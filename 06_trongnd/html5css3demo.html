@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+</head>
+<body>
+<!-- Header tiêu đề trang -->
+<header>
+  <h1>My Website</h1>
+  <p>ABC BBABCBCCBC .</p>
+</header>
+<!-- end heder -->
+<!-- Nav bar ví dụ thẻ nav thường chứa các chức năng  -->
+<nav>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</nav>
+<!-- end Nav bar -->
+<!-- thuộc tính sử dụng thêm là border-radius box-shadow -->
+<div class="row">
+  <div class="side">
+      <h2>Ví dụ</h2>
+      <h1>border-radius +box-shadow</h1>
+      <div class="border_radius">
+            <img src="download.jpeg" >
+      </div>
+      <h1>BORDER-IMAGE</h1>
+      <div class="border_image" style="height:150px; background:blue" ></div>
+      <br>
+      <h1>Transition</h1>
+      <div class="Transition_hover" style="background:blue" ></div>
+      <h1>text-Shadow</h1>
+      <div class="fakeimg">
+          <h2>Hế Lô</h2>
+      </div>
+      <h1>TEXT_EFFECT</h1>
+      <div class="fakeimg">
+            <h2>text-overflow: clip:</h2>
+                <p class="test1">This is some long text that will not fit in the box</p>
+            <h2>text-overflow: ellipsis:</h2>
+                <p class="test2">This is some long text that will not fit in the box</p>
+            <h2> word-wrap: break-word;</h2>
+                <p class="test">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.
+                </p>
+            <h2> word-break: keep-all;;</h2>
+                <p class="test3">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.
+                </p>
+      </div>
+      <h1>Multiple background(nhiều ảnh nền)</h1>
+      <div class="fakeimg">
+          <p>Nhiều ảnh nền</p>
+          <div id="vidu">
+                <p >This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.
+                    </p>
+                <p>This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.
+                    </p>
+          </div>
+      </div>
+      <h1>Animation</h1>
+      <div class="fakeimg">
+          <div class="Animation1">
+          </div>
+          <div class="Animation2">
+          </div>
+      </div>
+      <h1>Transprom 2d</h1>
+      <div class="fakeimg">
+          <div class="Transprom1">; transform: rotate(20deg);
+          </div>
+          <div class="Transprom2">translate(x,y)
+          </div>
+      </div>
+      <!-- tran 3d tương tự 
+            rotateZ()rotateY(),rotateX()
+    -->
+      
+     
+
+      
+  </div>
+  <!-- main nội dung chính của web-->
+  <div class="main">
+      <h1>Giới thiệu thẻ video</h1>
+      <h5>Các thuộc tính của thẻ video</h5>
+      <div class="fakeimg" style="height:200px;">
+          <!-- poster ảnh đại diện cho video cho tới khi đc nhân nút
+                muted âm thanh bị tắt...
+                loop lặp khi hết
+                autoplay tự động phát khi sẵn sàng
+         -->
+            <video controls width="200px" poster="download.png">
+                    <source src="movie.mp4" type="video/mp4">
+            </video>
+      </div>
+      <br>
+      <h1>Audio</h1>
+      <h5>Thuộc tính audio</h5>
+      <div class="fakeimg" style="height:200px;">
+          <!-- lopp sẽ giúp audio tự động lặp lại khi phát xong
+                muted âm thanh sẽ bị tắt tiếng
+                preload âm thanh sẽ tải lại khi tải lại trang
+        -->
+           <audio controls autoplay> 
+               <source src="batuan.mp3" type="audio/mpeg">
+           </audio>
+           <h1>Thẻ details</h1>
+           <details>
+               <summary>Danh sách clb bóng đá:</summary>
+                    <ul>
+                        <li>Chelsea</li>
+                        <li>Chelsea</li>
+                        <li>Chelsea</li>
+                        <li>Chelsea</li>
+                    </ul>
+           </details>
+      </div>
+      <div class="fakeimg" style="height:200px;">
+          <h1>Thẻ bdi</h1>
+            <ul>
+                <!-- thẻ định dạng cho đoạn văn bản mà kiểu của nó 
+                    k thuộc định dạng của toàn trang hoặc đoạn đó 
+                 -->
+                    <li>User <bdi>hrefs</bdi>: 60 points</li>
+                    <li>User <bdi>jdoe</bdi>: 80 points</li>
+                    <li>User <bdi>إيان</bdi>: 90 points</li>
+            </ul>
+            
+        
+        </div>
+        <h1>Thẻ datalist</h1>
+        <form action="" method="">
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+            
+          </form>
+        <h1>Thẻ canvas</h1>
+        <canvas id="myCanvas"></canvas>
+        <!--  thẻ cavans thẻ đồ họa đồ họa sẽ đc vẽ bởi javascrip -->
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 80, 80);
+        </script>
+        <h1>Thẻ time</h1>
+        <p>Chúng tối sẽ tới vào <time>10:00</time> tối nay</p>
+
+        <p>Tôi có một ngày <time datetime="2018-02-14 20:00">Valentines </time>.</p>
+        <h1>Thẻ SECTION</h1>
+        <section>
+            <!-- có thể hiểu là thẻ dùng để nêu ra định nghĩa -->
+            <h2>WTO?</h2>
+            <p>Tổ chức Thương mại Thế giới 
+                (tiếng Anh: World Trade Organization, 
+                viết tắt WTO; tiếng Pháp: Organisation 
+                mondiale du commerce; 
+                tiếng Tây Ban Nha: Organización Mundial del Comercio;
+                 tiếng Đức: Welthandelsorganisation) là một tổ chức quốc tế đặt trụ sở ở Genève, Thụy Sĩ</p>
+        </section>
+        <h1>Thẻ mark</h1>
+        <!-- hiểu đơn giả là thẻ đánh dấu đoạn quan trọng -->
+        <h3>Messi là <mark>cầu thủ bóng đá</mark> không phải là nhạc sĩ</h3>
+        <h1>Thẻ Metter và progress</h1>
+        Quá trình thực hiện của dự án(meter)<br>
+        <!-- có thể set value theo 2 cách theo % hoặc 
+            theo tỉ vể max và min rồi để value ở đầu cuối hoặc giữa -->
+        <meter value="2" min="0" max="10"></meter>
+        <br>
+        <meter value="0.6"></meter><br>
+        Quá trình thực hiện dự án (progress)<br>
+        <progress value="22" max="100">
+        </progress>
+        <h1>Thẻ Ruby: </h1>
+        <a>Dùng để chú thích phát âm </a>
+        <h2>
+            <ruby>
+                Hello <rt> həˈlō </rt>
+            </ruby>
+        </h2>
+        <h1 >Thẻ figure </h1>
+        <p>Đỗ Thì Nguyễn Hoàng ABC là một cô gái, Đỗ Thì Nguyễn Hoàng ABC là một cô gái, Đỗ Thì Nguyễn Hoàng ABC là một cô gái, Đỗ Thì Nguyễn Hoàng ABC là một cô gái</p>
+        <figure>
+            <img src="download.jpeg" alt="Đỗ Thì Nguyễn Hoàng ABC">
+        </figure>
+
+
+      
+      
+  </div>
+  <!-- main -->
+</div>
+<!-- footer -->
+<footer>
+        <h2>Footer</h2>
+</footer>
+<!-- end footer -->
+
+</body>
+</html>

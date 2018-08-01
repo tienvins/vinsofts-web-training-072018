@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+	<header><h1>Đây là header</h1></header>
+	<section>
+		<nav>
+			<h1>thẻ NAV</h1>
+			<ul>
+				<li><a href="#">HÀ NÔỊ</a></li>
+				<li><a href="#">HUÊ</a></li>
+				<li><a href="#">TP HCM</a></li>
+			</ul>
+		</nav>
+		<article>
+			<h1>ĐÂY LÀ ARTICLE</h1>
+		</article>
+		<p>the aside</p>
+		<aside>
+			<h4>Ha </h4>
+			<p>xac dinh noi dung co lien quan den noi dung chinh</p>
+		</aside>
+		<figure>
+			<img src="images/anhthiennhien.jpg" alt="anhthiennhien" width="250" height="300px">
+			<figcaption>Viet Nam</figcaption>
+		</figure>
+		<audio controls="controls">
+			<source src="https://mp3.zing.vn/bai-hat/Duyen-Minh-Lo-Huong-Tram/ZW9CBEEO.html?play_song=1" type="audio/mp3" />
+			<source src="https://mp3.zing.vn/bai-hat/Duyen-Minh-Lo-Huong-Tram/ZW9CBEEO.html?play_song=1" type="audio/ogg" />
+		</audio>
+	</section>
+	<!--Đây la section tiep theo-->
+	<section>
+		<h3>Thực hành về Canvas</h3>
+		<canvas id="myCanvas" width="578" height="200">
+			<script type="text/javascript">
+				var canvas = document.getElementById('myCanvas'),
+				ctx = canvas.getContext('2d');
+				ctx.strokeStyle = "#FF0000";
+				ctx.beginPath();
+				ctx.arc(95,50,40,0,2*Math.PI);
+				ctx.stroke();
+			</script>
+		</canvas>
+		<div id="datalist">
+			<input list="html" />
+			<datalist id="html">
+				<option value="Học HTML"></option>
+				<option value="Tham khảo HTML"></option>
+				<option value="Ví dụ HTML"></option>
+				<option value="Thực hành HTML"></option>
+			</datalist>
+		</div>
+		<details>
+			<summary>Học HTML</summary>
+			<p>Học từ cơ bản đến nâng cao.</p>
+			<p>Tham khảo những phần liên quan.</p>
+		</details>
+		<hgroup>
+			<h2>the hgoup</h2>
+			<h3>dinh nghia 1 nhom cac tieu de</h3>
+		</hgroup>
+		Thẻ Mark <mark>HTML</mark> thật là dễ.<br>
+		<p>the meter</p>
+		<meter value="1">100%</meter>
+	</section>
+	<section>
+	<form onsubmit="return false" oninput="result.value = num01.valueAsNumber + num02.valueAsNumber">
+<input name="num01" type="number"> + <input name="num02" type="number"> = <output name="result">NaN</output>
+</form>
+<p>Quá trình download được: <progress max="100" value="30">90%</progress></p>
+<p>hien thi noi dung khi trinh duyet khong ho tro ruby</p>
+<ruby>
+字 <rp>(</rp><rt>じ</rt><rp>)</rp>
+</ruby>
+<p>Thời gian làm việc từ <time>08:00</time> sáng các ngày trong tuần.</p>
+	</section>
+
+	<section>
+		<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p>Đoạn text có thể làm vỡ <wbr>layoutttttttttttttttttttttttt</wbr></p>
+	</section>
+	<footer>
+		<p>FOOTER</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="">Menu 1</a>
+                </li>
+                <li>
+                    <a href="">Menu 2</a>
+                </li>
+                <li>
+                    <a href="">Menu 3</a>
+                </li>
+                <li>
+                    <a href="">Menu 4</a>
+                </li>
+                <li>
+                    <a href="">Menu 5</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Demo HTML5</h2>
+        <details>
+            <summary>
+                Aside
+            </summary>
+            <aside>
+                <p>Định nghĩa nội dung bên ngoài nội dung chính (thường là phần sidebar).Tag nên có nội dung liên quan tới phần
+                    nội dung chính. Tag có thể chứa tất cả các tag định dạng khác</p>
+            </aside>
+        </details>
+        <details>
+            <summary>
+                Email, Phone, Url,...
+            </summary>
+            <label>Email
+                <input type="email">
+            </label>
+            <label>Phone
+                <input type="phone">
+            </label>
+            <label>Url
+                <input type="url">
+            </label>
+        </details>
+        <details>
+            <summary>
+                Video, Source
+            </summary>
+            <video controls height="200px">
+                <source src="./asset/demo.mp4">
+            </video>
+        </details>
+        <details>
+            <summary>
+                Audio
+            </summary>
+            <audio src="./asset/demo.mp3" controls></audio>
+        </details>
+        <details>
+            <summary>
+                Figure
+            </summary>
+            <figure>
+                <img src="./asset/demo.png" alt="Demo" height="200px">
+                <figcaption>Demo HTML5/ CSS3</figcaption>
+            </figure>
+        </details>
+        <details>
+            <summary>
+                Canvas
+            </summary>
+            <Canvas id="myCanvas">
+            </Canvas>
+            <script>
+                window.onload = function () {
+                    var canvas = document.getElementById("myCanvas");
+                    var context = canvas.getContext("2d");
+                    context.moveTo(10, 20);
+                    context.lineTo(180, 150);
+                    context.strokeStyle = "#000000";
+                    context.stroke();
+                }
+            </script>
+
+        </details>
+        <details>
+            <summary>
+                Command
+            </summary>
+            <menu>
+                <command onclick="alert('Đây là command')">Command</command>
+            </menu>
+        </details>
+        <details>
+            <summary>
+                Datalist
+            </summary>
+            <!-- <datalist>
+                    <option value="HTML5"></option>
+                    <option value="CSS3"></option>
+            </datalist> -->
+        </details>
+        <details>
+            <summary>
+                Embed
+            </summary>
+            <embed src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/200px-Rotating_earth_%28large%29.gif"
+                type="">
+        </details>
+        <details>
+            <summary>
+                Hgroup
+            </summary>
+            <hgroup>
+                <h2>Demo</h2>
+                <h3>HTML5</h3>
+                <h3>CSS3</h3>
+            </hgroup>
+        </details>
+        <details>
+            <summary>
+                Mark, Meter, Progress
+            </summary>
+            <p>Học
+                <mark> HTML</mark> thật là khó.</p>
+            <meter value="75" min="0" max="100">70%</meter>
+            <progress></progress>
+        </details>
+        <details>
+            <summary>
+                Output
+            </summary>
+            <output>
+        </details>
+        <details>
+            <summary>
+                Wbr
+            </summary>
+            <p>abcafeefsfsdfsdggthfgbdbfssffghkhjluiouyikjmghmjghjyjghjghmfgdge<wbr>rgsdvsvdsbfdgjhglhhfgwdifuiefufjdlkjfadklfjsdfjsfiuwfweknsvcnsmvnsfgjkosdjfiasofsjfilsjfsdjfzlsjflijfsofusjeofinskdfsdlkfjsdiofus8dfu</p>
+            <wbr>
+        </details>
+
+    </section>
+    <h2>Demo CSS3</h2>
+    <section>
+        <details>
+            <summary>
+                Border-radius
+            </summary>
+            <div class="flex">
+                <div class="border-radius"></div>
+                <div class="border-radius50"></div>
+            </div>
+        </details>
+        <details>
+            <summary>
+                Border-image
+            </summary>
+            <div class="border-image"></div>
+        </details>
+        <details>
+            <summary>
+                Gradient
+            </summary>
+            <div class="flex">
+                <div class="linear-gradient">linear-gradient</div>
+                <div class="radial-gradient">radial-gradient</div>
+            </div>
+        </details>
+        <details>
+            <summary>
+                Multiple backgrounds
+            </summary>
+            <div class="multiple-backgrounds">
+            </div>
+        </details>
+        <details>
+            <summary>
+                Box-shadow, Text-shadow
+            </summary>
+            <div class="box-text-shadow">Demo CSS3</div>
+        </details>
+        <details>
+            <summary>
+                Column
+            </summary>
+            <div class="column">
+                Và anh biết, anh biết em sẽ quên hết Những bài tình ca anh đã viết riêng tặng em Và anh biết, anh biết trái tim em có Hình
+                bóng ai kia đâu chỉ riêng anh. Và anh sẽ, anh sẽ không trách em nữa Giờ thì anh chẳng trách em đâu Khi ta
+                đến bên nhau tình gian dối. (Khi ta đến bên nhau, tình yêu dối lừa.)
+            </div>
+        </details>
+        <details>
+            <summary>
+                Transition
+            </summary>
+            <div class="transition"></div>
+        </details>
+        <details>
+            <summary>
+                Animations
+            </summary>
+            <div class="divanimations">
+                <div class="animations"></div>
+            </div>
+        </details>
+    </section>
+    <article>
+        Thẻ article
+    </article>
+    <footer>Đây là thẻ footer</footer>
+</body>
+
+</html>

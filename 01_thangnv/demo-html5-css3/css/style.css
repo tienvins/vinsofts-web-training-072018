@@ -1,0 +1,138 @@
+
+.menu{
+}
+.menu ul{
+    text-align: center;
+    background: #747474;
+    height: 50px;
+    line-height: 50px;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-table;
+    width: 100px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    display: block;
+    color:  #ffffff;
+}
+
+.menu ul li:hover a{
+    color: #747474;
+    background: #ffffff;
+}
+
+
+/*Demo CSS3*/
+
+.flex{
+    display: flex;
+}
+
+/*border-radius*/
+.border-radius{
+    border: solid 1;
+    height: 200px;
+    width: 200px;
+    background: #4240b3;
+    border-radius:10px 20px 30px 40px;
+}
+.border-radius50{
+    border: solid 1;
+    height: 200px;
+    width: 200px;
+    background: #4240b3;
+    border-radius:50%;
+}
+
+/*border-image*/
+.border-image{
+    border: solid 20px;
+    height: 160px;
+    width: 160px;
+    border-image: url(https://4.bp.blogspot.com/-1-5RZSJPdV8/URzeeXgSPeI/AAAAAAAABDk/B03EJjkg2pc/s200/anh-tran-tri-blogger-blogspot_anh-dong-nen-blog_Namkna-blogspot-com_20.gif) 25 stretch;
+}
+
+
+/*Gradients*/
+.linear-gradient{
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to left,red,yellow,blue);
+    /* background: linear-gradient(direction-Vị trí cuối, color-stop1, color-stop2, ...);*/
+}
+
+.radial-gradient{
+    height: 200px;
+    width: 200px;
+    background: radial-gradient(red,yellow,blue);
+    /* background: linear-gradient(direction-Vị trí cuối, color-stop1, color-stop2, ...);*/
+}
+
+/*multi background*/
+.multiple-backgrounds{
+    height: 200px;
+    width: 200px;
+    background-image:
+    url(http://triwou.org/assets/images/project_logos/logo_stg_icon.png),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    url(https://img.freepik.com/free-vector/modern-technological-elements-with-transparent-background_1035-7108.jpg?size=338c&ext=jpg);
+    background-position: left,right;
+
+}
+
+
+/*Box,text-shadow*/
+.box-text-shadow{
+    text-align: center;
+    height: 190px;
+    width: 190px;
+    box-shadow: 10px 10px #747474;
+    text-shadow: 2px 2px #747474;
+}
+
+/*Column*/
+.column{
+    height: 200px;
+    width: 600px;
+    column-count: 3;
+    column-gap: 190px;
+}
+
+/*Transition*/
+.transition{
+    height: 100px;
+    width: 100px;
+    background:red;
+    transition: width 2s, height 1s, transform 2s;
+}
+.transition:hover{
+    height: 200px;
+    width: 200px;
+    background: blue;
+}
+
+
+/*Animations*/
+.divanimations{
+    height: 150px;
+    width: 150px;
+}
+@keyframes animations {
+    0%   {background-color: red; left: 0px;top: 0px}
+    25%  {background-color: yellow;left: 100px;top: 100px;}
+    50%  {background-color: blue;left: 100px;top: 0px;}
+    75%  {background-color: yellow;left: 0px;top: 100px;}
+    100% {background-color:red;left: 0px;top: 0px;}
+}
+.animations{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: relative;
+    animation-name: animations;
+    animation-duration: 5s;
+}

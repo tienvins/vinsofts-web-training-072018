@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #img1{
+            position: relative;
+            animation-name: img-mover;
+            animation-duration: 2s;
+            animation-delay: 2s;
+
+            animation-iteration-count:infinite;
+
+        }        @keyframes img-mover{
+            0%{top:0; left:0;}
+            25%{top:0; left:200px;}
+            50%{top:200px; left: 200px;}
+            75%{top:200px; left: 0;}
+            100%{top:0; left: 0;}
+        }
+        #img2:hover{
+            animation-name: img-tranform;
+            animation-duration: 6s;
+            animation-iteration-count:infinite;
+        }
+        @keyframes img-tranform{
+            0%{transform: rotate(0deg);}
+            50%{transform: rotate(180deg);}
+            100%{transform: rotate(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <img id="img1" width="200px" style="" src="images/klematis4_big.jpg" alt="">
+
+ 
+        <img id="img2" width="200px" style="margin-left: 300px;" src="images/klematis4_big.jpg" alt="">
+    
+    
+</body>
+</html>

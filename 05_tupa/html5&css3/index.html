@@ -66,7 +66,7 @@
 			</article>
 			<article class="a2">
 				<h3>Đây là Article</h3>
-				<p>Thẻ audio,video,source</p>
+				<p>Thẻ audio,video,source,embed</p>
 				<figure>
 					<video width="400" controls>
 					  <source src="images/mov_bbb.mp4" type="video/mp4">
@@ -78,6 +78,9 @@
 					  <source src="images/horse.ogg" type="audio/ogg">
 					</audio>
 					<figcaption><mark>Click để nghe nhạc</mark></figcaption>
+				</figure>
+				<figure>
+					<embed src="https://www.w3schools.com/tags/helloworld.swf">
 				</figure>
 			</article>
 		</section>
@@ -116,11 +119,19 @@
 			<p><mark>Thẻ Canavas</mark></p>
 			<canvas id="myCanvas"></canvas>
 			<script>
-				var c = document.getElementById("myCanvas");
-				var ctx = c.getContext("2d");
-				ctx.fillStyle = "#FF0000";
-				ctx.fillRect(0, 0, 70, 90);
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.moveTo(0,0);
+			ctx.lineTo(100,100);
+			ctx.stroke();
 			</script>
+			<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.beginPath();
+			ctx.arc(95,50,40,0,2*Math.PI);
+			ctx.stroke();
+			</script> 
 		</aside>
 		<content>
 			<h3>Đây là Content</h3>
@@ -151,5 +162,6 @@
 		</details>
 	</footer>
 	<!-- end footer -->
+	
 </body>
 </html>

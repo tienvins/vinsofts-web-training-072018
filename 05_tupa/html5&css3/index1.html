@@ -1,21 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CSS3</title>
-	<link rel="stylesheet" href="">
-</head>
+<title>CSS3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-	div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Style the header */
+header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Increase the font size of the h1 element */
+header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+nav a.right {
+    float: right;
+}
+
+/* Change color on hover */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {   
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    nav a {
+        float: none;
+        width:100%;
+    }
 }
 @keyframes example {
     0%   {background-color:red; left:0px; top:0px;}
@@ -24,9 +110,241 @@
     75%  {background-color:green; left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
 }
+/* csssssssssssssssss */
+.animation{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 100;
+}
+.appearance {
+appearance: button;
+-moz-appearance: button;
+-webkit-appearance: button;
+}
+.visible {
+	background: #cc0000;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+	backface-visibility: visible;
+	-moz-backface-visibility: visible;
+	-webkit-backface-visibility: visible;
+}
+.background-clip {
+    background: #ccc;
+    background-clip: padding-box;
+    border: 10px dotted #cc0000;
+    height: 150px;
+    padding: 20px;
+    width: 150px;
+}
+.background-origin{
+	margin-top: 10px;	
+	background: #ccc;
+    background-origin: padding-box;
+    border: 10px dotted #cc0000;
+    height: 150px;
+    padding: 20px;
+    width: 150px;
+}
+.background-size{
+	margin-top: 10px;	
+	background: #ccc;
+    background-size: contain;
+    border: 10px dotted #cc0000;
+    height: 150px;
+    padding: 20px;
+    width: 150px;
+}
+.backgroundgradient {
+    background-color: #cc0000;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0.3, #cc0000),color-stop(0.7, #330000));
+    height: 300px;
+    width: 300px;
+    border-radius: 20px 20px 20px 20px;	
+    box-shadow: 5px 10px 5px #000;
+}
+#grad1 {
+    height: 55px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+}
+#borderimg1 { 
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(images/like.png) 30 round;
+}
+
+#borderimg2 { 
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(images/like.png) 30 stretch;
+}
+.column {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid lightblue;
+    column-rule-style: dashed;
+}
+@font-face {
+    font-family: 'myFont';
+    src: url('vcouri-webfont.ttf');
+}
+
+p.addFont {
+    font-family: 'myFont';
+}
+.slide{position: relative;}
+.text{
+	height: 40px;line-height: 40px;color: white;
+	background-color: black; 
+	background-color: rgba(255,0,24,0.7);/*mau rgb theo range so(tu 0 den 255). a=avaible,chạy từ 0-1 */
+	/*căn chỉnh vị trí khối có class=text*/
+	position: absolute; width: 100%; bottom: 0px; 
+	opacity: 0.7 /*opacity chỉ chạy từ 0->1(làm mờ dòng chữ)*/
+	}
+.text span{margin-left: 10px;}
+.perspective1 {
+    background: #cc0000;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: rotateX(45deg);
+}
+.perspective {
+    perspective: 300;
+    -webkit-perspective: 300;
+}
+.resize {
+    border: 1px solid #cc0000;
+    overflow: auto;
+    resize: both;
+    width: 400px;
+}
+p.text1 {
+    color: #cc0000;
+    font-size: 120%;
+    font-weight: bold;
+    text-shadow: 0 0 3px blue;
+}
+.transform {
+	margin-top: 20px;
+    background: #cc0000;
+    height: 50px;
+    width: 80px;
+    transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+}
+p.a {
+    word-break: normal;
+    border: 1px solid #000000;
+    width: 140px;
+}
+
+p.b {
+    word-break: keep-all;
+    border: 1px solid #000000;
+    width: 140px;
+}
+
+p.c {
+    word-break: break-all;
+    border: 1px solid #000000;
+    width: 140px;
+}
+div.ex1 {
+    margin: 20px;
+    border: 1px solid black;
+    outline: 4px solid red;
+    outline-offset: 15px;
+} 
+
+div.ex2 {
+    margin: 10px;
+    border: 1px solid black;
+    outline: 5px dashed blue;
+    outline-offset: 5px;
+} 
 </style>
+</head>
 <body>
-	<p>Animation</p>
-	<div></div>
+
+<header>
+	<h1>My Website</h1>
+  	<p>A website created by me.</p>
+</header>
+
+<nav>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</nav>
+
+<div class="row">
+  <div class="side">
+    <p class="appearance">Appearance</p>
+    <p class="visible">Backface-visibility</p>
+    <div class="background-clip">background-clip background-clip background-clip</div>
+    <div class="background-origin">background-origin background-origin background-origin</div>
+    <div class="background-size">background-size background-origin background-origin</div>
+    <div class="perspective">
+		<p class="perspective1">perspective.</p>
+	</div>
+	
+  </div>
+  <div class="main">
+      <div class="animation"><img src="images/download.jpeg" alt=""></div>
+      <div class="backgroundgradient"></div>
+      <div id="grad1" style="text-align:center;margin:20px auto;color:#888888;font-size:40px;font-weight:bold">
+Gradient Background
+</div>
+      <p id="borderimg1">Here, the image tiles to fill the area. The image is rescaled if necessary, to avoid dividing tiles.</p>
+		<p id="borderimg2">Here, the image is stretched to fill the area.</p>
+		<div class="column">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+		</div>
+		<p>Su dung font trong css3</p>
+		<p class="addFont">Su dung font trong css3</p>
+		<div class="slide" style="width: 700px;height: 201px;margin: auto;">
+			<img src="images/1.jpg">
+			<div class="text"><span>Welcome to Vinsofts</span></div>
+		</div>
+		<p class="resize">Đây là vùng nội dung có thể thay đổi kích thước, giữ chuột vào phía dưới bên phải để thay
+đổi.</p>
+		<p class="text1">HỌC WEB CHUẨN</p>
+		<p class="transform">Transform</p>
+		<h2>word-break: normal (default):</h2>
+		<p class="a">Thisissomeveryveryverylong word. Words will break according to usual rules.</p>
+
+		<h2>word-break: keep-all:</h2>
+		<p class="b">Thisissomeveryveryverylong word. This text will-break-at-hyphens.</p>
+
+		<h2>word-break: break-all:</h2>
+		<p class="c">Thisissomeveryveryverylong word. This text will break at any character.</p>
+		<h1>Test outline-offset Property</h1>
+		<div class="ex1">Div này có đường viền màu đỏ đậm 4 pixel bên ngoài cạnh biên giới.</div>
+		<br>
+
+		<div class="ex2">Div này có đường viền màu xanh lam 5 pixel, nằm ngoài viền biên giới.</div>
+  </div>
+</div>
+
+<footer>
+  <h2>Footer</h2>
+</div>
+
 </body>
 </html>

@@ -83,9 +83,11 @@ nav a:hover {
 .border_radius{
     width: 100%;
     padding: 20px;
+   
 }
 .border_radius img{
         border:1px solid #1abc9c;
+       
         border-radius: 20px 0px 30px 50px;
         box-shadow: 10px 10px 10px #333;
 }
@@ -137,7 +139,29 @@ nav a:hover {
 .fakeimg #vidu{
     background-image: url(../anh2.jpg), url(../anh1.jpg);
     background-position: right bottom, right center;
-    background-repeat: no-repeat,no-repeat;
+    background-repeat: no-repeat,repeat;
+}
+.user_interface{
+    border: 2px solid #1abc9c;
+    resize: vertical; 
+    width: 200px;
+    
+    margin-top: 30px;
+    /* vertical theo chiều dọc */
+    overflow: auto;
+}
+.warr{
+    width: 1000px;
+    margin: 0 auto;
+   
+}
+.user_interface2{
+    border: 2px solid #1abc9c;
+    width: 300px;
+    resize: both; 
+    margin: 30px;
+    /* vertical theo chiều dọc */
+    overflow: auto;
 }
 .fakeimg .Animation1{
     width: 100px;

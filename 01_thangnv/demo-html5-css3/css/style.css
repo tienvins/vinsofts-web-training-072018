@@ -197,3 +197,27 @@
 .none{
     resize: none;
 }
+
+/*Outline-offset*/
+.outline-offset{
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid;
+    outline: 5px solid red;
+    outline-offset: 10px;
+}
+
+/*Transfrom*/
+.transfrom{
+    background:#5e5e5e;
+    color: #ffffff;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+.d2{
+    transform: rotate(30deg);
+}
+.d3{
+    transform: rotateX(180deg);
+}

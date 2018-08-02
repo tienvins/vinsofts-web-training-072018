@@ -1,0 +1,162 @@
+#br1 {
+	width: 200px;
+	height: 200px;
+	border:1px solid red;
+	border-radius: 50%;
+	float: left;
+}
+#br2 {
+	width: 200px;
+	height: 200px;
+	border:1px solid red;
+	border-radius: 50px 0 50px 0;
+	float: left;
+}
+#br3 {
+	width: 200px;
+	height: 200px;
+	border:1px solid red;
+	border-radius: 0 0 0 50px;
+	float: left;
+}
+#bi1 {
+	width: 200px;
+	height: 200px;
+	border: 10px solid red;
+	border-image: url('border.png') 30 round;
+}
+#g1 {
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(red, yellow, green);
+}
+#g2 {
+	width: 200px;
+	height: 200px;
+	background: radial-gradient(red, yellow, green);
+}
+#mb1 {
+	width: 200px;
+	height: 200px;
+	background-image: 
+		url('border.png'),
+		url('https://mdn.mozillademos.org/files/11307/bubbles.png'),
+	linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+	background-repeat: no-repeat;
+	background-position: bottom right, left;
+}
+#bs1 {
+	width: 200px;
+	height: 200px;
+	background: red;
+	box-shadow: 10px 10px 10px 0;
+	text-shadow: 2px 2px green;
+}
+#c1 {
+	width: 600px;
+	column-count: 3;
+}
+#mq1 {
+	width: 100%;
+}
+#mq11 {
+	width: 30%;
+	height: 200px;
+	background: red;
+	float: left;
+}
+#mq12 {
+	width: 30%;
+	height: 200px;
+	background: green;
+	float: left;
+}
+#mq13 {
+	width: 30%;
+	height: 200px;
+	background: blue;
+	float: left;
+}
+#t1 {
+	width: 200px;
+	height: 200px;
+	background: pink;
+	transition: width 2s, height 4s;
+}
+#t1:hover {
+	width: 300px;
+	height: 300px;
+}
+#a1 {
+	width: 200px;
+	height: 200px;
+	background: red;
+	animation-name: myani;
+	animation-duration: 2s;
+}
+@keyframes myani {
+	0% {background: blue;}
+	25%{background: green;}
+	50%{background: yellow;}
+	100%{background: black}
+}
+#te1 p{
+	white-space: nowrap;
+	width: 100px;
+	border: 1px solid red;
+	overflow: hidden;
+	text-overflow: clip;
+}
+#te2 p{
+	white-space: nowrap;
+	width: 100px;
+	border: 1px solid red;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#te3 p{
+	width: 100px;
+	border: 1px solid red;
+	word-wrap: break-all;
+}
+#te4 p{
+	width: 100px;
+	border: 1px solid red;
+	word-wrap: keep-all;
+}
+#ui1 {
+	border: 2px solid;
+	padding: 20px;
+	width: 300px;
+	resize: vertical;
+	overflow: auto;
+}
+#ui2 {
+	border: 2px solid;
+	margin: 20px;
+	outline: 1px solid red;
+	outline-offset: 15px;
+}
+#t2d {
+	width: 200px;
+	height: 200px;
+	background: red;
+	transform: rotate(-15deg);
+}
+#t3d {
+	width: 200px;
+	height: 200px;
+	background: red;
+	transform: rotateX(150deg);
+}
+@media screen and (max-width: 500px) {
+	#mq11 {
+		width: 100%;
+}
+	#mq12 {
+		width: 100%;
+	}
+	#mq13 {
+		width: 100%;
+	}
+}

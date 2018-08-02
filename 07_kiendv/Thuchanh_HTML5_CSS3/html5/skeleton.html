@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+<style type="text/css">
+	header {
+		text-align: center;
+		background-color: pink;
+	}
+	nav {
+		background-color: #ddd;
+	}
+	nav ul li {
+		display: inline;
+	}
+	aside {
+		width: 20%;
+		float: left;
+		overflow: auto;
+		height: 171px;
+	}
+	article	{
+		width: 80%;
+		float: right;
+		background: #DDD;
+	}
+	figure {
+		background: #FFF;
+	}
+	canvas {
+		background: #FFF;
+	}
+	footer {
+		padding: 20px 0 20px 0;
+		background-color: blue;
+	}
+</style>
+<body>
+	<header>
+		<h1>Day la header</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="">Menu 1</a></li>
+			<li><a href="">Menu 2</a></li>
+			<li><a href="">Menu 3</a></li>
+			<li><a href="">Menu 4</a></li>
+		</ul>
+	</nav>
+	<aside>
+		<p>Day la aside</p>
+	</aside>
+	<article>
+		<h2>Day la article</h2>
+		<section>
+			<h3>Day la 1 section</h3>
+			<p>
+				<mark>The WorlWide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</mark>
+			</p>
+			<p>
+				The WorlWide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.
+			</p>
+			<h2>Day la 1 video</h2>
+			<video width="400" controls>
+				<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+			</video>
+			<h2>Day la 1 audio</h2>
+			<audio controls>
+				<source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+			</audio>
+		</section>
+		<figure>
+			<figcaption>Day la 1 figure</figcaption>
+			<p>
+				Thẻ Figure tạo nội dung khép kín như hình minh họa, biểu đồ, hình ảnh, v.v..
+				<img src="../b.jpg">
+			</p>
+		</figure>
+		<canvas id="myCanvas" width="578" height="200"></canvas>
+		<script type="text/javascript">
+			window.onload = function(){
+				var canvas = document.getElementById("myCanvas");
+				var context = canvas.getContext("2d");
+				context.moveTo(0,0);
+				context.lineTo(200,200);
+				context.strokeStyle = "#990000";
+				context.stroke();
+			}
+		</script>
+		<h2>Day la 1 datalist</h2>
+		<input list="html">
+		<datalist id="html">
+			<option value="Hoc HTML"></option>
+			<option value="Hoc CSS"></option>
+			<option value="Hoc JS"></option>
+		</datalist>
+		<h2>Day la deltai-sumary</h2>
+		<details>
+			<summary>Tuy chon</summary>
+				<p>Hoc HTML</p>
+				<p>Hoc CSS</p>
+				<p>Hoc JS</p>
+		</details>
+		<h2>Embed</h2>
+		<embed src="helloworld.swf">
+		<h2>Hgroup</h2>
+		<hgroup>
+			Chua 1 nhom tieu de tu h1 -> h6
+			<h1>Day la h1</h1>
+			<h2>Day la h2</h2>
+		</hgroup>
+		<h2>Meter</h2>
+		<meter value="3" min="1" max="10"></meter>
+		<h2>Progress</h2>
+		<progress value="5" max="10"></progress>
+		<h2>Output</h2>
+		<form oninput="x.value = parseInt(a.value) + parseInt(b.value)">
+			<input type="number" id="a" value="0">
+			+
+			<input type="number" id="b" value="100">
+			=
+			<output name="x"></output>
+		</form>
+		<h2>Time</h2>
+		<time>15:00</time>
+		<h2>WBR	</h2>
+		<div style="width: 150px;">
+			<p><wbr>Doan text nay co the lam vo layoouttttttttttttttttttttttttt</p>
+		</div>
+	</article>
+	<div style="clear: both;"></div>
+	<footer>
+		&copy Copyright
+	</footer>
+</body>
+
+</html>

@@ -194,6 +194,9 @@
 .horizontal{
     resize: horizontal;
 }
+.both{
+    resize: both;
+}
 .none{
     resize: none;
 }

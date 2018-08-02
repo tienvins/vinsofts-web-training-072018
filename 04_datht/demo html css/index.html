@@ -20,7 +20,7 @@
 				</ul>
 			</nav>	
 		</header>
-		<main class="wapper">
+		<section class="wapper">
 			<aside class="aside-right">
 				<ul class="menu-right">
 					<li><a href="#">menu right 1</a></li>
@@ -31,16 +31,68 @@
 				</ul>
 			</aside>
 			<div class="content">
-				<video src="images/video.mp4" controls="" style="border-radius: 50px;"></video>
+				<video controls="" style="border-radius: 50px;">
+					<source src="images/video.mp4" type="video/mp4">
+					<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  					<track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+				</video>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/2mb0FI5A-2M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				<audio controls>
 					  
 					  <source src="images/music.mp3" type="">
 					Your browser does not support the audio element.
 				</audio>
-			</div>
+				<br/>
+				<br/>
+				<article>
+					  <h1>Google Chrome</h1>
+					  <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+				</article>
+				<br/>
+			<!-- the data -->	
+				<ul style="margin-left: 30px;">
+				  <li><data value="21053">Cherry Tomato</data></li>
+				  <li><data value="21054">Beef Tomato</data></li>
+				  <li><data value="21055">Snack Tomato</data></li>
+				</ul>
+			the datalist
+				<form action="/action_page.php" method="get">
+				  <input list="browsers" name="browser">
+				  <datalist id="browsers">
+				    <option value="Internet Explorer">
+				    <option value="Firefox">
+				    <option value="Chrome">
+				    <option value="Opera">
+				    <option value="Safari">
+				  </datalist>
+				  <input type="submit">
+				</form>
+				<br>
+			<!-- the detail	 -->
+				<details>
+				  <summary>Copyright 1999-2018.</summary>
+				  <p> - by Refsnes Data. All Rights Reserved.</p>
+				  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+				</details>
+			<!-- the mark -->
+				<br>
+				<p>Do not forget to buy <mark>milk</mark> today.</p>
+				<br>
+			<!-- the meter -->
+				<p>Meter</p>
+				<meter value="2" min="0" max="10" style="width: 300px" >2 out of 10</meter><br>
+				<meter value="0.8" style="width: 300px">80%</meter>
 
-		</main>
+			<!-- the output -->
+				<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+					<input type="range" id="a" value="50">100
+					+<input type="number" id="b" value="50">
+					=<output name="x" for="a b"></output>
+				</form>
+			<!-- the wbr -->
+				<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.</p>
+				</div>	
+		</section>
 
 
 		<footer>

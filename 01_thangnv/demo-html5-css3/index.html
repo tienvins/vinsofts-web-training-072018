@@ -110,10 +110,11 @@
             <summary>
                 Datalist
             </summary>
-            <!-- <datalist>
-                    <option value="HTML5"></option>
-                    <option value="CSS3"></option>
-            </datalist> -->
+            <input list=”ds”>
+            <datalist id=”ds”>
+                <option value="HTML5"></option>
+                <option value="CSS3"></option>
+            </datalist>
         </details>
         <details>
             <summary>
@@ -145,7 +146,11 @@
             <summary>
                 Output
             </summary>
-            <output>
+            <form oninput="tong.value=stra.value+strb.value">
+                <input type="text" name="stra">
+                <input type="text" name="strb">
+                <output name="tong" for="stra strb"></output>
+            </form>
         </details>
         <details>
             <summary>
@@ -156,8 +161,9 @@
         </details>
 
     </section>
-    <h2>Demo CSS3</h2>
+
     <section>
+        <h2>Demo CSS3</h2>
         <details>
             <summary>
                 Border-radius

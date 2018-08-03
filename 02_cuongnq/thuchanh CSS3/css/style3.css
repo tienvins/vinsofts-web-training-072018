@@ -155,14 +155,9 @@ h1 {
     -moz-column-rule: 1px solid lightblue; /* Firefox */
     column-rule: 1px solid lightblue;
 }
-.text-overflow
-{
-    float: left;
-
-    margin: 50px 0 0 20px;
-    white-space: nowrap;
-    width: 200px;
-    border: 1px solid #000000;
-    overflow: hidden;
-    text-overflow: ellipsis;
+div.word_wrap{
+width:100px;
+border:2px solid red;
+padding:10px;
+word-wrap:break-word;
 }

@@ -88,12 +88,6 @@ ul li:hover{
     background: red; /* For browsers that do not support gradients */
     background: repeating-linear-gradient(red 20%,yellow 30%,green 60%); /* Standard syntax (must be last) */
 }
-#grad2 {
-    height: 150px;
-    width: 200px;
-    background: red; /* For browsers that do not support gradients */
-    background: radial-gradient(circle, red, yellow, green); /* Standard syntax (must be last) */
-}
 h1 {
     color: white;
     text-shadow: 2px 2px 4px #000000;
@@ -171,38 +165,4 @@ h1 {
     border: 1px solid #000000;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-.word-wrap{
-    float: left;
-    margin: 50px 0 0 20px;
-    white-space: nowrap;
-    border: solid 1px;
-    width: 100px;
-    height: 18px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.word-break{
-    float: left;
-    margin: 50px 0 0 20px;
-    width: 200px;
-    border: 1px solid red;
-    word-break: break-all;
-}
-
-
-/*xử lý phía giao diện người dùng*/
-.user-interface
-{
-    margin: 400px 0 0 50px;
-    border: 2px solid;
-    padding: 20px;
-    width: 500px;
-    resize: horizontal;
-    overflow: auto;
-
-    outline: 4px solid red;
-    outline-offset: 15px;
-
 }

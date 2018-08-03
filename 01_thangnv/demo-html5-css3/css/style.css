@@ -1,6 +1,3 @@
-
-.menu{
-}
 .menu ul{
     text-align: center;
     background: #747474;
@@ -99,7 +96,7 @@
     height: 200px;
     width: 600px;
     column-count: 3;
-    column-gap: 190px;
+    column-gap: 190px; /*độ rộng cột*/
 }
 
 /*Media-query*/
@@ -149,6 +146,8 @@
     position: relative;
     animation-name: animations;
     animation-duration: 5s;
+    animation-direction: unset;
+    /* animation: <name> <thời gian chạy> <kiểu tốc đoọ theo thời gian> <độ chễ> <số lần chạy> <kiểu> fill-mode; */
 }
 
 /*Text Effect*/
@@ -192,10 +191,10 @@
     resize: vertical;
 }
 .horizontal{
-    resize: horizontal;
+    resize: horizontal;/*ngang*/
 }
 .both{
-    resize: both;
+    resize: both; /*2 chiều*/
 }
 .none{
     resize: none;

@@ -23,11 +23,23 @@
             animation-name: img-tranform;
             animation-duration: 6s;
             animation-iteration-count:infinite;
+
         }
         @keyframes img-tranform{
             0%{transform: rotate(0deg);}
             50%{transform: rotate(180deg);}
             100%{transform: rotate(360deg);}
+        }
+        #img3:hover{
+            animation-name: img-tranform2;
+            animation-duration: 6s;
+            animation-iteration-count:infinite;
+
+        }
+        @keyframes img-tranform2{
+            0%{transform: rotate(0deg);}
+            50%{transform: rotateY(180deg);}
+            100%{transform: rotateY(360deg);}
         }
 
     </style>
@@ -37,6 +49,7 @@
 
  
         <img id="img2" width="200px" style="margin-left: 300px;" src="images/klematis4_big.jpg" alt="">
+         <img id="img3" width="200px" style="margin-left: 100px;" src="images/klematis4_big.jpg" alt="">
     
     
 </body>

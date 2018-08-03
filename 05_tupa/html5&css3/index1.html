@@ -264,6 +264,17 @@ p.c {
     border: 1px solid #000000;
     width: 140px;
 }
+.aaa {
+    word-wrap: normal;
+    width: 150px; 
+    border: 1px solid #000000;
+}
+
+.bbb {
+    word-wrap: break-word;
+    width: 150px; 
+    border: 1px solid #000000;
+}
 div.ex1 {
     margin: 20px;
     border: 1px solid black;
@@ -334,6 +345,13 @@ Gradient Background
 
 		<h2>word-break: break-all:</h2>
 		<p class="c">Thisissomeveryveryverylong word. This text will break at any character.</p>
+        <h1>The word-wrap Property</h1>
+
+        <h2>word-wrap: normal (default):</h2>
+        <div class="aaa"> This div contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</div>
+
+        <h2>word-wrap: break-word:</h2>
+        <div class="bbb"> This div contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</div>
 		<h1>Test outline-offset Property</h1>
 		<div class="ex1">Div này có đường viền màu đỏ đậm 4 pixel bên ngoài cạnh biên giới.</div>
 		<br>

@@ -1,0 +1,159 @@
+.border-radius {
+	background: red;
+	border-radius: 40px 40px 40px 40px;
+	width: 10%;
+	text-align: center;
+}
+
+.border-image {
+	border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(../images/border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(../images/border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(../images/border.png) 30 round;
+    width: 10%;
+}
+
+.gradient1 {
+	height: 50px;
+    background: red; 
+    background: linear-gradient(red, yellow);
+    text-align: center;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	width: 30%;
+}
+
+.gradient2 {
+	height: 50px;
+    background: red; 
+    background: linear-gradient(to right, red, yellow);
+    text-align: center;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	width: 30%;
+}
+
+.gradient3 {
+	height: 50px;
+    background: red; 
+    background: linear-gradient(to bottom right, red, yellow);
+    text-align: center;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	width: 30%;
+}
+
+.gradient4 #grad1 {
+    height: 30px;
+    background: red;
+    background: linear-gradient(0deg, red, yellow);
+    width: 30%;
+}
+
+.gradient4 #grad2 {
+    height: 30px;
+    background: red;
+    background: linear-gradient(90deg, red, yellow);
+    width: 30%;
+}
+
+.gradient4 #grad3 {
+    height: 30px;
+    background: red;
+    background: linear-gradient(180deg, red, yellow); 
+    width: 30%;
+}
+
+.gradient4 #grad4 {
+    height: 30px;
+    background: red; 
+    background: linear-gradient(-90deg, red, yellow); 
+    width: 30%;
+}
+
+.gradient5 {
+	height: 50px;
+    background: red;
+    background: linear-gradient(red, yellow, green);
+    text-align: center;
+    width: 30%;
+}
+
+.gradient6 {
+	height: 150px;
+    width: 200px;
+    background: red;
+    background: radial-gradient(circle,red, yellow, green);
+}
+
+.multiple-bg {
+	background-image: url(../images/banner.jpg),url(../images/border.png);	
+	background-repeat: no-repeat, repeat;
+	background-position: right bottom, left top;
+	padding: 15px;
+	height: 500px;
+	width: 50%;
+}
+
+.shadow {
+	box-shadow: 10px 10px grey;
+	width: 30%;
+	border: 2px solid grey;
+}
+
+.shadow h3{
+	text-shadow: 2px 2px red;
+}
+
+.column {
+	column-count: 3;
+	width: 50%;
+}
+
+.media-query {
+	background-color: tan;
+    color: black;
+    width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .media-query {
+        background-color: blue;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .media-query {
+        background-color: olive;
+        color: white;
+    }
+}
+
+.transition {
+	width: 100px;
+	height: 100px;
+	background: red;
+	transition: width 3s;
+}
+.transition:hover{
+	width: 50%;
+}
+
+@keyframes animation {
+	0%   {background-color:red; left:0px; top:0px;}
+    50%  {background-color:yellow; left:200px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+.animations {
+	width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: animation;
+    animation-duration: 4s;
+}

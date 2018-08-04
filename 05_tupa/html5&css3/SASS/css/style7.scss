@@ -1,0 +1,7 @@
+//sass @each
+@each $var,$color in (item1,red), (item2,blue), (item3,black){
+    .#{$var}{
+        background:url("images/#{$var}.png");
+        color: $color;
+    }
+}

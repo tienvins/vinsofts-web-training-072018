@@ -1,0 +1,13 @@
+//sass @if
+$dieukien: maudo;
+.main{
+    @if($dieukien==maudo){
+        background: red;
+    } 
+    @else if($dieukien==mauxanh){
+        background: blue;
+    }
+    @else{
+        background: black;
+    }
+}

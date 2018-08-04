@@ -120,16 +120,24 @@ nav a:hover {
     /* cắt chữ */
 }
 .fakeimg .test2{
-    white-space: nowrap; 
+    white-space: nowrap;
     width: 200px; 
     border: 1px solid #000000;
     overflow: hidden;
     text-overflow: ellipsis;
+    
+}
+.fakeimg .test2:hover{
+    text-overflow: inherit;
+    overflow: visible;
 }
 .fakeimg .test{
+    overflow: hidden;
     width: 150px;
+    height: 52px;
     border: 1px solid rebeccapurple;
-    word-wrap: break-word;
+    text-overflow: ellipsis;
+    
 }
 .fakeimg .test3{
     width: 150px;
@@ -138,7 +146,7 @@ nav a:hover {
 }
 .fakeimg #vidu{
     background-image: url(../anh2.jpg), url(../anh1.jpg);
-    background-position: right bottom, right center;
+    background-position: left center, right center;
     background-repeat: no-repeat,repeat;
 }
 .user_interface{

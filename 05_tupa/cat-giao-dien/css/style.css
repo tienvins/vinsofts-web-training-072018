@@ -1,0 +1,53 @@
+* { margin: 0px; padding: 0px; }
+
+ul { margin: 0px; padding: 0px; list-style: none; }
+
+a { text-decoration: none; color: #838383; }
+
+body { font-family: Arial; font-size: 12px; }
+body main { width: 1000px; margin: 20px auto; }
+body main header { height: 85px; }
+body main header .header-left { width: 300px; float: left; }
+body main header .header-left img { margin-left: 20px; }
+body main header .header-left p { font-size: 10px; margin-left: 15px; }
+body main header .header-right { width: 700px; float: left; }
+body main header .header-right .header-right-top { height: 30px; }
+body main header .header-right .header-right-top ul { text-align: right; }
+body main header .header-right .header-right-top ul li { display: inline; padding: 10px; }
+body main header .header-right .header-right-top ul li img { margin-right: 10px; }
+body main header .header-right nav { height: 40px; width: 800px; }
+body main header .header-right nav ul.menu { margin-left: -15px; }
+body main header .header-right nav ul.menu li { float: left; padding: 10px; line-height: 40px; border: 1px solid white; width: 70px; }
+body main header .header-right nav ul.menu li a { color: #939393; display: block; text-align: center; font-weight: bold; }
+body main header .header-right nav ul.menu li a:hover { color: white; background-color: #00a2ed; border-radius: 10px; }
+body main header .header-right nav ul.icon li { float: left; padding: 10px; line-height: 40px; margin-top: 5px; }
+body main .slide { position: relative; }
+body main .slide .text-title { position: absolute; right: 20px; bottom: 70px; color: white; font-size: 20px; }
+body main .slide .text-content { position: absolute; right: 20px; bottom: 20px; color: white; width: 350px; }
+body main content { height: 1000px; width: 1000px; }
+body main content section.title { margin-top: 20px; text-align: center; font-weight: bold; }
+body main content section.title p { color: #838383; font-size: 30px; }
+body main content section.title span { color: #838383; }
+body main content article.box-main { margin-top: 20px; margin-bottom: 40px; }
+body main content article.box-main ul { margin-left: 20px; }
+body main content article.box-main ul li { float: left; width: 290px; text-align: center; color: #838383; margin-right: 30px; }
+body main content article.box-main ul li .box-title { font-size: 15px; font-weight: bold; margin-top: 20px; }
+body main content article.box-main ul li .box-desc { margin-top: 20px; height: 50px; }
+body main content article.box-main ul li .box-link { margin-top: 20px; width: 100px; height: 30px; line-height: 30px; background-color: #00a2ed; color: white; border-radius: 10px; margin-left: 110px; }
+body main content .line { margin-top: 20px; border: 1px solid #ededed; width: 300px; margin: auto; margin-bottom: 10px; }
+body main content article.people { margin-top: 30px; }
+body main content article.people ul li { display: inline; padding: 30px; margin-left: 30px; }
+body main content article.product { margin-top: 20px; }
+body main content article.product ul li { float: left; width: 300px; margin-left: 30px; }
+body main content article.product ul li .product-title { margin: 5px; font-weight: bold; }
+body main content article.product ul li .product-desc { color: #838383; padding: 5px; }
+body main footer { margin-top: 40px; height: 400px; width: 1000px; background-color: #323232; color: white; }
+body main footer .footer-about { float: left; width: 250px; margin-left: 30px; margin-top: 40px; }
+body main footer .footer-about .footer-about-title { font-size: 25px; }
+body main footer .footer-about .footer-about-desc { font-weight: bold; }
+body main footer .footer-contact { float: left; widows: 300px; margin-left: 30px; margin-top: 40px; }
+body main footer .footer-contact .footer-contact-title { font-size: 25px; }
+body main footer .footer-info { float: left; widows: 300px; margin-left: 30px; margin-top: 40px; }
+body main footer .footer-info .footer-info-title { font-size: 25px; }
+
+/*# sourceMappingURL=style.css.map */

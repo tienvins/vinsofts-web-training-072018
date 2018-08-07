@@ -67,4 +67,7 @@ footer{
 	margin-right: auto;
 	margin-left: auto;
 }
-
+meter::-webkit-meter-optimum-value {
+    background: blue;
+    border-radius: 3px;
+}

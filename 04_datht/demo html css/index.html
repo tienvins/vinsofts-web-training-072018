@@ -81,7 +81,9 @@
 			<!-- the meter -->
 				<p>Meter</p>
 				<meter value="2" min="0" max="10" style="width: 300px" >2 out of 10</meter><br>
-				<meter value="0.8" style="width: 300px">80%</meter>
+				<meter value="0.8" high="0.7" style="width: 300px">80%</meter>
+				<meter value="0.2" low="0.3" style="width: 300px">80%</meter>
+				<meter low=".25" optimum=".8" high=".75" value=".1"></meter>
 
 			<!-- the output -->
 				<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0

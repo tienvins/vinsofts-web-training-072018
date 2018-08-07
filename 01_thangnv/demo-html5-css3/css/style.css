@@ -58,14 +58,14 @@
 .linear-gradient{
     height: 200px;
     width: 200px;
-    background: linear-gradient(to left,red,yellow,blue);
+    background: linear-gradient(40deg,red,yellow,blue);
     /* background: linear-gradient(direction-Vị trí cuối, color-stop1, color-stop2, ...);*/
 }
 
 .radial-gradient{
     height: 200px;
     width: 200px;
-    background: radial-gradient(red,yellow,blue);
+    background: repeating-radial-gradient(red,yellow,blue 20%);
     /* background: linear-gradient(direction-Vị trí cuối, color-stop1, color-stop2, ...);*/
 }
 
@@ -87,6 +87,7 @@
     text-align: center;
     height: 190px;
     width: 190px;
+    border: solid 1px;
     box-shadow: 10px 10px #747474;
     text-shadow: 2px 2px #747474;
 }
@@ -96,7 +97,7 @@
     height: 200px;
     width: 600px;
     column-count: 3;
-    column-gap: 190px; /*độ rộng cột*/
+    column-gap: 10px; /*độ rộng cột*/
 }
 
 /*Media-query*/
@@ -139,7 +140,7 @@
     75%  {background-color: yellow;left: 0px;top: 100px;}
     100% {background-color:red;left: 0px;top: 0px;}
 }
-.animations{
+.animation{
     height: 50px;
     width: 50px;
     background-color: red;
@@ -153,8 +154,8 @@
 /*Text Effect*/
 .text-overflow{
     width: 300px;
-    overflow: hidden;
-    white-space: nowrap; 
+    height: 50px;
+    overflow:hidden;
     border: solid 1px;
 }
 .clip{

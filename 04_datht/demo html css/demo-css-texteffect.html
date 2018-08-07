@@ -7,7 +7,6 @@
     src: url(font/Sansation_Light.ttf);
 }
 
-font-family: myFirstFont;
 p.test1 {
     white-space: nowrap; 
     width: 200px; 
@@ -16,12 +15,10 @@ p.test1 {
     text-overflow: clip;
 }
 
-p.test2 {
-    white-space: nowrap; 
-    width: 200px; 
-    border: 1px solid #000000;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.test2 {
+    height: 50px;
+    width: 200px;
+    
 }
 
 .test1:hover {
@@ -57,13 +54,16 @@ p.test5 {
 <body>
 
 <h1>The text-overflow Property</h1>
-<p>The following two paragraphs contains a long text that will not fit in the box.</p>
+<p>The following two paragraphs contains a long text that will not fit in the box. The following two paragraphs contains a long text that will not fit in the bo</p>
 
 <h2>text-overflow: clip:</h2>
-<p class="test1">This is some long text that will not fit in the box</p>
+<div class="test2">
+   <p>This is some long text that will not fit in the box  The following two paragraphs contains a long text that will not fit in the bo</p> 
+</div>
+
 
 <h2>text-overflow: ellipsis:</h2>
-<p class="test2">This is some long text that will not fit in the box</p>
+<p class="test2">This is some long text that will not fit in the box This is some long text that will not fit in the box  The following two paragraphs contains a long text that will not fit in the bo</p>
 
 <p class="test3"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
 

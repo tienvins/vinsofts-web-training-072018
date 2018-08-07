@@ -1,0 +1,294 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+@media only screen and (min-width: 960) {
+    body{
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 960) {
+    body{
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+li{
+    list-style-type: none;
+}
+
+#header-page{
+    display: flex;  
+    height: 85px;
+    background: #ffffff;
+}
+
+.logo{
+    height: 50%;
+    width: 35%;
+    padding: 8px 0px 0px 8%;
+    
+}
+
+.menu-contact{
+    height: 100%;
+    width: 65%;
+}
+
+.contact{
+    height: 42px;
+    line-height: 42px;
+}
+
+.contact ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact ul li{
+    font-size: 9.86px;
+    font-family: Roboto;
+    color: #939393;
+    padding: 0px 10px;
+}
+
+.contact ul li a{
+    font-weight: bold;
+    color: #939393;
+    text-decoration-line: none;
+}
+
+
+.menu{
+    height: 43px;
+    line-height: 43px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu nav ul {
+    padding: 11px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu nav ul li{
+    text-align: center;
+    padding: 0px 10px;
+    line-height: 20px;
+    height: 20px;
+    
+}
+
+.menu nav ul li a{
+    padding: 0px 5px;
+    font-size: 11.86px;
+    font-weight: bold;
+    color: #939393;
+    text-decoration-line: none;
+}
+.menu nav ul li:hover{
+    background: #00a2ed;
+    border-radius: 20px;
+}
+.menu nav ul li:hover >a{
+    color: #ffffff;
+}
+
+.mxh ul{
+    display: flex;
+}
+.mxh ul li{
+    line-height: 55px;
+    padding: 0px 10px;
+}
+
+.slide{
+    height: 31.25%;
+    width: 100%;
+}
+.slide img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/*our services*/
+.our-services{
+    text-align: center;
+    color: #838383;
+    margin: 32px 50px;
+}
+
+.header-our-services{
+    color: #838383;
+    font-size: 29.3px;
+    font-weight: bold;
+    height: 21px;
+}
+
+.content-out-services{
+    display: flex;
+    margin-top: 62px;
+}
+
+.col-content-out-services{
+    width: 100%;
+}
+
+.col-content-out-services div img{
+    height: 96px;
+}
+
+.col-content-out-services div h3{
+    margin: 24px 0px;
+
+}
+
+.col-content-out-services div p{
+    margin: 24px 0px;
+    font-size: 11.86px;
+}
+
+/*clinets*/
+.our-clients{
+    text-align: center;
+    color: #838383;
+    margin: 32px 20px;
+}
+
+.header-our-clients{
+    color: #838383;
+    font-size: 29.3px;
+    font-weight: bold;
+    height: 21px;
+}
+
+.content-out-clients{
+    display: flex;
+    margin-top: 62px
+}
+
+.col-content-out-clients{
+    width: 100%;
+    text-align: center;
+}
+
+/*our art*/
+.our-articles{
+    color: #838383;
+    margin: 42px 8.5%;
+}
+
+.header-our-articles{
+    color: #838383;
+    font-size: 29.3px;
+    font-weight: bold;
+    height: 21px;
+    text-align: center;
+}
+
+.content-out-articles{
+    display: flex;
+    margin-top: 62px;
+}
+
+.col-content-out-articles{
+    width: 100%;
+    margin: 0px 5px;
+}
+
+.col-content-out-articles div img{
+    height: auto;
+    width: 100%;
+}
+
+.col-content-out-articles div h3{
+    margin-top: 24px;
+}
+
+.col-content-out-articles div p{
+    margin: 12px 10px 0px 0px;
+    font-size: 11.86px;
+}
+
+footer{
+    background: #323232;
+    min-height: 400px;
+    width: 100;
+    display:flex;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.about-vinsofts{
+    width: 25%;
+    margin: 10px;
+}
+
+.about-vinsofts p{
+    font-size: 10.86px
+}
+
+.contact-us{
+    width:35%;
+    margin: 10px;
+}
+.contact-us div h5{
+    color: #54584c;
+}
+.contact-us div div div input,.contact-us div div input{
+    height: 25px;
+    width: 100%;
+}
+
+.our-info{
+    width: 35%;
+    margin: 10px;
+}
+.our-info p{
+    font-size: 10.86px
+}
+
+@media screen and (max-width: 840px) {
+    .col-content-out-services{width: 50%;}
+    .content-out-services{flex-wrap: wrap;}
+    .col-content-out-clients{width: 33%}
+    .content-out-clients{flex-wrap: wrap}
+    .col-content-out-articles{width: 48%}
+    .content-out-articles{flex-wrap: wrap}
+    footer{flex-wrap: wrap;}
+    .about-vinsofts{
+        width: 30%;
+    }
+    .contact-us{
+        width: 65%;
+    }
+    .our-info{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .col-content-out-services{width: 100%;}
+    .content-out-services{flex-wrap: wrap;}
+    .col-content-out-clients{width: 50%}
+    .content-out-clients{flex-wrap: wrap}
+    .col-content-out-articles{width: 100%}
+    .content-out-articles{flex-wrap: wrap;}
+    footer{flex-wrap: wrap;}
+    .about-vinsofts{
+        width: 100%;
+    }
+    .contact-us{
+        width: 100%;
+    }
+    .our-info{
+        width: 100%;
+    }
+}

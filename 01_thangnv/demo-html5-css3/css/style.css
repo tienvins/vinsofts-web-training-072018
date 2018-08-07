@@ -228,3 +228,7 @@
 section{
     padding: 0 20%;
 }
+meter::-webkit-meter-bar {background:white;} /*background color of bar*/
+meter::-webkit-meter-optimum-value {background:green;} /* high > value > low */
+meter::-webkit-meter-suboptimum-value{background:orange;} /* value < low hoặc value > high */
+meter::-webkit-meter-even-less-good-value{background:red;} /* value < low & optimun > high |value > high & optimun < low*/

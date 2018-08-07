@@ -14,6 +14,7 @@ header {
     text-align: center;
     background: #1abc9c;
     color: white;
+    opacity: 0.0;
 }
 
 /* Increase the font size of the heading */
@@ -87,7 +88,6 @@ nav a:hover {
 }
 .border_radius img{
         border:1px solid #1abc9c;
-       
         border-radius: 20px 0px 30px 50px;
         box-shadow: 10px 10px 10px #333;
 }
@@ -95,7 +95,7 @@ nav a:hover {
     width: 100%;
     padding: 20px;
     border: 10px solid transparent;
-    border-image: url(../border.png) 30 round;
+    border-image: url(../border.png) 20% round;
 }
 .Transition_hover{
     height: 100px;
@@ -120,16 +120,24 @@ nav a:hover {
     /* cắt chữ */
 }
 .fakeimg .test2{
-    white-space: nowrap; 
+    white-space: nowrap;
     width: 200px; 
     border: 1px solid #000000;
     overflow: hidden;
     text-overflow: ellipsis;
+    
+}
+.fakeimg .test2:hover{
+    text-overflow: inherit;
+    overflow: visible;
 }
 .fakeimg .test{
+    overflow: hidden;
     width: 150px;
+    height: 52px;
     border: 1px solid rebeccapurple;
-    word-wrap: break-word;
+    text-overflow: ellipsis;
+    
 }
 .fakeimg .test3{
     width: 150px;
@@ -138,7 +146,7 @@ nav a:hover {
 }
 .fakeimg #vidu{
     background-image: url(../anh2.jpg), url(../anh1.jpg);
-    background-position: right bottom, right center;
+    background-position: left center, right center;
     background-repeat: no-repeat,repeat;
 }
 .user_interface{
@@ -160,7 +168,7 @@ nav a:hover {
     width: 300px;
     resize: both; 
     margin: 30px;
-    /* vertical theo chiều dọc */
+    /* vertical theo chiều dọc và ngang */
     overflow: auto;
 }
 .fakeimg .Animation1{
@@ -230,3 +238,9 @@ footer {
         width: 100%;
     }
 }
+div.ex1 {
+    margin: 20px;
+    border: 1px solid black;
+    outline: 4px solid red;
+    outline-offset: 15px;
+} 

@@ -1,0 +1,224 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+ul{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#838383;
+}
+body{
+    font-family: Arial;
+    font-size: 12px;
+    main{
+        width:1000px;
+        margin:20px auto;
+        header{
+            height: 85px;
+            .header-left{
+                width: 300px;
+                float: left;
+                img{
+                    margin-left:20px;
+                }
+                p{
+                    font-size: 10px;
+                    margin-left:15px;
+                }
+            }
+            .header-right{
+                width:700px;
+                float: left;
+                .header-right-top{
+                    height: 30px;
+                    ul{
+                        text-align: right;
+                        li{
+                            display: inline;
+                            padding:10px;
+                            img{
+                                margin-right:10px;
+                            }
+                        }
+                    }
+                }
+                nav{
+                    height: 40px;
+                    width: 800px;
+                    ul.menu{
+                        margin-left:-15px;
+                        li{
+                            float:left;
+                            padding:10px;
+                            line-height: 40px;
+                            border:1px solid white;
+                            width:70px;
+                            a{
+                                color:#939393;
+                                display: block;
+                                text-align: center;
+                                font-weight: bold;
+                                &:hover{
+                                    color:white;
+                                    background-color: #00a2ed;
+                                    border-radius:10px;
+                                }
+                            }
+                        }
+                    }
+                    ul.icon{
+                        li{
+                            float: left;
+                            padding:10px;
+                            line-height: 40px;
+                            margin-top:5px;
+                        }
+                    }
+                }
+            }
+        }
+        .slide{
+            position: relative;
+            .text-title{
+                position: absolute;
+                right:20px;
+                bottom:70px;
+                color:white;
+                font-size:20px;
+            }
+            .text-content{
+                position: absolute;
+                right:20px;
+                bottom:20px;
+                color:white;
+                width: 350px;
+            }
+        }
+        content{
+            height: 1000px;
+            width: 1000px;
+            section.title{
+                margin-top:20px;
+                text-align:center;
+                font-weight: bold;
+                p{
+                    color: #838383;
+                    font-size: 30px;
+                }
+                span{
+                    color: #838383;
+                }
+            }
+            article.box-main{
+                margin-top:20px;
+                margin-bottom:40px;
+                    ul{
+                        margin-left:20px;
+                        li{
+                            float: left;
+                            width:290px;
+                            text-align: center;
+                            color:#838383;
+                            margin-right:30px;
+                            .box-title{
+                                font-size: 15px;
+                                font-weight: bold;
+                                margin-top:20px;
+                            }
+                            .box-desc{
+                                margin-top:20px;
+                                height: 50px;
+                            }
+                            .box-link{
+                                margin-top:20px;
+                                width: 100px;
+                                height:30px;
+                                line-height: 30px;
+                                background-color: #00a2ed;
+                                color:white;
+                                border-radius:10px;
+                                margin-left:110px;
+                            }
+                        }
+                    }
+            }
+            .line{
+                margin-top:20px;
+                border:1px solid #ededed;
+                width:300px;
+                margin:auto;
+                margin-bottom:10px;
+            }
+            article.people{
+                margin-top:30px;
+                ul{
+                    li{
+                        display:inline;
+                        padding:30px;
+                        margin-left:30px;
+                    }
+                }
+            }
+            article.product{
+                margin-top:20px;
+                ul{
+                    li{
+                        float:left;
+                        width: 300px;
+                        margin-left:30px;
+                        .product-title{
+                            margin:5px;
+                            font-weight: bold;
+                        }
+                        .product-desc{
+                            color:#838383;
+                            padding:5px;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            margin-top:40px;
+            height: 400px;
+            width: 1000px;
+            background-color: #323232;
+            color:white;
+            .footer-about{
+                float:left;
+                width:250px;
+                margin-left:30px;
+                margin-top:40px;
+                .footer-about-title{
+                    font-size:25px;
+                }
+                .footer-about-desc{
+                    font-weight: bold;
+                }
+            }
+            .footer-contact{
+                float:left;
+                widows: 300px;
+                margin-left:30px;
+                margin-top:40px;
+                .footer-contact-title{
+                    font-size:25px;
+                }
+            }
+            .footer-info{
+                float:left;
+                widows: 300px;
+                margin-left:30px;
+                margin-top:40px;
+                .footer-info-title{
+                    font-size:25px;
+                }
+            }
+        }
+    }
+}
+

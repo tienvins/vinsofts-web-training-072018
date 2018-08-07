@@ -1,0 +1,22 @@
+//sass placeholder
+%border{
+    border-radius:10px 0px;
+    -moz-border-radius: 10px 0px;
+    -webkit-border-radius: 10px 0px;
+    -o-border-radius: 10px 0px;
+}
+.background{
+    background: -moz-linear-gradient(180deg,white,green);
+    background: -webkit-gradient(180deg,white,green);
+    background: -o-linear-gradient(180deg,white,green);
+    background: -ms-linear-gradient(180deg,white,green);
+    background: linear-gradient(180deg,white,green);
+}
+.main{
+    background-color: red;
+    height: 100px;
+    @extend .background;
+}
+.main2{
+    @extend %border;
+}

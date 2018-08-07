@@ -1,0 +1,81 @@
+body {
+	margin: auto;
+}
+
+header {
+	text-align: center;
+	background-image: url("../images/banner.jpg");
+	color: white;
+}
+
+header h1 {
+	text-shadow: 5px 5px green;
+}
+
+nav {
+	clear: both;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+#menu{
+	float: left;
+	width: 80%;
+}
+#menu ul {
+  list-style-type: none;
+  text-align: center;
+}
+#menu ul li a i{
+	margin-left: 5px;
+}
+#menu li {
+  color: red;
+  display: inline-block;
+  width: 100px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #232323;
+  display: block;
+}
+#menu a:hover {
+  background: red;
+  color: white;
+}
+#menu li {
+ position: relative;
+ font-weight: bold;
+}
+
+/*aside*/
+
+aside {
+	box-shadow: 10px 10px grey;
+	background-color: yellow;
+}
+
+section {
+	background-color: silver;
+	box-shadow: 10px 10px grey;
+}
+
+.video {
+	text-align: center;
+}
+
+.audio {
+	text-align: center;
+}
+
+.image img{
+	size: 10px;
+}
+footer {
+	text-align: center;
+	background-color: red;
+}

@@ -1,0 +1,17 @@
+//sass mixin(ham)
+@mixin border-rd($bien1,$bien2) {
+    border-radius: $bien1 $bien2;
+    -moz-border-radius: $bien1 $bien2;
+    -webkit-border-radius: $bien1 $bien2;
+    -o-border-radius: $bien1 $bien2;
+}
+.main{
+    width:500px;
+    height: 200px;
+    @include border-rd(10px, 20px);
+}
+.main2{
+    width: 700px;
+    height: 100px;;
+    @include border-rd(0px, 10px);
+}

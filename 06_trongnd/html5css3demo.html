@@ -50,6 +50,7 @@
             </video>
       </div>
       <br>
+      <hr>
       <h1>Audio</h1>
       <h5>Thuộc tính audio</h5>
       <div class="fakeimg" style="height:200px;">
@@ -57,9 +58,10 @@
                 muted âm thanh sẽ bị tắt tiếng
                 preload âm thanh sẽ tải lại khi tải lại trang
         -->
-           <audio controls autoplay> 
+           <audio controls preload="metadata"> 
                <source src="batuan.mp3" type="audio/mpeg">
            </audio>
+           <hr>
            <h1>Thẻ details</h1>
            <details>
                <summary>Danh sách clb bóng đá:</summary>
@@ -72,7 +74,7 @@
            </details>
       </div>
       <div class="fakeimg" style="height:200px;">
-          <h1>Thẻ bdi</h1>
+        <h1>Thẻ bdi</h1>
             <ul>
                 <!-- thẻ định dạng cho đoạn văn bản mà kiểu của nó 
                     k thuộc định dạng của toàn trang hoặc đoạn đó 
@@ -80,10 +82,8 @@
                     <li>User <bdi>hrefs</bdi>: 60 points</li>
                     <li>User <bdi>jdoe</bdi>: 80 points</li>
                     <li>User <bdi>إيان</bdi>: 90 points</li>
-            </ul>
-            
-        
-        </div>
+            </ul>           
+        </div>     
         <h1>Thẻ datalist</h1>
         <form action="" method="">
             <input list="browsers" name="browser">
@@ -94,9 +94,8 @@
               <option value="Opera">
               <option value="Safari">
             </datalist>
-            
           </form>
-        <h1>Thẻ canvas</h1>
+          <hr><h1>Thẻ canvas</h1>
         <canvas id="myCanvas"></canvas>
         <!--  thẻ cavans thẻ đồ họa đồ họa sẽ đc vẽ bởi javascrip -->
         <script>
@@ -105,11 +104,10 @@
             ctx.fillStyle = "#FF0000";
             ctx.fillRect(0, 0, 80, 80);
         </script>
-        <h1>Thẻ time</h1>
+        <hr><h1>Thẻ time</h1>
         <p>Chúng tối sẽ tới vào <time>10:00</time> tối nay</p>
-
         <p>Tôi có một ngày <time datetime="2018-02-14 20:00">Valentines </time>.</p>
-        <h1>Thẻ SECTION</h1>
+        <hr><h1>Thẻ SECTION</h1>
         <section>
             <!-- có thể hiểu là thẻ dùng để nêu ra định nghĩa -->
             <h2>WTO?</h2>
@@ -120,9 +118,11 @@
                 tiếng Tây Ban Nha: Organización Mundial del Comercio;
                  tiếng Đức: Welthandelsorganisation) là một tổ chức quốc tế đặt trụ sở ở Genève, Thụy Sĩ</p>
         </section>
+        <hr>
         <h1>Thẻ mark</h1>
         <!-- hiểu đơn giả là thẻ đánh dấu đoạn quan trọng -->
         <h3>Messi là <mark>cầu thủ bóng đá</mark> không phải là nhạc sĩ</h3>
+        <hr>
         <h1>Thẻ Metter và progress</h1>
         Quá trình thực hiện của dự án(meter)<br>
         <!-- có thể set value theo 2 cách theo % hoặc 
@@ -131,8 +131,10 @@
         <br>
         <meter value="0.6"></meter><br>
         Quá trình thực hiện dự án (progress)<br>
+        <hr>
         <progress value="22" max="100">
         </progress>
+        <hr>
         <h1>Thẻ Ruby: </h1>
         <a>Dùng để chú thích phát âm </a>
         <h2>
@@ -140,15 +142,19 @@
                 Hello <rt> həˈlō </rt>
             </ruby>
         </h2>
+        <hr>
         <h1 >Thẻ figure </h1>
         <p>Đỗ Thì Nguyễn Hoàng ABC là một cô gái, Đỗ Thì Nguyễn Hoàng ABC là một cô gái, Đỗ Thì Nguyễn Hoàng ABC là một cô gái, Đỗ Thì Nguyễn Hoàng ABC là một cô gái</p>
         <figure>
             <img src="download.jpeg" alt="Đỗ Thì Nguyễn Hoàng ABC">
         </figure>
-
-
-      
-      
+        <hr>
+        <h1>Output</h1>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+            <input type="range" id="a" value="50">100
+            +<input type="number" id="b" value="50">
+            =<output name="x" for="a b"></output>
+        </form>
   </div>
   <!-- main -->
 </div>

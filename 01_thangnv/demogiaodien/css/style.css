@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -26,6 +26,22 @@ li{
     width: 35%;
     padding: 8px 0px 0px 8%;
     
+}
+
+.mini-menu{
+    width: 65%;
+    height: 100%;
+    display: none;
+}
+.mini-menu select{
+   
+    font-weight: bold;
+    color: #939393;
+    height: 30px;
+    line-height: 85px;
+    border: 0; 
+    background: #ffffff ;
+    margin-top: 25px;   
 }
 
 .menu-contact{
@@ -264,6 +280,15 @@ footer{
     }
     .our-info{
         width: 100%;
+    }
+    .mini-menu{
+        display:flex;
+        justify-content: flex-end;      
+    }
+
+    
+    .menu-contact{
+        display: none;
     }
 }
 @media screen and (max-width: 720px) {

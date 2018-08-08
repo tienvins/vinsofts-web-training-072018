@@ -16,6 +16,12 @@
 		right: 30px;
 	}
 }
+.contact {
+	z-index: 10001;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
 header {
 	nav {
 		background: #ffffff;
@@ -70,21 +76,12 @@ footer {
 @media all and (max-width: 991px) {
 	header {
 		nav {
-			.fb {
+			.desktop {
 				display: none;
 			}
-			.tw {
-				display: none;
+			.mobile {
+				display: block !important;
 			}
-			.ig {
-				display: none;
-			}
-			.gg {
-				display: none;
-			}
-		}
-		.mobile {
-			display: block !important;
 		}
 	}
 }
@@ -98,6 +95,9 @@ footer {
 				display: none;
 			}
 		}
+	}
+	.contact {
+		display: none;
 	}
 }
 @media all and (max-width: 320px) {

@@ -5,7 +5,7 @@
   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,9 +15,21 @@
   <body>
   	<div class="container">
 	<header>
+		<div class="contact">
+	        <span class="lienhe"><i style="color: #00A9F0" class="fab fa-skype"></i> Skype: Vinsofts.com</span>
+	        <span class="lienhe"><i style="color: #ea2112" class="far fa-envelope"></i> Mail: Contact@vinsofts.com</span>
+	        <span class="lienhe"><i style="color: #46e743" class="fas fa-phone"></i> Hotline: 0988 988 988</span>
+      	</div>
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light">
-			  <img class="navbar-brand" src="images/logo.png"></img>
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+			  <div class="navbar-brand">
+			  	<div>
+			  		<img src="images/logo.png"></img>
+			  	</div>
+			  	<div>
+			  		<p>Your success, our pride!</p>
+			  	</div>
+			  </div>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
@@ -41,11 +53,24 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">Recruitment</a>
 			      </li>
-			    </ul>
-			        <div class="link-nav"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
-			        <div class="link-nav"><a href="#"><i class="fab fa-twitter"></i></a></div>
-			        <div class="link-nav"><a href="#"><i class="fab fa-instagram"></i></a></div>
-			        <div class="link-nav"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+			      <li class="nav-item desktop">
+			        <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+			      </li>
+			      <li class="nav-item desktop">
+			        <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+			      </li>
+			      <li class="nav-item desktop">
+			        <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+			      </li>
+			      <li class="nav-item desktop">
+			        <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
+			      </li>
+			      <li class="nav-item mobile">
+		              <a class="fb-mb" href="#"><i class="fab fa-facebook-f"></i></a>
+		              <a class="tw-mb" href="#"><i class="fab fa-twitter"></i></a>
+		              <a class="ig-mb" href="#"><i class="fab fa-instagram"></i></a>
+		              <a class="gg-mb" href="#"><i class="fab fa-google-plus-g"></i></a>
+		            </li>
 			    </ul>
 			  </div>
 			</nav>
@@ -54,6 +79,11 @@
 </div>
 	<div class="container-fluid">
 		<img class = "mySlides" width="100%" src="images/banner1.png">
+		<div class="bottom-right">
+			<h4>WEB DESIGN COMPANY REPUPATION</h4><br>
+			<p>we've been brougth the most valued products<br> and
+			servecies to our global clients during last 10 year</p>
+		</div>
 	</div>
 	<section class="container">
 		<div class="row text-center">
@@ -66,15 +96,20 @@
 				<a href="#">
 					<img src="images/m.png">
 					<h5>Mobile App Development</h5>
-					<p>We are experts in mobile development skilled developers that have been in this field for at least 5 years so far.</p>
+					<p>We are experts in mobile development<br>
+					industry for years. We have a team with 10
+					skilled developers that have been in this<br>
+					field for at least 5 years so far.</p>
 				</a>
+				<button type="button" class="btn btn-primary">Explore more >></button>
 			</div>
 			<div class="col-sm-4">
 				<a href="#">
 					<img src="images/comp.png">
 					<h5>Website Development</h5>
-					<p>We provide website development services. We are experts in below fields: WordPress development Magento development</p>
+					<p>We provide website development services. <br>We are experts in below fields: <br>WordPress development <br>Magento development</p>
 				</a>
+				<button type="button" class="btn btn-primary">Explore more >></button>
 			</div>
 			<div class="col-sm-4">
 				<a href="#">
@@ -82,6 +117,7 @@
 					<h5>Custom IT & Software Services</h5>
 					<p>We provide other IT and software services too.We have a team of experts in many fields of software development,coding as well as IT related technologies.</p>
 				</a>
+				<button type="button" class="btn btn-primary">Explore more >></button>
 			</div>
 		</div>
 		<div class="row text-center">
@@ -90,11 +126,11 @@
 			</div>
 		</div>
 		<div class="row text-center">
-			<div class="col-sm"><img src="images/pic1.png"></div>
-			<div class="col-sm"><img src="images/pic2.png"></div>
-			<div class="col-sm"><img src="images/pic3.png"></div>
-			<div class="col-sm"><img src="images/pic4.png"></div>
-			<div class="col-sm"><img src="images/pic5.png"></div>
+			<div class="col-sm"><a href="#"><img src="images/pic1.png"></a></div>
+			<div class="col-sm"><a href="#"><img src="images/pic2.png"></a></div>
+			<div class="col-sm"><a href="#"><img src="images/pic3.png"></a></div>
+			<div class="col-sm"><a href="#"><img src="images/pic4.png"></a></div>
+			<div class="col-sm"><a href="#"><img src="images/pic5.png"></a></div>
 		</div>
 		<div class="row text-center">
 			<div class="col-sm-12">
@@ -132,14 +168,14 @@
 					<hr>
 					<form>
 					  <div class="row">
-					  	<div class="col-sm-12">Name<span>*</span></div>
+					  	<div class="col-sm-12"><label>Name<span>*</span></label></div>
 					    <div class="col-sm-5">
 					      <input type="text" class="form-control" placeholder="First name">
 					    </div>
 					    <div class="col-sm-7">
 					      <input type="text" class="form-control" placeholder="Last name">
 					    </div>
-					    <div class="col-sm-12">Email<span>*</span></div>
+					    <div class="col-sm-12"><label>Email<span>*</span></label></div>
 					    <div class="col-sm-12">
 					    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 					    </div>

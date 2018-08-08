@@ -1,12 +1,31 @@
 * {
   font-family: 'Roboto', sans-serif; }
 
+header .contact {
+  z-index: 10001;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-right: 50px;
+  padding-top: 20px; }
+  header .contact .lienhe {
+    font-size: 14px;
+    color: #aaaaaa;
+    font-weight: bold; }
+header nav {
+  background-color: white; }
+  header nav .mobile {
+    display: none; }
+header #navbarNav {
+  margin-bottom: -50px; }
 header .nav-item {
-  height: 28px;
   font-size: 12px;
   font-weight: bold;
   padding-right: 10px;
   padding-left: 10px; }
+  header .nav-item a:hover {
+    background-color: #00a2ed;
+    border-radius: 15px; }
 header .active {
   background-color: #00a2ed;
   border-radius: 15px; }
@@ -15,27 +34,70 @@ header .link-nav {
   margin: 5px; }
   header .link-nav a {
     color: #aaaaaa; }
+    header .link-nav a:hover {
+      color: red; }
+header p {
+  font-size: 13px;
+  text-align: center; }
 
-h1 {
-  padding-top: 30px;
-  color: #838383;
-  padding-bottom: 50px;
-  font-weight: bold; }
+.container-fluid {
+  position: relative;
+  text-align: center;
+  color: white; }
+  .container-fluid .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px; }
+    .container-fluid .bottom-right h4 {
+      padding-right: 50px; }
 
 section h5 {
   color: #706972; }
 section p {
   color: #706972; }
+section a:hover {
+  text-decoration: none; }
+section h1 {
+  padding-top: 30px;
+  color: #838383;
+  padding-bottom: 50px;
+  font-weight: bold; }
 
 footer {
   background-color: #323232;
   color: white; }
   footer h4 {
-    margin-top: 100px; }
+    padding-top: 40px; }
+  footer span {
+    color: red;
+    padding-left: 5px; }
+  footer label {
+    padding-top: 10px; }
   footer .button {
-    background-color: red; }
+    margin-top: 10px;
+    border-radius: 10px; }
+  footer .container {
+    padding-bottom: 50px; }
+  footer textarea {
+    resize: none; }
+  footer img {
+    width: 100%; }
 
 .mySlides {
+  padding-top: 145px;
   width: 100%; }
+
+@media all and (max-width: 991px) {
+  header nav .desktop {
+    display: none; }
+  header #navbarNav {
+    margin-bottom: 0px; }
+  header .mobile {
+    display: block !important; }
+    header .mobile a {
+      color: #aaaaaa;
+      letter-spacing: 10px; }
+  header .contact {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

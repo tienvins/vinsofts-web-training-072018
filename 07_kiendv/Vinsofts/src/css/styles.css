@@ -15,6 +15,12 @@
     bottom: 30px;
     right: 30px; }
 
+.contact {
+  z-index: 10001;
+  position: fixed;
+  top: 10px;
+  right: 10px; }
+
 header nav {
   background: #ffffff; }
   header nav ul .active {
@@ -54,20 +60,17 @@ footer {
     height: 225px; }
 
 @media all and (max-width: 991px) {
-  header nav .fb {
+  header nav .desktop {
     display: none; }
-  header nav .tw {
-    display: none; }
-  header nav .ig {
-    display: none; }
-  header nav .gg {
-    display: none; }
-  header .mobile {
+  header nav .mobile {
     display: block !important; } }
 @media all and (max-width: 425px) {
   section .clients .client4 {
     display: none; }
   section .clients .client5 {
+    display: none; }
+
+  .contact {
     display: none; } }
 @media all and (max-width: 320px) {
   section .clients .col {

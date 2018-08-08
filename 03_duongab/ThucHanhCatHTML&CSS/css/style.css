@@ -1,6 +1,7 @@
 * {
   font-family: 'Roboto', sans-serif; }
 
+/*Header css*/
 header .contact {
   z-index: 10001;
   position: fixed;
@@ -51,6 +52,7 @@ header p {
     .container-fluid .bottom-right h4 {
       padding-right: 50px; }
 
+/*Section css*/
 section h5 {
   color: #706972; }
 section p {
@@ -63,6 +65,7 @@ section h1 {
   padding-bottom: 50px;
   font-weight: bold; }
 
+/*Footer css*/
 footer {
   background-color: #323232;
   color: white; }

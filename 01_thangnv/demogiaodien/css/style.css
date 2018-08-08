@@ -43,6 +43,9 @@ li{
     background: #ffffff ;
     margin-top: 25px;   
 }
+.mini-menu select option{
+    height: 30px;
+}
 
 .menu-contact{
     height: 100%;
@@ -143,6 +146,7 @@ li{
 
 .content-out-services{
     display: flex;
+    justify-content: center;
     margin-top: 62px;
 }
 
@@ -180,6 +184,7 @@ li{
 
 .content-out-clients{
     display: flex;
+    justify-content: center;
     margin-top: 62px
 }
 
@@ -204,6 +209,7 @@ li{
 
 .content-out-articles{
     display: flex;
+    justify-content: center;
     margin-top: 62px;
 }
 
@@ -231,6 +237,7 @@ footer{
     min-height: 400px;
     width: 100;
     display:flex;
+    justify-content: center;
     padding: 20px;
     color: #ffffff;
 }

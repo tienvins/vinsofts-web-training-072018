@@ -1,6 +1,6 @@
 //sass @for
 @for $i from 1 through 6{
     .item-#{$i}{
-        width: #{$i}em;
+        width: #{$i}px;
     }
 }

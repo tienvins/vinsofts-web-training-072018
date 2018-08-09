@@ -14,7 +14,8 @@ header .contact {
     color: #aaaaaa;
     font-weight: bold; }
 header nav {
-  background-color: white; }
+  background-color: white;
+  padding-left: 200px; }
   header nav .mobile {
     display: none; }
 header #navbarNav {
@@ -85,11 +86,14 @@ footer {
     resize: none; }
   footer img {
     width: 100%; }
+  footer #map {
+    height: 100%; }
 
 .mySlides {
   padding-top: 145px;
   width: 100%; }
 
+/*Reponsive*/
 @media all and (max-width: 991px) {
   header nav .desktop {
     display: none; }

@@ -6,10 +6,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link href="css/ihover.css" rel="stylesheet">
     <title>Vinsofts</title>
   </head>
   <body>
@@ -78,7 +78,8 @@
 	</header>
 	</div>
 	<div class="container-fluid">
-		<img class = "mySlides" width="100%" src="images/banner1.png">
+		  <img class="mySlides" src="images/slide1.jpg" style="width:100%">
+		  <img class="mySlides" src="images/slide2.jpg" style="width:100%">
 		<div class="bottom-right">
 			<h4>WEB DESIGN COMPANY REPUPATION</h4><br>
 			<p>we've been brougth the most valued products<br> and
@@ -125,13 +126,13 @@
 				<h1>OUR CLIENTS</h1>
 			</div>
 		</div>
-		<div class="row text-center">
-			<div class="col-sm"><a href="#"><img src="images/pic1.png"></a></div>
-			<div class="col-sm"><a href="#"><img src="images/pic2.png"></a></div>
-			<div class="col-sm"><a href="#"><img src="images/pic3.png"></a></div>
-			<div class="col-sm"><a href="#"><img src="images/pic4.png"></a></div>
-			<div class="col-sm"><a href="#"><img src="images/pic5.png"></a></div>
-		</div>
+			<div class="row text-center">
+				<div class="col-sm"><a href="#"><img src="images/pic1.png"></a></div>
+				<div class="col-sm"><a href="#"><img src="images/pic2.png"></a></div>
+				<div class="col-sm"><a href="#"><img src="images/pic3.png"></a></div>
+				<div class="col-sm"><a href="#"><img src="images/pic4.png"></a></div>
+				<div class="col-sm"><a href="#"><img src="images/pic5.png"></a></div>
+			</div>
 		<div class="row text-center">
 			<div class="col-sm-12">
 				<h1>OUR ARTICLES</h1>
@@ -139,17 +140,32 @@
 		</div>
 		<div class="row text-center">
 			<div class="col-sm-4">
-				<img src="images/picture1.png">
+				<div class="ih-item square effect3 bottom_to_top"><a href="#">
+		        <div class="img"><img src="images/picture1.png" alt="img"></div>
+		        <div class="info">
+		          <h3>Heading here</h3>
+		          <p>Description goes here</p>
+		        </div></a></div>
 				<h5>Vestibulum Ipsums Eros</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</p>
 			</div>
 			<div class="col-sm-4">
-				<img src="images/picture2.png">
+				<div class="ih-item square effect3 bottom_to_top"><a href="#">
+		        <div class="img"><img src="images/picture2.png" alt="img"></div>
+		        <div class="info">
+		          <h3>Heading here</h3>
+		          <p>Description goes here</p>
+		        </div></a></div>
 				<h5>Vestibulum Ipsums Eros</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</p>
 			</div>
 			<div class="col-sm-4">
-				<img src="images/picture3.png">
+				<div class="ih-item square effect3 bottom_to_top"><a href="#">
+		        <div class="img"><img src="images/picture3.png" alt="img"></div>
+		        <div class="info">
+		          <h3>Heading here</h3>
+		          <p>Description goes here</p>
+		        </div></a></div>
 				<h5>Vestibulum Ipsums Eros</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</p>
 			</div>
@@ -200,6 +216,22 @@
 	</footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";  
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}    
+		    x[myIndex-1].style.display = "block";  
+		    setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+	</script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

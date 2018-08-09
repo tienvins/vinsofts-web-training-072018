@@ -19,6 +19,7 @@ header {
 	}
 	nav {
 		background-color:white;
+		padding-left:200px;
 		.mobile {
 			display: none;
 		}
@@ -116,13 +117,16 @@ footer {
 	img {
 		width:100%;
 	}
+	#map {
+        height: 100%;
+    }
 }
 
 .mySlides {
 	padding-top: 145px;
 	width : 100%;
 }
-
+/*Reponsive*/
 @media all and (max-width: 991px) {
   header {
     nav {

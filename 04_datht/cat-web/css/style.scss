@@ -38,13 +38,16 @@ header{
                 li{
                     
                     a{
+                        font-weight: bold;
                         color: #838383;
                         margin: 0px;
-                        padding:  5px 10px;
+                        padding:  5px 8px;
                         border-radius: 22px;
                         &:hover{
+                            
                             color:white;
                             background: #00a2ed;
+                        
                         }
                     }
                     
@@ -79,9 +82,11 @@ section{
     .articles{
         
         padding:0px 20px 30px 20px;
+        
         .articles-about{
             text-align: justify;
         }
+        
     }
     
 }
@@ -97,6 +102,7 @@ footer{
            
     }
     .form-guest{
+        padding: 0px;
         #add__form{
             color: #323232;
             background: wheat;
@@ -110,6 +116,7 @@ footer{
     margin-top: 10px;
 }
 @media only screen and (max-width :768px){
+    
     header{
         .header__logo{
             padding-left: 45%;
@@ -151,6 +158,8 @@ footer{
         }
     }
     footer{
+        
+        
         .about{
                
         }
@@ -169,5 +178,13 @@ footer{
         .map{
             display: none;
         }
+    }
+}
+@media (min-width :769px) and (max-width :992px){
+    footer{
+        .map{
+            display: none;
+        }
+        
     }
 }

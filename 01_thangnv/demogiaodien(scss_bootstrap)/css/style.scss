@@ -137,34 +137,32 @@ a {
 
     .content-our-services{
         display: flex;
-        div{
-            margin: 0 10px;
+        .item-content-our-services{
+            width: 35%;
+            margin: 5px 10px;
+            img{
+                height: 96px;
+            }
+    
+            h5{
+                margin-top:12px; 
+                font-size: 14.86px;
+                font-weight: bold;
+                height: 20px;
+                line-height: 20px;
+                overflow: hidden;
+            }
+    
+            p{
+                font-size: 11.86px;
+                height: 60px;
+                line-height: 20px;
+                overflow: hidden;
+            }
         }
     }    
 
-    .item-content-our-services{
-        width: 35%;
-
-        img{
-            height: 96px;
-        }
-
-        h5{
-            margin-top:12px; 
-            font-size: 14.86px;
-            font-weight: bold;
-            height: 20px;
-            line-height: 20px;
-            overflow: hidden;
-        }
-
-        p{
-            font-size: 11.86px;
-            height: 60px;
-            line-height: 20px;
-            overflow: hidden;
-        }
-    }
+    
 
 }
 
@@ -270,26 +268,16 @@ footer{
     }
 }
 
-.firstlastname{
-    display: flex;
-    #firstname{
-        width: 45%;
-        
-    }
-    #lastname{
-        margin-left:0.3em; 
-        width: 60%;
-    }
-}
-
 // Edit Bootstrap
 .carousel-item img {
     width: 100%;
 }
 .btn{
-    height: 30px;
+    height: 20px;
     margin: 0;
     padding: 0 0.2em;
+    font-size: 11.86px;
+    font-weight: bold;
 }
 .form-group{
     label{
@@ -297,9 +285,20 @@ footer{
         color: #66614d;
         font-weight: bold;
     }
+    .firstlastname{
+        display: flex;
+        #firstname{
+            width: 45%;     
+        }
+        #lastname{
+            margin-left:0.3em; 
+            width: 60%;
+        }
+    }
 }
 .form-control{
     height: 30px;
+    font-size: 12.86px ; 
 }
 
 
@@ -432,7 +431,7 @@ footer{
     }
 }
 
-@media screen and (max-width:540px){
+@media screen and (max-width:560px){
     body {
         max-width: 540px;
         margin: 0 auto; 

@@ -1,0 +1,19 @@
+@import url(style.css);
+.main {
+  color: red;
+  width: 100%; }
+  .main .main-content {
+    background-color: black;
+    color: white; }
+    .main .main-content a {
+      font-weight: bold; }
+      .main .main-content a:hover {
+        color: green;
+        color: black; }
+  .main .main-info {
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    color: blue; }
+
+/*# sourceMappingURL=style1.css.map */

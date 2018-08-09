@@ -5,14 +5,10 @@
   -o-border-radius: 10px 0px; }
 
 .background, .main {
-  background: -moz-linear-gradient(180deg, white, green);
-  background: -webkit-gradient(180deg, white, green);
-  background: -o-linear-gradient(180deg, white, green);
-  background: -ms-linear-gradient(180deg, white, green);
-  background: linear-gradient(180deg, white, green); }
+  background: green;
+}
 
 .main {
-  background-color: red;
   height: 100px; }
 
 /*# sourceMappingURL=style3.css.map */

@@ -4,7 +4,7 @@ ul { margin: 0px; padding: 0px; list-style: none; }
 
 a { text-decoration: none; color: #838383; }
 
-body { font-family: Arial; font-size: 12px; }
+body { font-family: 'Roboto', sans-serif; font-size: 12px; }
 body main { width: 1000px; margin: 20px auto; }
 body main header { height: 85px; }
 body main header .header-left { width: 30%; float: left; }

@@ -4,44 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOOTSTRAP 4</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Khóc</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-    .selector-for-some-widget {
-     box-sizing: content-box;
-    }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="row_left col-md-4">
-                    <img src="images/logo.jpg" alt="vinsofts" style="max-width: 100%;height: auto;">
-                    <p style="font-size:10px;">Your success, our pride!</p>
-                </div>
-                <div class="row_right col-md-8">
-                    <div class="right_contact">
-                        <ul>
-                            <li><a href="#"><img src="images/skype.jpg" alt="vinsofts.com">:vinsofts.com</a></li>
-                            <li><a href="#"><img src="images/skype.jpg" alt="vinsofts.com">:vinsofts.com</a></li>
-                            <li><a href="#"><img src="images/skype.jpg" alt="vinsofts.com">:vinsofts.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_menu">
-                        <nav>
-                            
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- scrip  -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/Above/styleabove.css">
+    <link rel="stylesheet" href="CSS/Below/stylebelow.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- NAVI -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="" src="images/logo.jpg" alt="Vinsofts"><p style="font-size: 10px;">Your success, our pride!</p></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    <!-- SLIDE -->
+    <div id="my-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/slide1.jpg">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>WEB DESIGN COMPANY REPUPATION</h1>
+                    <p>we've been brougth the most valued products and servecies to our global clients during last 10 year</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/silde2.jpg">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>WEB DESIGN COMPANY REPUPATION</h2>
+                    <p>we've been brougth the most valued products and servecies to our global clients during last 10 year</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="container-fluid padding ">
+    <div class="row wellcome text-center">
+        <div class="col-12">
+            <h1 >OUR SERVICES</h1>
+        </div>
+        <div class="col-12">
+            <p >We Get The Job Done, No Matter The Project</p>
+        </div>
+        
+    </div>
+    </div>
+    <div class="container-fluid ">
+            <div class="row text-center ">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                        <img class="card-img-top" src="images/m.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">Mobile App Development</h4>
+                            <a class="card-text">We are experts in mobile development industry for years. We have a team with 10 skilled developers that have been in this field for at least 5 years so far.</a>
+                        </div>
+                        <a href="#"><button class="btn btn-primary" type="button">Explore more >></button></a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                        <img class="card-img-top" src="images/m.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">Mobile App Development</h4>
+                            <a class="card-text">We are experts in mobile development industry for years. We have a team with 10 skilled developers that have been in this field for at least 5 years so far.</a>
+                        </div>
+                        <a href=""><button class="btn btn-primary" type="button">Explore more >></button></a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3">
+                        <img class="card-img-top" src="images/m.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">Mobile App Development</h4>
+                            <a class="card-text">We are experts in mobile development industry for years. We have a team with 10 skilled developers that have been in this field for at least 5 years so far.</a>
+                        </div>
+                        <a href=""><button class="btn btn-primary" type="button">Explore more >></button></a>
+                </div>
+            </div>
+            </div>
+            <hr style="width: 40%">
+
+    <!-- CLIENT -->
+    <div class="container-fluid  ">
+            <div class="row wellcome text-center">
+                <div class="col-12">
+                    <h1 >OUR CLIENTS</h1>
+                </div>
+                <div class="col-12">
+                    <p >The Circle Of Live And Deft Continute..</p>
+                </div>
+            </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <a href="#"><img class="card-img-top" src="images/people.jpg"></a>
+            </div>
+            <div class="col-md">
+                <a href="#"><img class="card-img-top" src="images/people.jpg"></a>
+            </div>
+            <div class="col-md">
+                <a href="#"><img class="card-img-top" src="images/people.jpg"></a>
+            </div>
+            <div class="col-md">
+                <a href="#"><img class="card-img-top" src="images/people.jpg"></a>
+            </div>
+            <div class="col-md">
+                <a href="#"><img class="card-img-top" src="images/people.jpg"></a>
+            </div>    
+        </div>  
+    </div>
+    <!-- ATRCLE -->
+    <div class="container-fluid padding ">
+            <div class="row wellcome text-center">
+                <div class="col-12">
+                    <h1 >OUR ARTICLE</h1>
+                </div>
+                <div class="col-12">
+                    <p>We Like To Keep Everyone Updated</p>
+                </div>
+                
+            </div>
+            </div>
+            <div class="container-fluid ">
+                    <div class="row text-center ">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                                <img class="card-img-top" src="images/article1.jpg">
+                                <div class="card-body">
+                                    <h4 class="card-title">Vestibulum Ipsums Eros</h4>
+                                    <a class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</a>
+                                </div>
+                                <a href="#"><button class="btn btn-primary" type="button">Explore more >></button></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                                <img class="card-img-top" src="images/article2.jpg">
+                                <div class="card-body">
+                                    <h4 class="card-title">Vestibulum Ipsums Eros</h4>
+                                    <a class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</a>
+                                </div>
+                                <a href=""><button class="btn btn-primary" type="button">Explore more >></button></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3">
+                                <img class="card-img-top" src="images/article3.jpg">
+                                <div class="card-body">
+                                    <h4 class="card-title">Vestibulum Ipsums Eros</h4>
+                                    <a class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</a>
+                                </div>
+                                <a href=""><button class="btn btn-primary" type="button">Explore more >></button></a>
+                        </div>
+                    </div>
+                    </div>
+                    <hr style="width: 40%">
+        
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-fluid bg-dark text-white">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>ABOUT VINSOFTS</h3>
+                    <hr>
+                    <p>Vinsofts Co., Ltd is software innovation and outsourcing company based in Hanoi, Vietnam. We provide top quality outsourcing services to global clients from USA to Australia, from Japan to EU countries.</p>
+                </div>
+                <div class="col-md-4">
+                        <h3>ABOUT VINSOFTS</h3>
+                        <hr>
+                        <p>Vinsofts Co., Ltd is software innovation and outsourcing company based in Hanoi, Vietnam. We provide top quality outsourcing services to global clients from USA to Australia, from Japan to EU countries.</p>
+                    </div>
+                    <div class="col-md-4">
+                            <h3>ABOUT VINSOFTS</h3>
+                            <hr>
+                            <p>Vinsofts Co., Ltd is software innovation and outsourcing company based in Hanoi, Vietnam. We provide top quality outsourcing services to global clients from USA to Australia, from Japan to EU countries.</p>
+                        </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>

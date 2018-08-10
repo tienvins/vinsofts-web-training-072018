@@ -149,7 +149,7 @@ body {
       color: white; }
       body main footer .footer-about {
         float: left;
-        width: 250px;
+        width: 25%;
         margin-left: 30px;
         margin-top: 40px; }
         body main footer .footer-about .footer-about-title {
@@ -158,14 +158,14 @@ body {
           font-weight: bold; }
       body main footer .footer-contact {
         float: left;
-        width: 300px;
+        width: 30%;
         margin-left: 30px;
         margin-top: 40px; }
         body main footer .footer-contact .footer-contact-title {
           font-size: 25px; }
       body main footer .footer-info {
         float: left;
-        width: 300px;
+        width: 30%;
         margin-left: 30px;
         margin-top: 40px; }
         body main footer .footer-info .footer-info-title {

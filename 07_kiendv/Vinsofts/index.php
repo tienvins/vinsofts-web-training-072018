@@ -8,75 +8,14 @@
 	    <!-- Bootstrap CSS -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="src/css/below.css">
 	    <title>Vinsofts</title>
 	    <?php
 	        echo "<style>". file_get_contents("src/css/above.css")."</style>"; 
 	    ?>
 	</head>
 	<body>
-		<div class="contact fixed-top">
-			<div class="container">
-				<span><i style="color: #00A9F0" class="fab fa-skype"></i> kiendo5695@gmail.com</span>
-				<span><i style="color: #ea2112" class="far fa-envelope"></i> kiendo5695@gmail.com</span>
-				<span><i style="color: #46e743" class="fas fa-phone"></i> 0123456789</span>
-			</div>
-		</div>
-		<header>
-			<nav class="navbar fixed-top navbar-expand-lg navbar-light" data-toggle="sticky-onscroll">
-				<div class="container">
-					<div class="navbar-brand">
-						<div><img src="src/images/logo.png" alt=""></div>
-						<div>
-							<p>Your success, Our pride!</p>
-						</div>
-					</div>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Protfolio</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Services</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Gallery</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Recruiment</a>
-							</li>
-							<li class="nav-item desktop">
-								<a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-							</li>
-							<li class="nav-item desktop">
-								<a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-							</li>
-							<li class="nav-item desktop">
-								<a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-							</li>
-							<li class="nav-item desktop">
-								<a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-							</li>
-							<li class="nav-item mobile">
-								<a class="fb-mb" href="#"><i class="fab fa-facebook-f"></i></a>
-								<a class="tw-mb" href="#"><i class="fab fa-twitter"></i></a>
-								<a class="ig-mb" href="#"><i class="fab fa-instagram"></i></a>
-								<a class="gg-mb" href="#"><i class="fab fa-google-plus-g"></i></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+		<?php include "header.php" ?>
 		<div class="bg-1">
 			<div id="demo" class="carousel slide" data-ride="carousel" data-interval="2000">
 				<!-- Indicators -->
@@ -176,57 +115,6 @@
 		<script src="src/lazyload/jquery-1.11.3.min.js"></script>
 		<script src="src/lazyload/jquery.lazyload.min.js"></script>
 		<script src="src/js/index.js"></script>
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3">
-						<h3>ABOUT VINSOFTS</h3>
-						<p>Vinsofts Co., Ltd is software innovation and outsourcing company based in Hanoi, Vietnam. We provide top quality outsourcing services to global clients from USA to Australia, from Japan to EU countries.</p>
-					</div>
-					<div class="col-sm-4">
-						<h3>CONTACT US</h3>
-						<form>
-							<div class="text-left">
-								Name<span style="color: red">&#42;</span>
-							</div>
-						<div class="row">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="First name">
-							</div>
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Last name">
-							</div>
-						</div>
-						<div class="text-left label">
-							Email<span style="color: red">&#42;</span>
-						</div>
-						<div class="row">
-							<div class="col">
-								<input type="email" class="form-control" placeholder="Email">
-							</div>
-						</div>
-						<div class="text-left label">
-							Comment<span style="color: red">&#42;</span>
-						</div>
-						<div class="row">
-							<div class="col">
-								<textarea name="" class="form-control"></textarea>
-							</div>
-						</div>
-						<div class="text-left label">
-							<input type="submit" name="" value="Submit"> 							
-						</div>
-					</form>
-					</div>
-					<div class="col-sm">
-						<h3>OUR INFO</h3>
-						<div class="label" id="googleMap"></div>
-						<p>Ki ốt số 3 Nhà N9, Khu 212, Học Viện Kỹ Thuật Quân Sự, <br>
-						Đường Tân Xuân, Phường Xuân Đình, Quận Bắc Từ Liêm, Hà Nội</p>
-					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<?php include "footer.php" ?>
 	</body>
 </html>

@@ -1,0 +1,28 @@
+header nav {
+  background: #ffffff; }
+  header nav ul .active {
+    background: #00a2ed;
+    border-radius: 25px; }
+    header nav ul .active a {
+      padding: 8px 14px 8px 14px !important; }
+  header nav .mobile {
+    display: none; }
+    header nav .mobile a {
+      color: rgba(0, 0, 0, 0.5);
+      padding: 0 30px 0 0; }
+  header nav .navbar-brand p {
+    font-size: 9px; }
+
+.contact {
+  z-index: 10001;
+  position: fixed;
+  top: 10px;
+  right: 10px; }
+
+.bg-1 {
+  position: relative; }
+  .bg-1 text {
+    position: absolute;
+    top: 0; }
+
+/*# sourceMappingURL=above.css.map */

@@ -32,13 +32,17 @@ footer {
     display: none; }
   header nav .mobile {
     display: block !important; } }
+@media all and (max-width: 575px) {
+  header .contact {
+    right: 10px !important;
+    top: 0 !important; } }
+@media all and (max-width: 512px) {
+  header .contact {
+    display: none; } }
 @media all and (max-width: 425px) {
   section .clients .client4 {
     display: none; }
   section .clients .client5 {
-    display: none; }
-
-  .contact {
     display: none; } }
 @media all and (max-width: 320px) {
   section .clients .col {

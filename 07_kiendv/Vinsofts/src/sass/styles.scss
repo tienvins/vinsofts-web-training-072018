@@ -32,7 +32,7 @@ footer {
 		height: 225px;
 	}
 }
-@media all and (max-width: 991px) {
+@media all and (max-width: 991px){
 	header {
 		nav {
 			.desktop {
@@ -44,7 +44,22 @@ footer {
 		}
 	}
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 575px){
+	header {
+		.contact {
+			right: 10px !important;
+			top: 0 !important;
+		}
+	}
+}
+@media all and (max-width: 512px){
+	header {
+		.contact {
+			display: none;
+		}
+	}
+}
+@media all and (max-width: 425px){
 	section {
 		.clients {
 			.client4 {
@@ -55,11 +70,8 @@ footer {
 			}
 		}
 	}
-	.contact {
-		display: none;
-	}
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 320px){
 	section {
 		.clients {
 			.col {

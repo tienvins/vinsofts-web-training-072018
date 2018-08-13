@@ -1,0 +1,20 @@
+.slide{position:relative;width:100%;height:300px;margin-left:25px;background:url(images/slide1.jpg) no-repeat;animation-name:example;animation-duration:4s;animation-iteration-count: 100;}
+@keyframes example{
+0%{background:url(images/slide1.jpg) no-repeat}
+25%{background:url(images/slide2.jpg) no-repeat}
+50%{background:url(images/slide1.jpg) no-repeat}
+100%{background:url(images/slide2.jpg) no-repeat}
+}
+.slide .text-title{position:absolute;right:70px;bottom:70px;color:#fff;font-size:20px}
+.slide .text-content{position:absolute;right:50px;bottom:20px;color:#fff;width:350px}
+body main content { height: 1000px; width: 100%; }
+body main content section.title { margin-top: 20px; text-align: center; font-weight: bold; }
+body main content section.title p { color: #838383; font-size: 30px; }
+body main content section.title span { color: #838383; }
+body main content article.box-main { margin-top: 20px; margin-bottom: 40px; }
+body main content article.box-main ul { margin-left: 20px; }
+body main content article.box-main ul li { float: left; width: 29%; text-align: center; color: #838383; margin-right: 30px; }
+body main content article.box-main ul li .box-title { font-size: 15px; font-weight: bold; margin-top: 20px; }
+body main content article.box-main ul li .box-desc { margin-top: 20px; height: 50px; }
+body main content article.box-main ul li .box-link { margin-top: 20px; width: 100px; height: 30px; line-height: 30px; background-color: #00a2ed; color: white; border-radius: 10px; margin-left: 110px; }
+body main content .line { margin-top: 20px; border: 1px solid #ededed; width: 300px; margin: auto; margin-bottom: 10px; }

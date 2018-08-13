@@ -1,0 +1,57 @@
+header{
+    .header__logo{
+        
+        padding-top: 10px;
+        padding-left: 70px;
+        padding-bottom: 7px;
+    }
+    .header__right{
+        
+        padding-bottom: 5px;
+        .header__right__contact{
+            margin-top: 10px;
+            ul{
+                margin-bottom: 0px;
+                li{
+                    display: inline-block;
+                    margin-left: 12px;
+                
+                }
+            }
+        }
+        .header__right__menu{
+            max-height: 43px;
+            padding: 0px;
+            
+            ul{
+                padding-left: 8px;
+                li{
+                    
+                    a{
+                        font-weight: bold;
+                        color: #838383;
+                        margin: 0px;
+                        padding:  5px 8px;
+                        border-radius: 22px;
+                        &:hover{
+                            
+                            color:white;
+                            background: #00a2ed;
+                        
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .header__right__icon{
+            padding: 0px;
+           ul{
+               li{
+                   padding-left: 10px;
+                   display: inline;
+               }
+           }
+        }
+    }
+}

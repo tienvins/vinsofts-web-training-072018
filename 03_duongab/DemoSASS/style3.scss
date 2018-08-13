@@ -1,0 +1,17 @@
+//sass extends
+.border{
+    border-radius:10px 0px;
+    -moz-border-radius: 10px 0px;
+    -webkit-border-radius: 10px 0px;
+    -o-border-radius: 10px 0px;
+}
+.background{
+    background: green;
+}
+.main{
+    height: 100px;
+    @extend .background;
+}
+.main2{
+    @extend .border;
+}

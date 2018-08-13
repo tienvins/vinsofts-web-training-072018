@@ -37,3 +37,11 @@ function myMap() {
 	};
 	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
+//
+$(function() {
+    $("img.lazyload").lazyload({
+        effect: "slideDown",
+		effectTime: 2000,
+		threshold: 10
+    });
+});

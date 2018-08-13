@@ -4,7 +4,7 @@ ul { margin: 0px; padding: 0px; list-style: none; }
 
 a { text-decoration: none; color: #838383; }
 
-body { font-family: Arial; font-size: 12px; }
+body { font-family: 'Roboto', sans-serif; font-size: 12px; }
 body main { width: 1000px; margin: 20px auto; }
 body main header { height: 85px; }
 body main header .header-left { width: 30%; float: left; }
@@ -49,6 +49,7 @@ body main footer .footer-contact { float: left; widows: 30%; margin-left: 30px; 
 body main footer .footer-contact .footer-contact-title { font-size: 25px; }
 body main footer .footer-info { float: left; width: 30%; margin-left: 30px; margin-top: 40px; }
 body main footer .footer-info .footer-info-title { font-size: 25px; }
+body main footer .line1 { border: 1px solid #404040; margin-bottom: 20px; }
 
 @media all and (max-width: 1000px) { main { width: 100%; }
   header { width: 100%; }

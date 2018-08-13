@@ -1,0 +1,9 @@
+//sass @while
+$n:1;
+@while ($n<10){
+    .item#{$n}{
+        width:12px * $n;
+        height: 6px * $n;
+    }
+    $n: $n+1;
+}

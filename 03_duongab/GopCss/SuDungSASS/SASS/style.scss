@@ -1,0 +1,22 @@
+.main{
+	color:red;
+	width:100%;
+	.main-content{
+		background-color: black;
+		color:white;
+		a{
+			font-weight: bold;
+			&:hover{
+				color: green;
+			}
+		}
+	}
+	.main-info{
+		font:{
+			family:Arial;
+			size:30px;
+			weight:bold;
+		}
+	}
+}
+//sass nested rules

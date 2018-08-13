@@ -7,12 +7,12 @@ body main header .header-right .header-right-top{height:30px}
 body main header .header-right .header-right-top ul{text-align:right}
 body main header .header-right .header-right-top ul li{display:inline;padding:10px}
 body main header .header-right .header-right-top ul li img{margin-right:10px}
-body main header .header-right .menu{height:40px;width:700px}
-body main header .header-right .menu ul.menu-con{margin-left:-15px}
-body main header .header-right .menu ul.menu-con li{float:left;padding:10px;line-height:40px;border:1px solid #fff;width:70px}
-body main header .header-right .menu ul.menu-con li a{color:#939393;display:block;text-align:center;font-weight:700}
-body main header .header-right .menu ul.menu-con li a:hover{color:#fff;background-color:#00a2ed;border-radius:10px}
-body main header .header-right .menu ul.icon li{float:left;padding:10px;line-height:40px;margin-top:5px}
+body main header .header-right nav.menu{height:40px;width:700px}
+body main header .header-right nav.menu ul.menu-con{margin-left:-15px}
+body main header .header-right nav.menu ul.menu-con li{float:left;padding:10px;line-height:40px;border:1px solid #fff;width:70px}
+body main header .header-right nav.menu ul.menu-con li a{color:#939393;display:block;text-align:center;font-weight:700}
+body main header .header-right nav.menu ul.menu-con li a:hover{color:#fff;background-color:#00a2ed;border-radius:10px}
+body main header .header-right nav.menu ul.icon li{float:left;padding:10px;line-height:40px;margin-top:5px}
 .slide{position:relative;width:100%;height:300px;margin-left:25px;background:url(images/slide1.jpg) no-repeat;animation-name:example;animation-duration:4s;animation-iteration-count: 100;}
 @keyframes example{
 0%{background:url(images/slide1.jpg) no-repeat}

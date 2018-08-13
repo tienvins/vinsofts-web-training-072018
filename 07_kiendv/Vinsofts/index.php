@@ -15,15 +15,16 @@
 	    ?>
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<div class="contact">
-					<span><i style="color: #00A9F0" class="fab fa-skype"></i> kiendo5695@gmail.com</span>
-					<span><i style="color: #ea2112" class="far fa-envelope"></i> kiendo5695@gmail.com</span>
-					<span><i style="color: #46e743" class="fas fa-phone"></i> 0123456789</span>
-				</div>
+		<div class="contact fixed-top">
+			<div class="container">
+				<span><i style="color: #00A9F0" class="fab fa-skype"></i> kiendo5695@gmail.com</span>
+				<span><i style="color: #ea2112" class="far fa-envelope"></i> kiendo5695@gmail.com</span>
+				<span><i style="color: #46e743" class="fas fa-phone"></i> 0123456789</span>
+			</div>
+		</div>
+		<header>
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light" data-toggle="sticky-onscroll">
 				<div class="container">
-				<nav class="navbar fixed-top navbar-expand-lg navbar-light" data-toggle="sticky-onscroll">
 					<div class="navbar-brand">
 						<div><img src="src/images/logo.png" alt=""></div>
 						<div>
@@ -33,7 +34,7 @@
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-top: 20px;">
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active">
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -73,12 +74,11 @@
 							</li>
 						</ul>
 					</div>
-				</nav>
 				</div>
-			</header>
-		</div>
+			</nav>
+		</header>
 		<div class="bg-1">
-			<div id="demo" class="carousel slide" data-ride="carousel">
+			<div id="demo" class="carousel slide" data-ride="carousel" data-interval="2000">
 				<!-- Indicators -->
 				<ul class="carousel-indicators">
 					<li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -87,10 +87,10 @@
 				<!-- The slideshow -->
 				<div class="carousel-inner text-center">
 					<div class="carousel-item active">
-						<img src="src/images/slide1.png" alt="" width="100%" height="300px">
+						<img src="src/images/slide1.png" alt="" width="100%" height="500px">
 					</div>
 					<div class="carousel-item">
-						<img src="src/images/slide2.jpg" alt="" width="100%" height="300px">
+						<img src="src/images/slide2.jpg" alt="" width="100%" height="500px">
 					</div>
 				</div>
 			</div>

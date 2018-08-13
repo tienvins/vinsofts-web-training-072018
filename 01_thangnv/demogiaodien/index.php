@@ -13,8 +13,12 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+    <?php
+        echo "<style>". file_get_contents("css/cssrun/above.css")."</style>"; 
+    ?>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/cssrun/below.css">
 
 
     <title>Demo giao diện web</title>

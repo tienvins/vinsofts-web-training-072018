@@ -9,8 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 	<?php
-	$css = file_get_contents('css/header.css');
-	echo $css;
+	echo file_get_contents('css/header.css');
 	?>
 </style>
 <link rel="stylesheet" href="css/main.css">
@@ -39,9 +38,9 @@
 						<div class="card-body text-center">
 							<h5 class="card-title">Mobile App Development</h5>
 							<p class="card-text">We are experts in mobile development 
-industry for years. We have a team with 10 
-skilled developers that have been in this 
-field for at least 5 years so far.</p>
+                                            industry for years. We have a team with 10 
+                                            skilled developers that have been in this 
+                                                field for at least 5 years so far.</p>
 							<a href="#" class="btn primary">Explore more >></a>
 						</div>
 					</div>
@@ -51,10 +50,10 @@ field for at least 5 years so far.</p>
 						<img class="card-img-top" src="images/layer12.png" alt="Card image cap" width="168px" height="126px">
 						<div class="card-body text-center">
 							<h5 class="card-title">Website Development</h5>
-							<p class="card-text">We provide website development services. 
-We are experts in below fields: 
-WordPress development 
-Magento development</p>
+							<p class="card-text">We are experts in mobile development 
+                                            industry for years. We have a team with 10 
+                                            skilled developers that have been in this 
+                                                field for at least 5 years so far.</p>
 							<a href="#" class="btn primary">Explore more >></a>
 						</div>
 					</div>
@@ -63,11 +62,11 @@ Magento development</p>
 					<div class="card" >
 						<img class="card-img-top" src="images/layer13.png" alt="Card image cap" width="168px" height="126px">
 						<div class="card-body text-center">
-							<h5 class="card-title">Custom IT & Software Services</h5>
-							<p class="card-text">We provide other IT and software services 
-too.We have a team of experts in many fields 
-of software development,coding as well as IT 
-related technologies.</p>
+							<h5 class="card-title">Custom IT & Software</h5>
+							<p class="card-text">We are experts in mobile development 
+                                            industry for years. We have a team with 10 
+                                            skilled developers that have been in this 
+                                                field for at least 5 years so far.</p>
 							<a href="#" class="btn primary">Explore more >></a>
 						</div>
 					</div>
@@ -90,11 +89,11 @@ related technologies.</p>
 				</div>
 			</div>
 			<div class="row text-center">
-				<div class="col-md col-sm-6 col-xs-6"><img src="images/per1.gif" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md col-sm-6 col-xs-6"><img src="images/per2.gif" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md col-sm-6 col-xs-6"><img src="images/per3.gif" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md col-sm-6 col-xs-6"><img src="images/per4.gif" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md col-sm-6 col-xs-6"><img src="images/per5.gif" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="images/per1.gif" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="images/per2.gif" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="images/per3.gif" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="images/per4.gif" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="images/per5.gif" alt="clients" width="98px" height="98px"></div>
 			</div>
 		</section>
 		<!-- end-section2 -->
@@ -114,7 +113,7 @@ related technologies.</p>
 			<div class="row ">
 				<div class="col-md-4">
 					<div class="card card2" >
-						<img class="card-img-top" src="images/img1.gif" alt="Card image cap">
+						<img class="card-img-top" data-src="images/img1.gif" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">VESTIBULUM IPSUMS EROS</h5>
 							<p class="card-text text-left">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -123,7 +122,7 @@ related technologies.</p>
 				</div>
 				<div class="col-md-4">
 					<div class="card card2" >
-						<img class="card-img-top" src="images/img2.gif" alt="Card image cap">
+						<img class="card-img-top" data-src="images/img2.gif" alt="Card image cap">
 
 						<div class="card-body">
 							<h5 class="card-title">VESTIBULUM IPSUMS EROS</h5>
@@ -133,7 +132,7 @@ related technologies.</p>
 				</div>
 				<div class="col-md-4">
 					<div class="card card2" >
-						<img class="card-img-top" src="images/img3.png" alt="Card image cap">
+						<img class="card-img-top" data-src="images/img3.png" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title">VESTIBULUM IPSUMS EROS</h5>
 							<p class="card-text text-left">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -146,13 +145,12 @@ related technologies.</p>
 		<!-- footer -->
 		<?php include "footer.php" ?>
 	</div>
-	<script src="js/lazyload.min.js"></script>
+		<script src="js/lazyload.min.js"></script>
 	<script >
 		new LazyLoad({
 			elements_selector: ["img", "iframe"]
 		});
 	</script>
-
 </body>
 </html>
 

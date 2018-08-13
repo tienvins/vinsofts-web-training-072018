@@ -1,0 +1,39 @@
+header {
+	nav {
+		background: #ffffff;
+		ul {
+			.active {
+				background: #00a2ed;
+				border-radius: 25px;
+				a {
+					padding:8px 14px 8px 14px !important;
+				}
+			}
+		}
+		.mobile {
+			display: none;
+			a {
+				color: rgba(0,0,0,.5);
+				padding: 0 30px 0 0;
+			}
+		}
+		.navbar-brand {
+			p {
+				font-size: 9px;
+			}
+		}
+	}
+}
+.contact {
+	z-index: 10001;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+.bg-1 {
+	position: relative;
+	text {
+		position: absolute;
+		top: 0;
+	}
+}

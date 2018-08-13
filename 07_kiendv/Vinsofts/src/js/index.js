@@ -42,6 +42,6 @@ $(function() {
     $("img.lazyload").lazyload({
         effect: "slideDown",
 		effectTime: 2000,
-		threshold: 0
+		threshold: 10
     });
 });

@@ -18,87 +18,87 @@ body{
     main{
         width:1000px;
         margin:20px auto;
-        header{
-            height: 85px;
-            .header-left{
-                width: 30%;
-                float: left;
-                img{
-                    margin-left:20px;
-                }
-                p{
-                    font-size: 10px;
-                    margin-left:15px;
-                }
-            }
-            .header-right{
-                width:70%;
-                float: left;
-                .header-right-top{
-                    height: 30px;
-                    ul{
-                        text-align: right;
-                        li{
-                            display: inline;
-                            padding:10px;
-                            img{
-                                margin-right:10px;
-                            }
-                        }
-                    }
-                }
-                nav{
-                    height: 40px;
-                    width: 800px;
-                    ul.menu{
-                        margin-left:-15px;
-                        li{
-                            float:left;
-                            padding:10px;
-                            line-height: 40px;
-                            border:1px solid white;
-                            width:70px;
-                            a{
-                                color:#939393;
-                                display: block;
-                                text-align: center;
-                                font-weight: bold;
-                                &:hover{
-                                    color:white;
-                                    background-color: #00a2ed;
-                                    border-radius:10px;
-                                }
-                            }
-                        }
-                    }
-                    ul.icon{
-                        li{
-                            float: left;
-                            padding:10px;
-                            line-height: 40px;
-                            margin-top:5px;
-                        }
-                    }
-                }
-            }
-        }
-        .slide{
-            position: relative;
-            .text-title{
-                position: absolute;
-                right:20px;
-                bottom:70px;
-                color:white;
-                font-size:20px;
-            }
-            .text-content{
-                position: absolute;
-                right:20px;
-                bottom:20px;
-                color:white;
-                width: 350px;
-            }
-        }
+        // header{
+        //     height: 85px;
+        //     .header-left{
+        //         width: 30%;
+        //         float: left;
+        //         img{
+        //             margin-left:20px;
+        //         }
+        //         p{
+        //             font-size: 10px;
+        //             margin-left:15px;
+        //         }
+        //     }
+        //     .header-right{
+        //         width:70%;
+        //         float: left;
+        //         .header-right-top{
+        //             height: 30px;
+        //             ul{
+        //                 text-align: right;
+        //                 li{
+        //                     display: inline;
+        //                     padding:10px;
+        //                     img{
+        //                         margin-right:10px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         nav{
+        //             height: 40px;
+        //             width: 800px;
+        //             ul.menu{
+        //                 margin-left:-15px;
+        //                 li{
+        //                     float:left;
+        //                     padding:10px;
+        //                     line-height: 40px;
+        //                     border:1px solid white;
+        //                     width:70px;
+        //                     a{
+        //                         color:#939393;
+        //                         display: block;
+        //                         text-align: center;
+        //                         font-weight: bold;
+        //                         &:hover{
+        //                             color:white;
+        //                             background-color: #00a2ed;
+        //                             border-radius:10px;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //             ul.icon{
+        //                 li{
+        //                     float: left;
+        //                     padding:10px;
+        //                     line-height: 40px;
+        //                     margin-top:5px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // .slide{
+        //     position: relative;
+        //     .text-title{
+        //         position: absolute;
+        //         right:20px;
+        //         bottom:70px;
+        //         color:white;
+        //         font-size:20px;
+        //     }
+        //     .text-content{
+        //         position: absolute;
+        //         right:20px;
+        //         bottom:20px;
+        //         color:white;
+        //         width: 350px;
+        //     }
+        // }
         content{
             height: 1000px;
             width: 100%;
@@ -191,7 +191,7 @@ body{
             color:white;
             .footer-about{
                 float:left;
-                width:250px;
+                width:25%;
                 margin-left:30px;
                 margin-top:40px;
                 .footer-about-title{
@@ -203,7 +203,7 @@ body{
             }
             .footer-contact{
                 float:left;
-                width: 300px;
+                width: 30%;
                 margin-left:30px;
                 margin-top:40px;
                 .footer-contact-title{
@@ -212,7 +212,7 @@ body{
             }
             .footer-info{
                 float:left;
-                width: 300px;
+                width: 30%;
                 margin-left:30px;
                 margin-top:40px;
                 .footer-info-title{

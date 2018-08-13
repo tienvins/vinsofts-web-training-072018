@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="Run/below/style.min.css">
+    <title>Vinsofts</title>
+    <style>
+        <?php include "Run/above/header_des.min.css" ?>
+    </style>
 </head>
 <body>
     <!-- main -->
@@ -54,27 +57,13 @@
                     servecies to our global clients during last 10 year</div>
         </div>
         <script>
-            var myIndex = 0;
-            carousel();
-                
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                }
-                 myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 1000); // Change image every 2 seconds
-            }
+        var myIndex=0;carousel();function carousel(){var i;var x=document.getElementsByClassName("mySlides");for(i=0;i<x.length;i++){x[i].style.display="none"}myIndex++;if(myIndex>x.length){myIndex=1}x[myIndex-1].style.display="block";setTimeout(carousel,1000)}
         </script>
         <!-- end slide -->
         <!-- content -->
         <content>
             <section class="title">
                 <p>OUR SERVICES</p>
-               
             </section>
             <article class="box-main">
                     <ul>
@@ -111,7 +100,6 @@
             <section class="title">
                 <div class="line"></div>
                 <p>OUR CLIENTS</p>
-                
             </section>
             <article class="people">
                 <ul>

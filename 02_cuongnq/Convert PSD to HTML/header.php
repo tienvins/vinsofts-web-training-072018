@@ -45,9 +45,37 @@
         </div>
     </div>
     <div class="slide">
+     <div id="demo" class="carousel slide" data-ride="carousel">
+
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+  </ul>
+  
+ 
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/slider1.png" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="images/slide2.png" alt="Chicago">
+    </div>
+  </div>
+  
+  
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div> 
+
         <div class="text">
             <h3>WEB DESIGN COMPANY REPUPATION</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veritatis, quia odit rerum? Ex quibusdam neque perspiciatis cum, et nulla pariatur </p>
+    
         </div>
     </div>
 </header>

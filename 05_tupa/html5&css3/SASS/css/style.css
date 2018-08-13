@@ -1,21 +1,16 @@
 .main {
   color: red;
-  width: 100%;
-}
-.main .main-content {
-  background-color: black;
-  color: white;
-}
-.main .main-content a {
-  font-weight: bold;
-}
-.main .main-content a:hover {
-  color: green;
-}
-.main .main-info {
-  font-family: Arial;
-  font-size: 30px;
-  font-weight: bold;
-}
+  width: 100%; }
+  .main .main-content {
+    background-color: black;
+    color: white; }
+    .main .main-content a {
+      font-weight: bold; }
+      .main .main-content a:hover {
+        color: green; }
+  .main .main-info {
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

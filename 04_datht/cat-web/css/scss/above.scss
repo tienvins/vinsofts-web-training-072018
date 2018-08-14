@@ -55,3 +55,50 @@ header{
         }
     }
 }
+section{
+    
+    text-align: center;
+    
+    .slideshow{
+        margin: 0px;
+    }
+    .services{
+        padding:0px 20px 30px 20px;
+    }
+}
+@media only screen and (max-width :768px){
+    
+    header{
+        .header__logo{
+            padding-left: 45%;
+        }
+        .header__right{
+            .header__right__contact{
+                display: none;
+            }
+            .header__right__menu{
+                background: #323232;
+                color: aliceblue;
+                padding-top: 0px;
+                ul{
+                    li{
+                        z-index: 999;
+                        background: #323232;
+                        border-bottom: 1px solid white;
+                        
+                        a{
+                            color: white;
+                            border-radius: 0px;
+                        }
+                    }
+                }
+                .button_nav_toggle{
+                    padding: 0px;
+                }
+            }
+            .header__right__icon{
+                display: none;
+            }
+        }
+    }
+}

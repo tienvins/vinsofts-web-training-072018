@@ -5,69 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/below.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jquery.lazyload.min.js"></script>
    
     <title>Vinsofts</title>
     <style >
-    
+       <?php 
+            include 'css/above.css';
+       ?>
     </style>
 </head>
 <body>
     <main class="container container--max">
-        <header class="row">
-            
-            <div class="header__logo col-md-4  col-xs-12  col-sm-12">
-                <img src="asset/logo.png" alt="">
-            </div>
-            
-            <div class="header__right col-md-8 col-xs-12 col-sm-12">
-                <div class="row">
-                        <div class="header__right__contact col-md-offset-2 col-xs-12 ">
-                                <ul>
-                                    <li><p><img src="asset/icon-skype.png" alt=""> Skype: <span class="header__text--bold">Vinsofts.com</span></p></li>
-                                    <li><p><img src="asset/icon-mail.png" alt=""> Mail: <span class="header__text--bold">Contact@vinsofts.com</span></p></li>
-                                    <li><p><img src="asset/icon-phone.png" alt=""> Hotline: <span class="header__text--bold">0988 988 988</span></p></li>
-                                </ul>
-                            </div>
-                </div>
-                <div class="row">
-                    
-                    <div class="header__right__menu col-md-9 col-xs-12 col-sm-9">
-                        
-                        <div>
-							<button type="button" class="navbar-toggle button_nav_toggle" data-toggle="collapse" data-target="#myNavbar">
-								<div class="glyphicon glyphicon glyphicon-align-justify"></div>
-					        
-					      </button>
-							<div class="collapse navbar-collapse" id="myNavbar">
-							<ul class="nav navbar-nav">
-								<li><a href="">Home</a></li>
-								<li><a href="">Protfolio</a></li>
-								<li><a href="">Services</a></li>
-								<li><a href="">Gellery</a></li>
-								<li><a href="">Contact</a></li>
-								<li><a href="">Recruitment</a></li>
-							</ul>
-						</div>
-						</div>
-                    </div>
-
-                    <div class="header__right__icon col-md-3 col-sm-3">
-                        <ul>
-                            <li><img src="asset/icon-fb.png" alt=""></li>
-                            <li><img src="asset/icon-twitter.png" alt=""></li>
-                            <li><img src="asset/icon-likedin.png" alt=""></li>
-                            <li><img src="asset/icon-google.png" alt=""></li>
-                        </ul>
-                    </div>
-                    
-                </div>          
-            </div>
-            
-        </header>
+        <?php include 'header.php' ?>
         <section class="row">
             <div class="row slideshow">
                 <div id="carousel-id" class="carousel slide" data-ride="carousel">
@@ -163,71 +115,7 @@
                     </div>
             </div>
         </section>
-        <footer class="row">
-            <div class="col-md-3 col-sm-12 about">
-                    <div class="col-xs-12"></div>
-                <h4>ABOUT VINSOFTS</h4>
-                <div>
-                    Vinsoft Co,.Ltd is softwere
-                    innovation and outsourcing company based in Hanoi, Vietnam. We provide top quality outsourcing services to global clients from USA to Australia,from Japan to EU countries.
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12 form-guest">
-                    <div class="col-xs-12"></div>
-                            <div class="col-md-12 col-sm-12 col-xs-10">
-                                    <h4>CONTACT US</h4>
-                            </div>
-                            <div class="col-xs-2">
-                                <button id="add__form">+</button>
-                            </div>
-                   
-                    
-                    
-                    <form action="" class="form col-xs-12">
-                        <div class="form-group">
-                            <label>Name <span style="color: red">*</span></label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Email<span style="color: red">*</span></label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Conment<span style="color: red">*</span></label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                        <button class="btn btn-primary">Submit</button>
-                    </form>
-            </div>
-            <div class="col-md-5 map">
-                
-                    <h4>OUR INFO</h4>
-                    <div id="map" style="width:100%">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.9536719806252!2d105.78562978806224!3d21.04009955081291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab34493f1719%3A0xcb0b2a50ed7cf561!2zQsOgaSBU4bqtcCAxMjMgTHV54buHbiBUaGkgVHLhuq9jIE5naGnhu4dtIE9ubGluZSBNaeG7hW4gUGjDrQ!5e0!3m2!1svi!2s!4v1533830107036" width="350" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                    <div>Ki ốt số 3 Nhà N9,Khu 212,Học Viện Kĩ Thuật Quân Sự,Đường Tân Xuân,Phường Xuân Đỉnh, Quận Bắc Từ Liêm,Hà Nội</div>
-            </div>
-            <script>
-            $(document).ready(function(){
-                $("#add__form").click(function(){
-                    $(".form").slideToggle();
-                })
-            });
-        </script>
-        <script>
-            $(function() {
-                $('.lazy').lazyload({
-                    effect : "fadeIn"
-                    
-                });
-            });
-            $(window).on("load", function() {
-                var timeout = setTimeout(function() {
-                    $("img.lazy").trigger("sporty")
-                }, 5000);
-        });
-        </script>
-        </footer>
+        <?php include 'footer.php' ?>
     </main>
 </body>
 </html>

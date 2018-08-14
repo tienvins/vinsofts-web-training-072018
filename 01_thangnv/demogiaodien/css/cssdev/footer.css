@@ -1,0 +1,50 @@
+footer {
+  min-height: 400px;
+  background: #323232;
+  display: flex; }
+  footer .item-footer {
+    margin: 2em 2em;
+    width: 35%;
+    color: #ffffff;
+    font-weight: bold; }
+    footer .item-footer h4 {
+      font-size: 14.86px;
+      line-height: 20px;
+      font-weight: bold; }
+    footer .item-footer img {
+      height: 3px;
+      width: 100%; }
+    footer .item-footer div p {
+      color: #ffffff;
+      font-size: 10.86px; }
+    footer .item-footer .map-info {
+      width: 100%;
+      height: auto; }
+
+.carousel-item img {
+  width: 100%; }
+
+.btn {
+  height: 20px;
+  margin: 0;
+  padding: 0 0.2em;
+  font-size: 11.86px;
+  font-weight: bold; }
+
+.form-group label {
+  font-size: 10.86px;
+  color: #66614d;
+  font-weight: bold; }
+.form-group .firstlastname {
+  display: flex; }
+  .form-group .firstlastname #firstname {
+    width: 45%; }
+  .form-group .firstlastname #lastname {
+    margin-left: 0.3em;
+    width: 60%; }
+
+.form-control {
+  height: 30px;
+  font-size: 12.86px; }
+
+/*# sourceMappingURL=footer.css.map */

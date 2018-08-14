@@ -1,0 +1,65 @@
+footer{
+    min-height: 400px;
+    background: #323232;
+    display: flex;
+
+    .item-footer{
+        margin: 2em 2em;
+        width: 35%;
+        color: #ffffff;
+        font-weight: bold;
+        h4{
+            font-size: 14.86px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+        img{
+            height: 3px;
+            width: 100%;
+        }
+        div{
+            p{
+                color: #ffffff;
+                font-size: 10.86px;
+            }
+        }
+        .map-info{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Edit Bootstrap
+.carousel-item img {
+    width: 100%;
+}
+.btn{
+    height: 20px;
+    margin: 0;
+    padding: 0 0.2em;
+    font-size: 11.86px;
+    font-weight: bold;
+}
+.form-group{
+    label{
+        font-size: 10.86px;
+        color: #66614d;
+        font-weight: bold;
+    }
+    .firstlastname{
+        display: flex;
+        #firstname{
+            width: 45%;     
+        }
+        #lastname{
+            margin-left:0.3em; 
+            width: 60%;
+        }
+    }
+}
+.form-control{
+    height: 30px;
+    font-size: 12.86px ; 
+}

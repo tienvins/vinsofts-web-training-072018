@@ -26,7 +26,7 @@
                           <th>STT</th>
                           <th>Name</th>
                           <th>Description</th>
-                          <!-- <th>Logo</th> -->
+                          <th style="width:150px;">Logo</th>
                           <!-- <th>Leader ID</th> -->
                           <th></th>
                         </tr>
@@ -40,8 +40,12 @@
                           <td><?php echo $rows->pk_team_id ?></td>
                           <td><?php echo $rows->c_name; ?></td>
                           <td><?php echo $rows->c_description; ?></td>
-<!--                           <td><?php echo $rows->c_logo; ?></td>
- -->                          <!-- <td><?php echo $rows->c_date_of_birth ?></td> -->
+                          <td>
+                            <?php if(file_exists("public/upload/teams/".$rows->c_logo)){ ?>
+                              <img src="public/upload/teams/<?php echo $rows->c_logo; ?>">
+                            <?php } ?>
+                          </td>
+                          <!-- <td><?php echo $rows->c_date_of_birth ?></td> -->
                           <td style="text-align: center">
                             <a href="admin.php?controller=add_edit_teams&act=edit&id=<?php echo $rows->pk_team_id ?>">Edit</a>&nbsp;&nbsp;
                             <a onclick="return window.confirm('Are you sure')" href="admin.php?controller=teams&act=delete&id=<?php echo $rows->pk_team_id ?>">Delete</a>

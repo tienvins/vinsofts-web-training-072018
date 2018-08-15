@@ -1,4 +1,3 @@
-
 <?php  
 	include_once "model/model.php";
 	class controller_login{

@@ -11,16 +11,16 @@
   <title>Gentelella Alela! | </title>
 
   <!-- Bootstrap -->
-  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
-  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- NProgress -->
-  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
   <!-- Animate.css -->
-  <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+  <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
   <!-- Custom Theme Style -->
-  <link href="../build/css/custom.min.css" rel="stylesheet">
+  <link href="build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="login">
@@ -31,16 +31,17 @@
     <div class="login_wrapper">
       <div class="animate form login_form">
         <section class="login_content">
-          <form>
+          <form method="POST">
             <h1>Login Form</h1>
             <div>
-              <input type="text" class="form-control" placeholder="Username" required="" />
+              <input type="email" name ="email" class="form-control" placeholder="Email" required="" />
             </div>
             <div>
-              <input type="password" class="form-control" placeholder="Password" required="" />
+              <input type="password" name="password" class="form-control" placeholder="Password" required="" />
             </div>
             <div>
-              <a class="btn btn-default submit" href="index.html">Log in</a>
+              <input type="submit" value="Log in" class="btn btn-default submit">
+              <a class="reset_pass" href="#">Lost your password?</a>
             </div>
             <div class="clearfix"></div>
             <div class="separator">

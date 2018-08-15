@@ -18,7 +18,7 @@
         <div class="clearfix"></div>
       </div>
       <div class="x_content">
-        <form class="form-horizontal form-label-left" novalidate method="POST">
+        <form class="form-horizontal form-label-left" action="<?php echo $form_action ?>" method="POST" enctype="multipart/form-data">
           <span class="section">Personal Info</span>
           <div class="item form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
@@ -35,10 +35,10 @@
             </div>
           </div>
           <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email Personal<span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email_personal">Email Personal<span class="required">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
+              <input type="email" id="email_personal" name="email_personal" data-validate-linked="email_personal" required="required" class="form-control col-md-7 col-xs-12">
             </div>
           </div>
           <div class="item form-group">
@@ -49,9 +49,15 @@
             </div>
           </div>
           <div class="item form-group">
-            <label for="image" class="control-label col-md-3">Images</label>
+            <label for="image" class="control-label col-md-3">Image</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
               <input id="image" type="file" name="image" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+            </div>
+          </div>
+          <div class="item form-group">
+            <label for="gender" class="control-label col-md-3">Gender</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="gender" type="text" name="gender" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
             </div>
           </div>
           <div class="item form-group">

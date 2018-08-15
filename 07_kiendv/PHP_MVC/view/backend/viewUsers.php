@@ -12,7 +12,7 @@
         <ul class="nav navbar-right panel_toolbox">
           <li><a class="collapse-link"><i class="fa fa-chevron-up fa-2x"></i></a>
           </li>
-          <li><a href="admin.php?controller=AddEditUsers"><i class="fa fa-plus fa-2x"></i></a>
+          <li><a href="admin.php?controller=AddEditUsers&action=add"><i class="fa fa-plus fa-2x"></i></a>
           </li>
         </ul>
         <div class="clearfix"></div>
@@ -25,7 +25,7 @@
               <th>Email</th>
               <th>Email Personal</th>
               <th>Password</th>
-              <th>Remember Token</th>
+              <th>Teams id</th>
               <th>Image</th>
               <th>Gender</th>
               <th>Action</th>
@@ -39,13 +39,13 @@
               <td><?php echo $row->email ?></td>
               <td><?php echo $row->email_personal ?></td>
               <td><?php echo $row->password ?></td>
-              <td><?php echo $row->remember_token ?></td>
-              <td><?php echo $row->image ?></td>
+              <td><?php echo $row->teams_id ?></td>
+              <td>a</td>
               <td><?php echo $row->gender ?></td>
               <td class="text-center">
                 <a href=""><span><i class="fas fa-search-plus fa-2x"></i></span></a>&nbsp;
                 <a href=""><span><i class="fas fa-edit fa-2x"></i></span></a>&nbsp;
-                <a href=""><span><i class="fas fa-trash-alt fa-2x"></i></span></a>
+                <a href="admin.php?controller=Users&action=delete&id=<?php echo $row->id ?>"><span><i class="fas fa-trash-alt fa-2x"></i></span></a>
               </td>
             </tr>
             <?php } ?>

@@ -1,7 +1,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Users</h2>
+            <h2>Users <a href="index.php?controller=c_edit_user&action=add"><i class="fa fa-plus-circle"></i></a></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -39,6 +39,8 @@
               <th>Graduate From</th>
               <th>Salary</th>
               <th>Bank Account Skills</th>
+              <th>Hobby</th>
+              <th>Family Description</th>
               <th>Leave Days</th>
               <th>Role ID</th>
               <th>Team-ID</th>
@@ -46,28 +48,32 @@
             </tr>
           </thead>
           <tbody>
+          <?php foreach ($users as $user){ ?>
             <tr>
-              <td>Tiger</td>
-              <td>Nixon</td>
-              <td>System Architect</td>
-              <td>Edinburgh</td>
-              <td>61</td>
-              <td>2011/04/25</td>
-              <td>$320,800</td>
-              <td>5421</td>
-              <td>t.nixon@datatables.net</td>
-              <td>Tiger</td>
-              <td>Nixon</td>
-              <td>System Architect</td>
-              <td>Edinburgh</td>
-              <td>61</td>
-              <td>2011/04/25</td>
-              <td>$320,800</td>
-              <td>5421</td>
-              <td>t.nixon@datatables.net</td>
-              <td>5421</td>
-              <td>t.nixon@datatables.net</td>
+              <td><?php echo $user->id ?></td>
+              <td><?php echo $user->name ?></td>
+              <td><?php echo $user->email ?></td>
+              <td><?php echo $user->email_personal ?></td>
+              <td><?php echo $user->password ?></td>
+              <td><?php echo $user->remember_token ?></td>
+              <td><?php echo $user->image ?></td>
+              <td><?php echo $user->gender ?></td>
+              <td><?php echo $user->date_of_birth ?></td>
+              <td><?php echo $user->identify_id ?></td>
+              <td><?php echo $user->phone_number ?></td>
+              <td><?php echo $user->current_address ?></td>
+              <td><?php echo $user->permanent_address ?></td>
+              <td><?php echo $user->graduate_from ?></td>
+              <td><?php echo $user->salary ?></td>
+              <td><?php echo $user->bank_account_number ?></td>
+              <td><?php echo $user->family_description ?></td>
+              <td><?php echo $user->language_skills ?></td>
+              <td><?php echo $user->leave_days ?></td>
+              <td><?php echo $user->role_id ?></td>
+              <td><?php echo $user->team_id ?></td>
+              <td><?php echo $user->status ?></td>
             </tr>
+          <?php } ?>
           </tbody>
           </table>
         </div>

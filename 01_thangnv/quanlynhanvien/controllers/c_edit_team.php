@@ -20,16 +20,14 @@
                     $uploaddir      =   "image";
                     $fileinfo       =   PATHINFO($_FILES['image']['name']);
                     $newfilename    =   "upload_".$fileinfo['filename'].".".$fileinfo['extension'];
+                    $newname        =   "images/".$newfilename;
                     $filetmp        =   $_FILES['image']['tmp_name'];
 
-                    $copied = copy($_FILES['image']['tmp_name'], $newfilename);
-                    if (!$copied){
-                        $image           =   "$uploaddir/$newfilename";
-                    }else{
-                        if(move_uploaded_file($filetmp,"$uploaddir/$newfilename")==true){
-                            $image           =   "$uploaddir/$newfilename";
-                        }
-                    } 
+                    if (!file_exists("image/".$newfilename))
+                        move_uploaded_file($filetmp,"$uploaddir/$newfilename");
+                    
+                    $image           =   "$uploaddir/$newfilename";
+                        
                 }
                 else{
                     $image="-1";

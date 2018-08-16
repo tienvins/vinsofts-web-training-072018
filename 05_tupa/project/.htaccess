@@ -1,0 +1,5 @@
+RewriteEngine On
+#rewrite trang-admin
+RewriteRule ^home$ admin.php
+RewriteRule ^user$ admin.php?controller=user
+RewriteRule ^teams$ admin.php?controller=teams

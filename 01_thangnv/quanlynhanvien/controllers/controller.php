@@ -2,7 +2,7 @@
     class controller{
         public $model;
         public function __construct(){
-            $this->model = new m_db();
+            $this->model = new model();
         }
     }
 ?>

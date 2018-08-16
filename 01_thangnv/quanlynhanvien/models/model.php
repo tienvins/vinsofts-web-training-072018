@@ -1,5 +1,5 @@
 <?php
-	class m_db{
+	class model{
 		//hàm lấy danh sách tất cả các bản ghi
 		public function get_all($sql){
 			global $db;

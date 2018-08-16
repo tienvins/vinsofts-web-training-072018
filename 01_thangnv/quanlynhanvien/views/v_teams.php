@@ -1,7 +1,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Teams</h2>
+            <h2>Teams <a href="index.php?controller=c_edit_team&action=add"><i class="fa fa-plus-circle"></i></a></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -40,13 +40,13 @@
                     <td><?php echo $team->id ?></td>
                     <td><?php echo $team->name ?></td>
                     <td><?php echo $team->description ?></td>
-                    <td><?php echo $team->logo ?></td>
-                    <td><?php echo $team->leader_id ?></td>
+                    <td class="text-center"><img src="<?php echo $team->logo ?>" alt="<?php echo $team->logo ?>" height="30px"></td>
+                    <td class="text-right"><?php echo $team->leader_id ?></td>
                     <td class="text-center">
-                        <a href="index.php?controller=c_edit_team&id=<?php echo $team->id ?>&name=<?php echo $team->name ?>&leader_id=<?php echo $team->leader_id ?>"><i class="fa fa-edit"></i></a>
+                        <a href="index.php?controller=c_edit_team&action=edit&id=<?php echo $team->id ?>"><i class="fa fa-edit"></i></a>
                         &nbsp;
                         <?php
-                            if($team->id !=1) echo '<a href="index.php?controller=c_delete_team&id='.$team->id.'"><i class="fa fa-remove"></i></a>';
+                            if($team->id !=1) echo '<a href="index.php?controller=c_edit_team&action=delete&id='.$team->id.'"><i class="fa fa-remove"></i></a>';
                         ?>
                         
                     </td>

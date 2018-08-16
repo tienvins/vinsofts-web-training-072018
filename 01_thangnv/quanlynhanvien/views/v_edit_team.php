@@ -1,7 +1,7 @@
 <div class="col-md-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Update Team</h2>
+            <h2>Update Team <?php echo $tb ?></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -21,18 +21,17 @@
         </div>
         <div class="x_content">
             <br />
-            <form class="form-horizontal form-label-left" method="POST">
+            <form class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        <input name="id" type="text" readonly="readonly" class="form-control" placeholder="ID" value="<?php echo $_GET['id'];?>">
+                        <input name="id" type="text"<?php echo $action=="edit" ? 'readonly="readonly"':"" ?> class="form-control" placeholder="ID" value="<?php echo $infoid->id ?>">
                     </div>
                
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        <input name="name" type="text" class="form-control" placeholder="Name" value="<?php echo $_GET['name'];?>">
+                        <input name="name" type="text" class="form-control" placeholder="Name" value="<?php echo $infoid->name ?>">
                     </div>
-
                     <div class=" form-group col-md-6 col-sm-12 col-xs-12">
-                        <select class="form-control" name="leader_id">
+                        <select class="form-control" name="leader_id" value="<?php echo $infoid->leader_id ?>">
                             <option value ="0">Choose Leader ID</option>
                             <?php
                                 foreach($list_id_user as $id){
@@ -49,13 +48,13 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <textarea name="description" class="form-control" rows="3" placeholder="Description"></textarea>
+                        <textarea name="description" class="form-control" rows="3" placeholder="Description"><?php echo $infoid ->description ; ?></textarea>
                     </div>
                 </div>
                 <div class="ln_solid"></div>
                 <div class="form-group">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-success"><?php echo $action=="edit" ? 'Update':'Add' ?></button>
                         <button type="reset" class="btn btn-primary">Reset</button>
                         <a href="index.php?controller=c_teams"><button type="button" class="btn btn-danger">Cancel</button></a>
                     </div>

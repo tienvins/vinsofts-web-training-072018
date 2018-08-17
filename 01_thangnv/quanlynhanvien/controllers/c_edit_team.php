@@ -17,13 +17,13 @@
                 $image="";
 
                 if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0){
-                    $uploaddir      =   "image";
+                    $uploaddir      =   "images/teams";
                     $fileinfo       =   PATHINFO($_FILES['image']['name']);
                     $newfilename    =   "upload_".$fileinfo['filename'].".".$fileinfo['extension'];
-                    $newname        =   "images/".$newfilename;
+                    $newname        =   "images/teams/".$newfilename;
                     $filetmp        =   $_FILES['image']['tmp_name'];
 
-                    if (!file_exists("image/".$newfilename))
+                    if (!file_exists("images/teams/".$newfilename))
                         move_uploaded_file($filetmp,"$uploaddir/$newfilename");
                     
                     $image           =   "$uploaddir/$newfilename";
@@ -52,10 +52,9 @@
                 }
                 $this->model->execute($sql);
                 $tb="<i class='fa fa-check-circle'></i>";
-                header("location:index.php?controller=c_teams");
+                header("location:index.php?controller=c_edit_team&action=edit&id=".$id);
             }
 
-            $action=$_GET['action'];
             $id=$_GET['id'];    
             $infoid = $this->model->get_one("select * from teams where id='".$id."'");
             $list_id_user = $this->model->get_all("select id from users where id not in (select leader_id from teams group by leader_id)");

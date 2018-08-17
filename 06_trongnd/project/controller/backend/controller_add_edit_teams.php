@@ -41,9 +41,7 @@
                 break;
 				case "add":
 					$form_action = "admin.php?controller=add_edit_teams&act=do_add";
-					header("location:admin.php?controller=teams");
 					include "view/backend/view_add_edit_teams.php";
-
 				break;
 				case "do_add":
 

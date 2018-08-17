@@ -52,7 +52,7 @@
                         break;
                 }
                 $tb="<i class='fa fa-check-circle'></i>";
-                header("location:index.php?controller=c_edit_team&action=edit&id=".$id);
+                header("location:index.php?controller=c_edit_team&action=edit&id=".$_POST['id']);
             }
   
             $list_id_user = $this->model->get_all("select id from users where id not in (select leader_id from teams group by leader_id)");

@@ -52,7 +52,7 @@
                         break;
                 }
                 $tb="<i class='fa fa-check-circle'></i>";
-                header("location:index.php?controller=c_edit_user&action=edit&id=".$id);
+                header("location:index.php?controller=c_edit_user&action=edit&id=".$_POST['id']);
             }  
             $list_id_team = $this->m_teams->get_all();
             sort($list_id_team);

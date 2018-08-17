@@ -24,9 +24,9 @@
             return mysqli_fetch_object($res);
         }
 
-        public function login($email, $password){
+        public function login($data){
             global $db;
-            $sql ="select count(*) from users where email='".$email."' and password ='".$password."'";
+            $sql ="select email,password from users where email='".$data['email']."' and password ='".$data['password']."'";
             $res = mysqli_query($db,$sql);
             return mysqli_num_rows($res);
         }
@@ -39,6 +39,8 @@
 
         public function delete($id){
             global $db;
+            $sql="";
+            if($id!="1")
             $sql ="delete from users where id='".$id."'";
             return mysqli_query($db,$sql);
         }
@@ -54,7 +56,17 @@
             $sql        =   "update users set name='".$data['name']."',email='".$data['email']."',email_personal='".$data['email_personal']."',password='".$data['password']."',remenber_token='".$data['remember_token']."',gender='".$data['gender']."',date_of_birth='".$data['date_of_birth']."',identify_id='".$data['identify_id']."',phone_number='".$data['phone_number']."',current_address='".$data['current_address']."',permanent_address='".$data['permanent_address']."',graduate_from='".$data['graduate_from']."',salary='".$data['salary']."',bank_account_number='".$data['bank_account_number']."',hobby='".$data['hobby']."',family_description='".$data['family_description']."',language_skills='".$data['language_skills']."',leave_days='".$data['leave_days']."',role_id='".$data['role_id']."',team_id='".$data['team_id']."',status='".$data['status']."' where id='".$data['id']."'";
             return mysqli_query($db,$sql);
         }
-
+        
+        public function get_new_id(){
+            global $db;
+            $sql ="select id from users";
+            $res = mysqli_query($db,$sql);
+            $arr = array();
+			while ($rows = mysqli_fetch_object($res))
+                $arr[] = $rows;
+            asort($arr);
+            return (int)$arr[1]->id+1;
+        }
         
     }
 ?>

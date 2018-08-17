@@ -24,14 +24,14 @@
             <form class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        <input name="id" type="text"<?php echo $action=="edit" ? 'readonly="readonly"':"" ?> class="form-control" placeholder="ID" value="<?php echo $infoid->id ?>">
+                        <input name="id" type="text" readonly="readonly" value=" <?php echo $action=="edit" ? $team->id:$new_id ?>" class="form-control" placeholder="ID">
                     </div>
                
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        <input name="name" type="text" class="form-control" placeholder="Name" value="<?php echo $infoid->name ?>">
+                        <input name="name" type="text" class="form-control" placeholder="Name" value="<?php echo $team->name ?>">
                     </div>
                     <div class=" form-group col-md-6 col-sm-12 col-xs-12">
-                        <select class="form-control" name="leader_id" value="<?php echo $infoid->leader_id ?>">
+                        <select class="form-control" name="leader_id" value="<?php echo $team->leader_id ?>">
                             <option value ="0">Choose Leader ID</option>
                             <?php
                                 foreach($list_id_user as $id){
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <textarea name="description" class="form-control" rows="3" placeholder="Description"><?php echo $infoid ->description ; ?></textarea>
+                        <textarea name="description" class="form-control" rows="3" placeholder="Description"><?php echo $team->description ; ?></textarea>
                     </div>
                 </div>
                 <div class="ln_solid"></div>

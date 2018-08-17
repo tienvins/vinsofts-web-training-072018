@@ -16,7 +16,6 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $tb="";
-
                 $data=$_POST;
 
                 if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0){
@@ -55,8 +54,9 @@
                 $tb="<i class='fa fa-check-circle'></i>";
                 header("location:index.php?controller=c_edit_user&action=edit&id=".$id);
             }  
-            $list_id_team = $this->model->get_all("select id from teams");
+            $list_id_team = $this->m_teams->get_all();
             sort($list_id_team);
+            $new_id=$this->m_users->get_new_id();
             include "views/v_edit_user.php";
             }
         }

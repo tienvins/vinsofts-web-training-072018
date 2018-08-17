@@ -24,7 +24,7 @@
             <form class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                        <input name="id" type="number"<?php echo $action=="edit" ? 'readonly="readonly"':"" ?> class="form-control" placeholder="ID" value="<?php echo $user->id ?>">
+                        <input name="id" type="number" readonly="readonly" value="<?php echo $action=="edit" ? $user->id:$new_id ?>" class="form-control" placeholder="ID" value="<?php echo $user->id ?>">
                     </div>
 
                     <div class="form-group col-md-4 col-sm-6 col-xs-12">

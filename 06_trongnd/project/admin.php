@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-
 	//load file config
 	include "config.php";
 	//load file model

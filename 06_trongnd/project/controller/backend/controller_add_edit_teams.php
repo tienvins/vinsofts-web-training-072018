@@ -35,9 +35,9 @@
 			            $this->model->execute("update tbl_teams set logo='$logo' where pk_teams_id=$id");
          			 }
           //----------------
-
-          			$url    = 'admin.php?controller=teams';
-                  	echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+         			 header("location:admin.php?controller=teams");
+          			// $url    = 'admin.php?controller=teams';
+             //      	echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
                 break;
 				case "add":
 					$form_action = "admin.php?controller=add_edit_teams&act=do_add";
@@ -70,7 +70,7 @@
 			          var_dump($logo);
 			          $this->model->execute("insert into tbl_teams (name,description,logo,leader_id) values ('$name','$description','$logo',$leader_id)");
 
-			          // header ("location:admin.php?controller=teams");
+			          header ("location:admin.php?controller=teams");
 
 			          // $url    = 'admin.php?controller=teams';
 			          // echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';

@@ -18,6 +18,7 @@
                     $email=$_POST["email"];
                     $email_personal=$_POST["email_personal"];
                     $password=$_POST["password"];
+                    $password=md5($password);
                     $image="";
                     $gender = $_POST["gender"];
                     $salary=$_POST["salary"];
@@ -49,7 +50,7 @@
                      }
                     $this->model->execute("update tbl_user set name='$name',email='$email',email_personal='$email_personal',password='$password',image='$image',gender=$gender,salary=$salary,date_of_birth='$date_of_birth',identify_id='$identify_id',phone_number=$phone_number,current_address='$current_address',permanent_address='$permanent_address',graduate_from='$graduate_from',bank_account_number='$bank_account_number',hobby='$hobby',family_description='$family_description',language_skills='$language_skills',leave_days=$leave_days,role_id=$role_id,team_id=$team_id,status=$status where pk_user_id=$id");
                    
-                      //header ("location:admin.php?controller=user");
+                      header ("location:admin.php?controller=user");
                       //echo "update tbl_user set name='$name',description='$description',image='$image',leader_id=$leader_id where pk_user_id=$id";
                       //----------------
                       //upload ảnh
@@ -67,8 +68,8 @@
                     //  }
           //----------------
 
-                    $url    = 'admin.php?controller=user';
-                    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+                    // $url    = 'admin.php?controller=user';
+                    // echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
                 break;
 
                 case "add":
@@ -82,7 +83,7 @@
                     $email=$_POST["email"];
                     $email_personal=$_POST["email_personal"];
                     $password=$_POST["password"];
-                    
+                    $password=md5($password);
                     $gender = $_POST["gender"];
                     $salary=$_POST["salary"];
                     $date_of_birth=$_POST["date_of_birth"];
@@ -110,10 +111,10 @@
                       }
                     
                     $this->model->execute("insert into tbl_user(name,email,email_personal,password,image,gender,date_of_birth,identify_id,phone_number,current_address,permanent_address,graduate_from,salary,bank_account_number,hobby,family_description,language_skills,leave_days,role_id,team_id,status) values('$name','$email','$email_personal','$password','$image','$gender','$date_of_birth','$identify_id','$phone_number','$current_address','$permanent_address','$graduate_from','$salary','$bank_account_number','$hobby','$family_description','$language_skills','$leave_days','$role_id','$team_id','$status')");
-                   
+                    header("location:admin.php?controller=user");
                   
-                    $url    = 'admin.php?controller=user';
-                    echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+                    // $url    = 'admin.php?controller=user';
+                    // echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
 
                     //insert into tbl_user (name,email,email_personal,password,remember_token,image,gender,date_of_birth,identify_id,phone_number,current_address,permanent_address,graduate_from,salary,bank_account_number,hobby,family_description,language_skills,leave_days,role_id,team_id,status) values('$name','$email','$email_personal','$password','$remember_token','$image',$gender,'$date_of_birth','$identify_id',$phone_number,'$current_address','$permanent_address','$graduate_from',$salary,'$bank_account_number','$hobby','$family_description','$language_skills',$leave_days,$role_id,$team_id,$status 
                 break;

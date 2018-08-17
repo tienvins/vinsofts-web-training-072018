@@ -3,7 +3,8 @@
 		public function __construct(){
 			//huy session
 			unset($_SESSION["name"]);
-			echo "<script>location.reload()</script>";
+			header("location:admin.php");
+			//echo "<script>location.reload()</script>";
 		}
 	}
 	new controller_logout();

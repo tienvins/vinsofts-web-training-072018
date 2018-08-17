@@ -13,7 +13,8 @@ class UserModel extends MasterModel
 		$result=$conn->query($sql);
        	$num= $result->num_rows;
       	$row = $result->fetch_row();
-        return $row;
+
+        return $num;
 	}
 	public function getAllUser(){
 		return parent::get_all_from('user');
@@ -22,12 +23,15 @@ class UserModel extends MasterModel
 		return parent::get_by_id_parent('user','id',$id);
 	}
 	public function delete($id){
-		return parent::delete_by_id('user','id',$id);
+		return parent::delete_by_id("user","id",$id);
 	}
-	public function insertUser(){
-		echo "dang dc goi";
-		return parent::insert("user(name,email,password,image,gender,date_of_birth,phone_number,hobby,role_id,team_id) ","('daudau','dat@gmail.com','sdsad','37865305_1038391282994723_8368732119714758656_n (1).jpg','0','2018-08-08','132465','dtaujgdas','12','1')");
+	public function insertUser($v){
+		
+		return parent::insert(" user(name,email,password,image,gender,date_of_birth,phone_number,hobby,role_id,team_id) ",$v);
 	}
-
+	public function editUser($name,$email,$password,$image,$gender,$date,$iden,$hobby,$role,$team,$id){
+		return parent::update("UPDATE user SET name='$name',email='$email',password='$password',image='$image',gender='$gender',date_of_birth='$date',identify_id='$iden',hobby='$hobby',role_id='$role',team_id='$team' WHERE id= $id");
+	}
+	
 }
 ?>

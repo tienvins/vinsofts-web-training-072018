@@ -47,7 +47,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2><?php echo $_SESSION['user']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -60,8 +60,8 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="index.html"> <i class="fa fa-bar-chart"></i>Dashboard</a></li>
-                  <li><a href="teams.html"> <i class="fa fa-edit"></i>Quản lý phòng ban</a></li>
-                  <li><a href="index.html"> <i class="fa fa-user"></i>Quản lý nhân viên</a></li>
+                  <li><a href="?controller=user&action=index"> <i class="fa fa-edit"></i>Quản lý nhân viên</a></li>
+                  <li><a href="?controller=team&action=index"> <i class="fa fa-user"></i>Quản lý phòng ban</a></li>
                 </ul>
               </div>
             </div>
@@ -97,19 +97,13 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
+                    <img src="images/img.jpg" alt=""><?php echo $_SESSION['user']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    
+                    <li><a href="?controller=user&action=logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 

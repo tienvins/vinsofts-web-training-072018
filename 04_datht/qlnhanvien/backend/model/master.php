@@ -40,13 +40,19 @@
                       
                     return $row;
 		}
-		public function insert($tb,$value){
+		public function insert($q,$value){
 			$db= new database();
 			$conn= $db->connectDB();
 
-			$sql="INSERT INTO $tb VALUES $value";
+			$sql="INSERT INTO $q VALUES $value";
 			$result=$conn->query($sql);
-		}                          
+		}
+		public function update($q){
+			$db= new database();
+			$conn= $db->connectDB();
+			$sql=$q;
+			$result=$conn->query($sql);
+		}                         
 		
 	}
 

@@ -2,20 +2,29 @@
 	require('backend/config/database.php');
 	$db= new database();
 	$con= $db->connectDB();
+	session_start();
 	ob_start();
-	if (isset($_GET['controller'],$_GET['action'])) {
+	if (isset($_GET['controller'],$_GET['action'],$_SESSION['user'])) {
 		$controller=$_GET['controller'];
 		$action=$_GET['action'];
 	}
-	else if (isset($_GET['controller'])&&(!isset($_GET['action']))) {
+	else if (isset($_GET['controller'])&& !isset($_GET['action'])&& isset($_SESSION['user']) ) {
 		$controller=$_GET['controller'];
-		$action=$_GET['index'];
+		$action='index';
+	}else if (!isset($_GET['controller'],$_GET['action'])&&isset($_SESSION['user'])) {
+		$controller='home';
+		$action='index';
+
 	}
 	else{
-		$controller= 'home';
-		$action= 'index';
+		$controller= 'user';
+		$action= 'login';
 	}
-	require('backend/views/layout.php');
 	
+	if ($controller=='user'&&(($action=='login')||($action=='register'))) {
+		require('backend/views/layout2.php');
+	}else{
+		require('backend/views/layout.php');
+	}
 	
 ?>

@@ -12,11 +12,13 @@
 			break;
 		case 'user':
 			$controller= new User();
-			
 			include 'backend/model/m_user.php';
-			
 			break;
-		
+		case 'team':
+			
+			$controller= new Team();
+			include 'backend/model/m_team.php';
+			break;
 		default:
 			
 			break;

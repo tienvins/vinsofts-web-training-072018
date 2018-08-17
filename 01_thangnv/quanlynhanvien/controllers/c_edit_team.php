@@ -24,12 +24,9 @@
                     $newfilename    =   "upload_".$fileinfo['filename'].".".$fileinfo['extension'];
                     $newname        =   "images/teams/".$newfilename;
                     $filetmp        =   $_FILES['image']['tmp_name'];
-
+                    echo $data["image"]           =   "$uploaddir/$newfilename";
                     if (!file_exists("images/teams/".$newfilename))
                         move_uploaded_file($filetmp,"$uploaddir/$newfilename");
-                    
-                    $data["image"]           =   "$uploaddir/$newfilename";
-                        
                 }
                 else{
                     $data["image"]="-1";

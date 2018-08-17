@@ -39,13 +39,13 @@
 
         public function update($data){
             global $db;
-            $sql        =   "update teams set name='".$data['name']."',descroption='".$data['description']."',logo='".$data['image']."',leader_id='".$data['leader_id']."' where id='".$data['id']."'";
+            $sql        =   "update teams set name='".$data['name']."',description='".$data['description']."',logo='".$data['image']."',leader_id='".$data['leader_id']."' where id='".$data['id']."'";
             return mysqli_query($db,$sql);
         }
 
         public function update_no_up_img($data){
             global $db;
-            $sql        =   "update teams set name='".$data['name']."',descroption='".$data['description']."',leader_id='".$data['leader_id']."' where id='".$data['id']."'";
+            $sql        =   "update teams set name='".$data['name']."',description='".$data['description']."',leader_id='".$data['leader_id']."' where id='".$data['id']."'";
             return mysqli_query($db,$sql);
         }
         

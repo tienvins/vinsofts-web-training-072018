@@ -10,7 +10,7 @@
     <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
-    <link href="public/backend/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/backend/vendors/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link href="public/backend/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
@@ -21,6 +21,7 @@
     <!-- Custom Theme Style -->
     <link href="public/backend/build/css/custom.min.css" rel="stylesheet">
   </head>
+
   <body class="login">
     <div>
       <a class="hiddenanchor" id="signup"></a>
@@ -29,14 +30,13 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <!-- form -->
             <form method="POST" action="">
               <h1>Login Form</h1>
               <div>
-                <input type="text" name="c_email" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" name="name" placeholder="Username" required="" />
               </div>
               <div>
-                <input type="password" name="c_password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" name="password" placeholder="Password" required="" />
               </div>
               <div>
                 <input type="submit" value="Login">

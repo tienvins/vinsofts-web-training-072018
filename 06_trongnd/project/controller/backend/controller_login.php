@@ -1,29 +1,29 @@
-<?php  
-	include_once "model/model.php";
-	class controller_login{
-		public $model;
+<?php 
+	class controller_login extends controller{
 		public function __construct(){
-			$this->model = new model();
-			//-------------------
-			//nếu user ấn nút submit
+			parent::__construct();
+			//--------------
 			if($_SERVER["REQUEST_METHOD"] == "POST"){
-				$c_email = $_POST["c_email"];
-				$c_password = $_POST["c_password"];
-				//kiểm tra đăng nhập
-				$check = $this->model->get_a_record("select c_email,c_password from tbl_user where c_email='$c_email'");
-				if(isset($check->c_email)){
-					if($check->c_password == md5($c_password) ){
-						//gán vào session
-						$_SESSION["c_email"] = $c_email;
-						//quay trở lại trang admin
-						header('location:admin.php');
+				//ham mysql_escape_string se chuyen ky tu ' thanh \'
+				//hoac ham str_replace(search, replace, subject)
+				$name = ($_POST["name"]);
+				$password = ($_POST["password"]);
+				//ham md5 la ham ma hoa 1 chieu
+				$password = md5($password);
+				//kiem tra dang nhap
+				$check = $this->model->fetch_one("select name,password from tbl_user where name='$name'");
+				if($check["name"] != ""){
+					//kiem tra password
+					if($check["password"] == ($password)){
+						//dang nhap thanh cong
+						$_SESSION["name"] = $name;
 					}
 				}
-				else{echo "ok";}
+				header('location:admin.php');
 			}
-			//-------------------
+			//--------------
 			include "view/backend/view_login.php";
 		}
 	}
 	new controller_login();
-?>
+ ?>

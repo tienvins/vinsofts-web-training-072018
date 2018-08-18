@@ -23,6 +23,7 @@
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap table-hover" cellspacing="0" width="100%">
           <thead>
             <tr>
+              <th>Option</th>
               <th>ID</th>
               <th>Name</th>
               <th>Email</th>
@@ -50,13 +51,20 @@
           <tbody>
           <?php foreach ($users as $user){ ?>
             <tr>
+              <td class="text-center">
+                <a href="index.php?controller=c_edit_user&action=edit&id=<?php echo $user->id ?>"><i class="fa fa-edit"></i></a>
+                &nbsp;
+                <?php
+                    if($user->id !=1) echo '<a href="index.php?controller=c_edit_user&action=delete&id='.$user->id.'"><i class="fa fa-remove"></i></a>';
+                ?>
+              </td>
               <td><?php echo $user->id ?></td>
               <td><?php echo $user->name ?></td>
               <td><?php echo $user->email ?></td>
               <td><?php echo $user->email_personal ?></td>
               <td><?php echo $user->password ?></td>
               <td><?php echo $user->remember_token ?></td>
-              <td><?php echo $user->image ?></td>
+              <td class="text-center"><img src="<?php echo $user->image ?>" alt="<?php echo $user->image ?>" height="50px"></td>
               <td><?php echo $user->gender ?></td>
               <td><?php echo $user->date_of_birth ?></td>
               <td><?php echo $user->identify_id ?></td>

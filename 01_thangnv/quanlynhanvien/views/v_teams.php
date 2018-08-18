@@ -24,12 +24,12 @@
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap table-hover" cellspacing="0" width="100%">
                 <thead>
                     <tr>
+                        <th>Option</th>
                         <th>ID</th>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Logo</th>
                         <th>Leader ID</th>
-                        <th>Option</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,19 +37,18 @@
                     foreach ($teams as $team  ) {
                 ?>
                 <tr>
-                    <td><?php echo $team->id ?></td>
-                    <td><?php echo $team->name ?></td>
-                    <td><?php echo $team->description ?></td>
-                    <td class="text-center"><img src="<?php echo $team->logo ?>" alt="<?php echo $team->logo ?>" height="30px"></td>
-                    <td class="text-right"><?php echo $team->leader_id ?></td>
                     <td class="text-center">
                         <a href="index.php?controller=c_edit_team&action=edit&id=<?php echo $team->id ?>"><i class="fa fa-edit"></i></a>
                         &nbsp;
                         <?php
                             if($team->id !=1) echo '<a href="index.php?controller=c_edit_team&action=delete&id='.$team->id.'"><i class="fa fa-remove"></i></a>';
                         ?>
-                        
                     </td>
+                    <td><?php echo $team->id ?></td>
+                    <td><?php echo $team->name ?></td>
+                    <td><?php echo $team->description ?></td>
+                    <td class="text-center"><img src="<?php echo $team->logo ?>" alt="<?php echo $team->logo ?>" height="30px"></td>
+                    <td class="text-right"><?php echo $team->leader_id ?></td>
                 </tr>
                 <?php
                     }

@@ -26,7 +26,8 @@ class api extends restful_api {
 	{
 		if($this->method == 'DELETE'){
 			$con  = mysqli_connect('localhost', 'root', 'hanoi1','qlnv');
-			$id   = $_GET['user_id'];
+			mysqli_set_charset($con, 'UTF8');
+			$id   = $_GET['id'];
 			$sql  	= "DELETE FROM tbl_user where pk_user_id='$id'";
 			$res = [];
 			if( $con->query($sql)){

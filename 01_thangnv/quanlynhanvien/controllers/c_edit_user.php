@@ -22,7 +22,6 @@
                     $uploaddir      =   "images/users";
                     $fileinfo       =   PATHINFO($_FILES['image']['name']);
                     $newfilename    =   "upload_".$fileinfo['filename'].".".$fileinfo['extension'];
-                    $newname        =   "images/users/".$newfilename;
                     $filetmp        =   $_FILES['image']['tmp_name'];
 
                     if (!file_exists("images/users/".$newfilename))
@@ -47,7 +46,7 @@
                         if($data["image"] =="-1"){
                             $this->m_users->update_no_up_img($data);
                         }else{
-                            $this->m_users->update($data);
+                            echo $this->m_users->update($data);
                         }
                         break;
                 }

@@ -56,7 +56,7 @@
             $arr = array();
 			while ($rows = mysqli_fetch_object($res))
                 $arr[] = $rows;
-            asort($arr);
+            sort($arr);
             return $arr[sizeof($arr)-1]->id+1;
         }
         

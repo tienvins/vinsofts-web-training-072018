@@ -18,6 +18,8 @@ class api extends restful_api {
 			while($row = mysqli_fetch_object($res))
 				$data[]= $row;
 			$this->response(200,$data);
+		}else{
+			$this->response(200,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 
@@ -30,6 +32,9 @@ class api extends restful_api {
 			$sql     = "delete from users where id='".$_GET['id']."'";
 			$res  = mysqli_query($db,$sql);
 			$this->response(200,$res);
+		}
+		else{
+			$this->response(200,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 
@@ -67,6 +72,9 @@ class api extends restful_api {
 			$res  = mysqli_query($db,$sql);
 			$this->response(200,$res);
 		}
+		else{
+			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+		}
 	}
 
 	function demo_dang_ky(){
@@ -103,6 +111,9 @@ class api extends restful_api {
 			$res  = mysqli_query($db,$sql);
 			$this->response(200,$res);
 		}
+		else{
+			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+		}
 	}
 
 	function demo_dang_nhap(){
@@ -114,6 +125,9 @@ class api extends restful_api {
 			$sql     = "select email, password from users where email='".$_POST['email']."' and password='".$_POST['password']."'";
 			$res  = mysqli_num_rows(mysqli_query($db,$sql));
 			$this->response(200,$res);
+		}
+		else{
+			$this->response(200,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 

@@ -5,29 +5,7 @@
 	 */
 	class User
 	{
-		// function login(){
-			
-		// 	include 'backend/views/login.php';
-			
 
-		// 	if (isset($_POST['btnLogin'])) {
-				
-		// 		$mail=$_POST['txtEmail'];
-		// 		$password=$_POST['txtPassword'];
-		// 		$model= new UserModel();
-		// 		$r=$model->checkUser($mail,$password);
-		// 		print_r($r);
-		// 		if ($r[0]==0) {
-		// 			echo "that bai";
-		// 		}else{
-		// 			echo "thanh cong";
-		// 			$_SESSION['user'] = $mail;  // khởi tạo 1 session, tên là admin và giá trị là username
-		// 			header("Location:?controller=home&&action=index");  
-		// 		}
-				
-		// 	}
-			
-		// }
 		function login(){
 			
 			include 'backend/views/v_user/login.php';
@@ -58,8 +36,9 @@
 
 		function index(){
 			
-			$user= new UserModel();
-			$rUser=$user->getAllUser();
+			$user = new UserModel();
+			$rUser= $user->getAllUser();
+			$team= new TeamModel();
 			require 'backend/views/v_user/user.php';
 			
 		}
@@ -74,14 +53,15 @@
 			
 		}
 		function add(){
-
+			$team= new TeamModel();
 			require 'backend/views/v_user/add.php';
+			
 			if (isset($_POST['btnAdd'])) {
 				$name= $_POST['txtName'];
 				$email=$_POST['txtEmail'];
 				$password = $_POST['txtPassword'];
 				$md_password= md5($password);
-				$avatar = $_POST["image"];
+				$avatar = $_FILES["image"]['name'];
 
 				$gender = $_POST['rdGender'];
 
@@ -95,8 +75,19 @@
 				$q= array("('$name'","'$email'","'$md_password'","'$avatar'","'$gender'","'$date'","'$identify'","'$hobbie'","'$role'","'$team')");
 				$str =implode(",", $q);
 				var_dump($str);
+				var_dump($avatar);
 				$user   = new UserModel();
 				$rUser  = $user->insertUser($str);
+				
+				$uploaddir      =   "asset/images";
+              	$fileinfo       =   PATHINFO($_FILES['image']['name']);
+              	$newfilename    =   $fileinfo['filename'].".".$fileinfo['extension'];
+              	$filetmp        =   $_FILES['image']['tmp_name'];
+              	if(move_uploaded_file($filetmp,"$uploaddir/$newfilename")==true)
+
+				move_uploaded_file($filetmp , $uploaddir);
+				var_dump(move_uploaded_file($_FILES['image']['tmp_name'], $uploaddir));
+				
 				header("location:?controller=user");
 				
 			}

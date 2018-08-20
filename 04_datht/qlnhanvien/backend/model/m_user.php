@@ -32,6 +32,9 @@ class UserModel extends MasterModel
 	public function editUser($name,$email,$password,$image,$gender,$date,$iden,$hobby,$role,$team,$id){
 		return parent::update("UPDATE user SET name='$name',email='$email',password='$password',image='$image',gender='$gender',date_of_birth='$date',identify_id='$iden',hobby='$hobby',role_id='$role',team_id='$team' WHERE id= $id");
 	}
+	public function get_free($sql){
+		return parent::get_free_by_parent($sql);
+	}
 	
 }
 ?>

@@ -12,7 +12,7 @@
 		$controller=$_GET['controller'];
 		$action='index';
 	}else if (!isset($_GET['controller'],$_GET['action'])&&isset($_SESSION['user'])) {
-		$controller='home';
+		$controller='user';
 		$action='index';
 
 	}

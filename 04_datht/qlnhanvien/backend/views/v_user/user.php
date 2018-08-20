@@ -29,6 +29,7 @@
                       <thead>
                         <tr>
                           <th>Tên</th>
+                          <th>Phòng</th>
                           <th>Email</th>
                           <th>Hình ảnh</th>
                           <th>Giới tính</th>
@@ -47,13 +48,14 @@
                       
                         <tr>
                           <td><?php echo $v[1] ?></td>
+                           <td><?php $t= $team->get_free("select name from teams where id = {$v[21]}"); echo $t[0][0]; ?></td>
                           <td><?php echo $v[2]; ?></td>
-                          <td><?php echo $v[6]; ?></td>
+                          <td><img src="asset/images/<?php echo $v[6]; ?>" width="100px"  alt=""></td>
                           <td><?php echo $v[7]==0?'nam':'nu'; ?></td>
                           <td><?php echo $v[10]; ?></td>
                           <td><?php echo $v[16]; ?></td>
                           <td>
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                            
                             <a href="?controller=user&action=edit&eid=<?php echo $v[0]; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                             <a href="?controller=user&action=delete&id=<?php echo $v[0]; ?>"  class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                           </td>

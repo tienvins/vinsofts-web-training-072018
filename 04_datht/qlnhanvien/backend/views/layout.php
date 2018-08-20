@@ -59,7 +59,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.html"> <i class="fa fa-bar-chart"></i>Dashboard</a></li>
+                  
                   <li><a href="?controller=user&action=index"> <i class="fa fa-edit"></i>Quản lý nhân viên</a></li>
                   <li><a href="?controller=team&action=index"> <i class="fa fa-user"></i>Quản lý phòng ban</a></li>
                 </ul>

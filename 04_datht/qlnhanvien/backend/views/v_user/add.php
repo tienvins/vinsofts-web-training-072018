@@ -31,7 +31,7 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <form method="POST" data-parsley-validate class="form-horizontal form-label-left">
+                    <form method="POST" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tên <span class="required">*</span>
@@ -108,11 +108,17 @@
                           <input type="text" name="txtRole" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+                     
+                      
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Phòng ban <span class="required">*</span>
-                        </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Phòng ban</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="txtTeam" required="required" class="form-control col-md-7 col-xs-12">
+                          <select class="form-control"  name="txtTeam">
+                            <option value="0">----Chọn phòng ban----</option>
+                             <?php $t= $team->get_free("select id,name from teams"); foreach ($t as $v) {   ?>
+                            <option value="<?php echo($v[0]); ?>" <?php if($v[0]==2){ ?>selected <?php } ?> > <?php echo($v[1]); ?> </option>
+                            <?php }; ?>
+                          </select>
                         </div>
                       </div>
 

@@ -23,9 +23,7 @@
                 <div class="x_panel">
                   
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      This example shows FixedHeader being styling by the Bootstrap CSS framework.
-                    </p>
+                    <a href="?controller=team&action=add" class="btn btn-primary btn-xs"><i class="fa fa-user"></i> Thêm nhân viên </a>
                     <table id="datatable-fixed-header" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -45,16 +43,14 @@
                         
                         <?php if (!empty($rTeam)) { ?>
                          <?php foreach ($rTeam as $v) { ?>
-     
-                      
                         <tr>
                           <td><?php echo $v[1] ?></td>
                           <td><?php echo $v[2]; ?></td>
-                          <td><?php echo $v[3]; ?></td>
+                          <td><img src="asset/images/<?php echo $v[3]; ?>" width="100px"  alt=""></td>
                           <td><?php echo $v[4]; ?></td>
                           
                           <td>
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                            
                             <a href="?controller=user&action=edit&eid=<?php echo $v[0]; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                             <a href="?controller=team&action=delete&id=<?php echo $v[0]; ?>"  class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                           </td>

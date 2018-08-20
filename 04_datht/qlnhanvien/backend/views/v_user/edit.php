@@ -34,7 +34,7 @@
                   </div>
                   <div class="x_content">
                     <br />
-<?php print_r($rUser); ?>
+
                     <?php foreach ($rUser as $v) {
                       # code...
                     } ?>

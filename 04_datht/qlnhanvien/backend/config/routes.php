@@ -13,11 +13,13 @@
 		case 'user':
 			$controller= new User();
 			include 'backend/model/m_user.php';
+			include 'backend/model/m_team.php';
 			break;
 		case 'team':
 			
 			$controller= new Team();
 			include 'backend/model/m_team.php';
+			include 'backend/model/m_user.php';
 			break;
 		default:
 			

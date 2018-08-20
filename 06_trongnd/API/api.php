@@ -7,11 +7,13 @@ class api extends restful_api {
 		parent::__construct();
 	}
 	function demo_danh_sach_nhan_vien(){
-		$con 	= new mysqli('localhost','root','hanoi1','qlnv');
+		//keet noi
+		$con 	 = new mysqli('localhost','root','hanoi1','qlnv');
 		mysqli_set_charset($con, 'UTF8');
+		//sql de show ca bang tbl_user
 		$sql     = "select * from  tbl_user" ;
 		$result  = $con->query($sql);
-		$data = [];
+		$data    = [];
 		if($result){
 			while($row = $result->fetch_object()){
 				array_push($data, $row);
@@ -27,12 +29,13 @@ class api extends restful_api {
 		if($this->method == 'DELETE'){
 			$con  = mysqli_connect('localhost', 'root', 'hanoi1','qlnv');
 			mysqli_set_charset($con, 'UTF8');
+			//lay id truyeen tren URL
 			$id   = $_GET['id'];
-			$sql  	= "DELETE FROM tbl_user where pk_user_id='$id'";
-			$res = [];
+			$sql  = "DELETE FROM tbl_user where pk_user_id='$id'";
+			$res  = [];
 			if( $con->query($sql)){
-				$res["MESSAGE"]="delete sucsses ";
-				$res["STATUS"]=200;
+				$res["MESSAGE"]  ="delete sucsses ";
+				$res["STATUS"]   =200;
 			}else{
 				$res["MESSAGE"] = "delete fail";
 				$res["STATUS"]  = 404;
@@ -48,8 +51,8 @@ class api extends restful_api {
 			mysqli_set_charset($con, 'UTF8');
 			$name 		 = $_POST['name'];
 			$description = $_POST['description'];
-			$logo		= 	$_POST['logo'];
-			$leader_id =$_POST['leader_id'];
+			$logo		 = $_POST['logo'];
+			$leader_id   = $_POST['leader_id'];
 			$sql  		 = "INSERT into tbl_teams (name,description,logo,leader_id) values('{$name}','{$description}','{$logo}','{$leader_id}')";
 			if( $con->query($sql)){
 				$res["MESSAGE"] = "insert sucsses ";
@@ -66,15 +69,21 @@ class api extends restful_api {
     
 		if($this->method=="POST")
 		{
-		  $con = new mysqli('localhost','root','hanoi1','qlnv');
+		  $con 	     = new mysqli('localhost','root','hanoi1','qlnv');
 		  mysqli_set_charset($db,"UTF8");
 		  
-		  $password=md5($password);
-		  $sql     = "select name, password from tbl_user where name='".$_POST['name']."' and password='".md5($_POST['password'])."'";
-		  $res  = mysqli_num_rows(mysqli_query($con,$sql));
-		  $this->response(200,$res);
+		  $sql       = "select name, password from tbl_user where name='".$_POST['name']."' and password='".md5($_POST['password'])."'";
+		  //$res       = mysqli_num_rows(mysqli_query($con,$sql));
+		  if( mysqli_num_rows($con->query($sql))>0){
+				$res["MESSAGE"] = "insert sucsses ";
+				$res["STATUS"]	= 200;
+			}else{
+				$res["MESSAGE"]	= "insert fail";
+				$res["STATUS"]	= 404;
+			}
 		
 		}
+
 		header('Content-Type: application/json');
 		echo json_encode($res);
 	  }
@@ -86,8 +95,8 @@ class api extends restful_api {
 			mysqli_set_charset($con, 'UTF8');
 			$name 		 = $_POST['name'];
 			$description = $_POST['description'];
-			$logo		= 	$_POST['logo'];
-			$leader_id =$_POST['leader_id'];
+			$logo		 = $_POST['logo'];
+			$leader_id   = $_POST['leader_id'];
 			$sql  		 = "INSERT into tbl_teams (name,description,logo,leader_id) values('{$name}','{$description}','{$logo}','{$leader_id}')";
 			if( $con->query($sql)){
 				$res["MESSAGE"] = "insert sucsses ";

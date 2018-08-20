@@ -150,7 +150,17 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Team_id<span style="color: red;">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input required name="team_id" value="<?php echo isset($arr->team_id) ? $arr->team_id : "";?>" type="text" class="form-control col-md-7 col-xs-12">
+                    <select name="team_id" class="form-control">
+                      <?php  
+                        $category = $this->model->get_all("select * from tbl_teams order by pk_team_id asc");
+                        foreach($category as $rows)
+                        {
+                        ?>
+                        <option <?php if(isset($arr->team_id)&&$arr->team_id==$rows->pk_team_id) { ?> selected <?php } ?> value="<?php echo $rows->pk_team_id; ?>"> <?php echo $rows->c_name; ?>
+                        </option>
+                      <?php } ?>
+                    </select>
+                    <!-- <input required name="team_id" value="<?php echo isset($arr->team_id) ? $arr->team_id : "";?>" type="text" class="form-control col-md-7 col-xs-12"> -->
                   </div>
                 </div>
                 <div class="item form-group">

@@ -1,62 +1,116 @@
-<?php
-include 'restful_api.php';
-class api extends restful_api {
-	function __construct(){
-		parent::__construct();
-	}
-	function demo_danh_sach_nhan_vien(){
-		$con 	= new mysqli('localhost','root','123456','vinsofts-tupa');
-		mysqli_set_charset($con, 'UTF8');
-		$sql     = "select pk_user_id,c_name,c_phone_number from  tbl_user" ;
-		$result  = $con->query($sql);
-		$data = [];
-		if($result){
-			while($row = $result->fetch_object()){
-				array_push($data, $row);
+<?php  
+	include 'restful_api.php';
+	class api extends restful_api {
+		function __construct(){
+			parent::__construct();
+		}
+
+		function demo_danh_sach_nhan_vien(){
+			if($this->method == 'GET'){
+				$db              = mysqli_connect('localhost','root','123456','vinsofts-tupa');
+				mysqli_set_charset($db,'UTF8');
+				$sql             = "select pk_user_id,c_name,c_phone_number from tbl_user";
+				$result          = mysqli_query($db,$sql);
+				$arr             = array();
+				while ($rows     = mysqli_fetch_object($result))
+				$arr[]           = $rows;
+				$this->response(200, $arr);
 			}
-			echo json_encode($data);
-		}
-		else{
-			echo "khong co du lieu";
-		}
-	}
-	function demo_xoa_nhan_vien()
-	{
-		if($this->method == 'DELETE'){
-			$con  = mysqli_connect('localhost', 'root', '123456','vinsofts-tupa');
-			$id   = $_GET['id'];
-			$sql  	= "DELETE FROM tbl_user where pk_user_id='$id'";
-			$res = [];
-			if( $con->query($sql)){
-				$res["MESSAGE"]="delete sucsses ";
-				$res["STATUS"]=200;
-			}else{
-				$res["MESSAGE"] = "delete fail";
-				$res["STATUS"]  = 404;
+			else{
+				echo "sai phuong thuc";
 			}
-			header('Content-Type: application/json');
-			echo json_encode($res);
 		}
-	}
-	function demo_them_phong_ban()
-	{
-		if($this->method == 'POST'){
-			$con 	 	 = mysqli_connect('localhost', 'root', '123456','vinsofts-tupa');
-			mysqli_set_charset($con, 'UTF8');
-			$name 		 = $_POST['name'];
-			$description = $_POST['description'];
-			$sql  		 = "INSERT into tbl_teams (c_name,c_description,c_logo,leader_id) values('{$name}','{$description}'";
-			if( $con->query($sql)){
-				$res["MESSAGE"] = "insert sucsses ";
-				$res["STATUS"]	= 200;
-			}else{
-				$res["MESSAGE"]	= "insert fail";
-				$res["STATUS"]	= 404;
+
+		function demo_xoa_nhan_vien(){
+			if($this->method     == 'DELETE'){
+				if($_GET['id'] == ""){
+					echo "ID null";
+				}else{
+					$db = mysqli_connect('localhost','root','123456','vinsofts-tupa');
+					mysqli_set_charset($db,'UTF8');
+					$id = $_GET['id'];
+					$sql = "select * from tbl_user where pk_user_id='$id'";
+					if(mysqli_fetch_row(mysqli_query($db,$sql))>0)
+	        		{
+	        			$sql1 = "delete from tbl_user where pk_user_id='$id'";
+	         			$arr = mysqli_query($db,$sql1);
+						$this->response(200, $arr);
+	        		}
+	        		else{
+	        			echo "ID ko ton tai";
+	        		}
+				}
 			}
-		header('Content-Type: application/json');
-			echo json_encode($res);
+			else{
+				echo "sai phuong thuc";
+			}
+		}
+		function demo_them_phong_ban(){
+			if($this->method 	== 'POST'){
+				$db 			= mysqli_connect('localhost','root','123456','vinsofts-tupa');
+				mysqli_set_charset($db,'UTF8');
+				//$name 			= $_POST['name'];
+				if ($_POST['name'] =='' || $_POST['description'] =='') {
+					$this->response(404, 'errr');
+				}
+				else{$name 	= "'".$_POST['name']."'";$description 	= "'".$_POST['description']."'";}
+				$sql 			= "insert into tbl_teams (c_name,c_description) values ($name,$description)";
+				$arr 			= mysqli_query($db,$sql);
+				$this->response(200, $arr);
+			}
+			else{
+				echo "sai phuong thuc";
+			}
+		}
+		function demo_dang_nhap(){
+			if($this->method 	== 'POST'){
+				$db 			= mysqli_connect('localhost','root','123456','vinsofts-tupa');
+				mysqli_set_charset($db,'UTF8');
+				$email 			= $_POST['email'];
+				$password 		= $_POST['password'];
+				if($_POST['email'] == ''){
+					$this->response(404, "email rỗng");
+				}if($_POST['password'] == ''){
+					$this->response(404, "pass rỗng");
+				}
+				else{
+					$sql 			= "select c_email,c_password from tbl_user where c_email='$email' and c_password='$password'";
+					$arr 			= mysqli_num_rows(mysqli_query($db,$sql));
+					if($arr>0){
+						$this->response(200, "login succes");
+					}else{
+						$this->response(404, "login fail");
+					}
+				}
+			}
+			else{
+				echo "sai phuong thuc";
+			}
+		}
+		function demo_dang_ky(){
+			if($this->method 	== 'POST'){
+				$db 			= mysqli_connect('localhost','root','123456','vinsofts-tupa');
+				mysqli_set_charset($db,'UTF8');
+				$name 			= $_POST['name'];
+				$email 			= $_POST['email'];
+				$email_personal = $_POST['email_personal'];
+				$password 		= $_POST['password'];
+				$gender 		= $_POST['gender'];
+				$date_of_birth 	= $_POST['date_of_birth'];
+				$phone_number 	= $_POST['phone_number'];
+				$salary 		= $_POST['salary'];
+				$leave_days 	= $_POST['leave_days'];
+				$role_id 		= $_POST['role_id'];
+				$team_id 		= $_POST['team_id'];
+				$status 		= $_POST['status'];
+				$sql 			= "insert into tbl_user (c_name,c_email,c_email_personal,c_password,c_gender,c_date_of_birth,c_phone_number,c_salary,c_leave_days,role_id,team_id,c_status) values ('$name','$email','$email_personal','$password',$gender,'$date_of_birth',$phone_number,$salary,$leave_days,$role_id,$team_id,$status)";
+				$arr 			= mysqli_query($db,$sql);
+				$this->response(200,$arr);
+			}
+			else{
+				echo "sai phuong thuc";
+			}
 		}
 	}
-}
-$user_api = new api();
+	$user_api = new api();
 ?>

@@ -42,7 +42,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Leader ID<span style="color: red;">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <!-- <select name="leader_id" class="form-control">
+                          <select name="leader_id" class="form-control">
                             <?php  
                               $category = $this->model->get_all("select * from tbl_user order by pk_user_id asc");
                               foreach($category as $rows)
@@ -51,8 +51,8 @@
                             <option <?php if(isset($arr->leader_id)&&$arr->leader_id==$rows->pk_user_id) { ?> selected <?php } ?> value="<?php echo $rows->pk_user_id; ?>"> <?php echo $rows->c_name; ?>
                             </option>
                           <?php } ?>
-                          </select> -->
-                          <input class="form-control col-md-7 col-xs-12" name="leader_id" value="<?php echo isset($arr->leader_id) ? $arr->leader_id : "";?>" type="text" required>
+                          </select>
+                          <!-- <input class="form-control col-md-7 col-xs-12" name="leader_id" value="<?php echo isset($arr->leader_id) ? $arr->leader_id : "";?>" type="text" required> -->
                         </div>
                       </div>
                       <div class="item form-group">

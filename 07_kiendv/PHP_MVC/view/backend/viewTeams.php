@@ -10,17 +10,9 @@
       <div class="x_title">
         <h2><small>Teams List</small></h2>
         <ul class="nav navbar-right panel_toolbox">
-          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          <li><a class="collapse-link"><i class="fa fa-chevron-up fa-2x"></i></a>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Settings</a>
-              </li>
-              </li>
-            </ul>
-          </li>
-          <li><a class="close-link"><i class="fa fa-close"></i></a>
+          <li><a href="admin.php?controller=AddEditTeams&action=add"><i class="fa fa-plus fa-2x"></i></a>
           </li>
         </ul>
         <div class="clearfix"></div>
@@ -29,46 +21,63 @@
         <table id="datatable" class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th>Name</th>
+              <th class="clickMe">Name</th>
               <th>Description</th>
               <th>Logo</th>
-              <th>Leader_id</th>
+              <th>Leader</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
+            <?php
+              foreach ($arr as $row) {
+                $row = (object)$row;
+            ?>
             <tr>
-              <td>Tiger Nixon</td>
-              <td>Day la team 1</td>
-              <td>Day la logo</td>
-              <td>1</td>
+              <td><?php echo $row->name ?></td>
+              <td><?php echo $row->description ?></td>
+              <td>
+                <?php if ($row->logo != "" && file_exists($row->logo)) {
+                 ?>
+                  <img src="<?php echo $row->logo ?>" alt="" style="width: 80px;">
+                 <?php } ?>
+              </td>
+              <td>
+                <?php  
+                  $leader_id = $row->leader_id;
+                  $leader_name = $this->model->fetch_one("select name from users where id = $leader_id");
+                  echo isset($leader_name->name) ? $leader_name->name : "";
+                ?>
+              </td>
+              <td class="text-center">
+                <a href="admin.php?controller=AddEditTeams&action=edit&id=<?php echo $row->id ?>"><span><i class="fas fa-edit fa-2x"></i></span></a>&nbsp;
+                <a href="admin.php?controller=Teams&action=delete&id=<?php echo $row->id ?>"><span><i class="fas fa-trash-alt fa-2x"></i></span></a>
+              </td>
             </tr>
-            <tr>
-              <td>Tiger Nixon</td>
-              <td>Day la team 2</td>
-              <td>Day la logo</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>Tiger Nixon</td>
-              <td>Day la team 3</td>
-              <td>Day la logo</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>Tiger Nixon</td>
-              <td>Day la team 4</td>
-              <td>Day la logo</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>Tiger Nixon</td>
-              <td>Day la team 5</td>
-              <td>Day la logo</td>
-              <td>1</td>
-            </tr>
+            <?php } ?>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<!-- <script>
+  $(document).ready(function(){
+    $('.clickMe').click(function(){
+      alert("bat dau goji ajax");
+      $.ajax({
+        url:"",
+        type :"get",
+        // data : {name : $("[name='name']").val()},
+        success :function(data){
+          alert("da goji xong");
+          console.log(data);
+        },
+        error :function (error) {
+          // body...
+        }
+      })
+    })
+  })
+</script> -->

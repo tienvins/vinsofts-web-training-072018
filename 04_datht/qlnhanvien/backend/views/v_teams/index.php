@@ -51,7 +51,7 @@
                           
                           <td>
                             
-                            <a href="?controller=user&action=edit&eid=<?php echo $v[0]; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                            <a href="?controller=team&action=edit&eid=<?php echo $v[0]; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                             <a href="?controller=team&action=delete&id=<?php echo $v[0]; ?>"  class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                           </td>
                         </tr> 

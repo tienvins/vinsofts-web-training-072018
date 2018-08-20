@@ -74,8 +74,7 @@
 				
 				$q= array("('$name'","'$email'","'$md_password'","'$avatar'","'$gender'","'$date'","'$identify'","'$hobbie'","'$role'","'$team')");
 				$str =implode(",", $q);
-				var_dump($str);
-				var_dump($avatar);
+				
 				$user   = new UserModel();
 				$rUser  = $user->insertUser($str);
 				
@@ -86,7 +85,7 @@
               	if(move_uploaded_file($filetmp,"$uploaddir/$newfilename")==true)
 
 				move_uploaded_file($filetmp , $uploaddir);
-				var_dump(move_uploaded_file($_FILES['image']['tmp_name'], $uploaddir));
+				
 				
 				header("location:?controller=user");
 				
@@ -120,6 +119,13 @@
 				
 				if (isset($_POST['btnEdit'])) {
 					$r= $user->editUser($name,$email,$password,$avatar,$gender,$date,$identify,$hobbie,$role,$team,$_GET['eid']);
+					$uploaddir      =   "asset/images";
+	              	$fileinfo       =   PATHINFO($_FILES['image']['name']);
+	              	$newfilename    =   $fileinfo['filename'].".".$fileinfo['extension'];
+	              	$filetmp        =   $_FILES['image']['tmp_name'];
+	              	if(move_uploaded_file($filetmp,"$uploaddir/$newfilename")==true)
+
+					move_uploaded_file($filetmp , $uploaddir);
 					header("location:?controller=user");
 				}
 				

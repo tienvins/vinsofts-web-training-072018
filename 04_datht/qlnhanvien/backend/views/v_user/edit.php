@@ -35,9 +35,9 @@
                   <div class="x_content">
                     <br />
 
-                    <?php foreach ($rUser as $v) {
-                      # code...
-                    } ?>
+                    <?php foreach ($rUser as $v) { ?>
+                      
+                      
                     <form method="POST" data-parsley-validate class="form-horizontal form-label-left">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tên <span class="required">*</span>
@@ -121,7 +121,7 @@
                           <input type="text" name="txtTeam" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $v[21]; ?>">
                         </div>
                       </div>
-                      
+                      <?php } ?>
 
 
                       <div class="ln_solid"></div>

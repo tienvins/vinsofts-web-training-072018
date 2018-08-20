@@ -17,9 +17,14 @@ class api extends restful_api {
 			$data = array();
 			while($row = mysqli_fetch_object($res))
 				$data[]= $row;
-			$this->response(200,$data);
+			if(sizeof($data)>0){
+				$this->response(200,$data);
+			}else{
+				$this->response(204,"Không có dữ liệu");
+			}
+			
 		}else{
-			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+			$this->response(405,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 
@@ -27,14 +32,25 @@ class api extends restful_api {
 		
 		if($this->method=="DELETE")
 		{
-			$db = new mysqli('localhost','root','Nvt1904.mysql','qlnv');
-			mysqli_set_charset($db,"UTF8");
-			$sql     = "delete from users where id='".$_GET['id']."'";
-			$res  = mysqli_query($db,$sql);
-			$this->response(200,$res);
+			if($_GET['id']==""){
+				$this->response(200,"ID null");
+			}else{
+				$db = new mysqli('localhost','root','Nvt1904.mysql','qlnv');
+				mysqli_set_charset($db,"UTF8");
+				$sql	=	"select * from users where id='".$_GET['id']."'";
+				if(mysqli_fetch_row(mysqli_query($db,$sql))>0)
+				{
+					$sql  	= "delete from users where id='".$_GET['id']."'";
+					$res  	= mysqli_query($db,$sql);
+					$this->response(200,$res);
+				}else{
+					$this->response(500,"ID không tồn tại");
+				}
+				
+			}
 		}
 		else{
-			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+			$this->response(405,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 
@@ -70,10 +86,16 @@ class api extends restful_api {
 
 			$sql     = "insert into teams values('".$new_id."','".$_POST['name']."','".$_POST['description']."','".$_POST['image']."','1')";
 			$res  = mysqli_query($db,$sql);
-			$this->response(200,$res);
+			if($res==1){
+				$this->response(200,"Thêm thành công phòng ban với id= '".$new_id."' và name= '".$_POST['name']."'");
+			}
+			else{
+				$this->response(500,"Không thành công xin kiểm tra lại");
+			}
+			
 		}
 		else{
-			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+			$this->response(405,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 
@@ -109,10 +131,15 @@ class api extends restful_api {
 
             $sql ="insert into users values('".$new_id."','".$_POST['name']."','".$_POST['email']."','".$_POST['email_personal']."','".$_POST['password']."','".$_POST['remember_token']."','".$_POST['image']."','".$_POST['gender']."','".$_POST['date_of_birth']."','".$_POST['identify_id']."','".$_POST['phone_number']."','".$_POST['current_address']."','".$_POST['permanent_address']."','".$_POST['graduate_from']."','".$_POST['salary']."','".$_POST['bank_account_number']."','".$_POST['hobby']."','".$_POST['family_description']."','".$_POST['language_skills']."','".$_POST['leave_days']."','".$_POST['role_id']."','".$_POST['team_id']."','".$_POST['status']."')";
 			$res  = mysqli_query($db,$sql);
-			$this->response(200,$res);
+			if($res==1){
+				$this->response(200,"Đăng kí thành công với id= '".$new_id."' và name= '".$_POST['name']."'");
+			}
+			else{
+				$this->response(405,"Không thành công xin kiểm tra lại");
+			}
 		}
 		else{
-			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+			$this->response(500,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 
@@ -124,10 +151,15 @@ class api extends restful_api {
 			mysqli_set_charset($db,"UTF8");
 			$sql     = "select email, password from users where email='".$_POST['email']."' and password='".$_POST['password']."'";
 			$res  = mysqli_num_rows(mysqli_query($db,$sql));
-			$this->response(200,$res);
+			if($res==1){
+				$this->response(200,"Đăng nhập thành công");
+			}
+			else{
+				$this->response(400,"Sai tài khoản hoặc mật khẩu mật khẩu");
+			}
 		}
 		else{
-			$this->response(200,"Sai phương thức. xin kiểm tra lại");
+			$this->response(500,"Sai phương thức. xin kiểm tra lại");
 		}
 	}
 

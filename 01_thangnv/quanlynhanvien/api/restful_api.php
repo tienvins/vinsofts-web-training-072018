@@ -100,7 +100,7 @@ class restful_api {
             410 => 'force update of the app',
             500 => 'failed/crash'
         );
-        return "HTTP/1.1 " . $status_code . " " . $status[$status_code];
+        return "HTTP/1.1 " . $status_code . " " .                            $status[$status_code];
     }
 }
 ?>

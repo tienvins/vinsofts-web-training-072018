@@ -64,6 +64,18 @@
                           <input type="text" name="txtLeader" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $v[4]; ?>">
                         </div>
                       </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Leader</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select class="form-control"  name="txtLeader">
+                           
+                             <?php $t= $team->get_free("select id,name from user"); foreach ($t as $vU) {   ?>
+                            <option value="<?php echo($vU[0]); ?>" <?php if($vU[0]==$v[4]){ ?> selected <?php } ?>  > <?php echo $vU[1]; ?> </option>
+                            <?php }; ?>
+                          </select>
+                        </div>
+                      </div>
                       <?php } ?>
                        
                      

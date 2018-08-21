@@ -54,9 +54,20 @@
 		}
 		function add(){
 			$team= new TeamModel();
-			require 'backend/views/v_user/add.php';
+			$name="";
 			
-			if (isset($_POST['btnAdd'])) {
+			
+			if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['btnAdd'])) {
+				$err= array();
+				if (empty($_POST['txtName'])) {
+					$err[]= "loiTen";
+				}
+				if (empty($_POST['txtEmail'])) {
+					$err[]= "loiEmail";
+				}
+				
+				if (empty($err)) {
+					# code...
 				$name= $_POST['txtName'];
 				$email=$_POST['txtEmail'];
 				$password = $_POST['txtPassword'];
@@ -71,6 +82,7 @@
 				$role = $_POST['txtRole'];
 				$team = $_POST['txtTeam'];
 				
+
 				
 				$q= array("('$name'","'$email'","'$md_password'","'$avatar'","'$gender'","'$date'","'$identify'","'$hobbie'","'$role'","'$team')");
 				$str =implode(",", $q);
@@ -88,11 +100,15 @@
 				
 				
 				header("location:?controller=user");
+				}
+
 				
 			}
+	require 'backend/views/v_user/add.php';
 		}
 		
 		function edit(){
+			$team= new TeamModel();
 			$user   = new UserModel();
 			
 			if (isset($_GET['eid'])) {

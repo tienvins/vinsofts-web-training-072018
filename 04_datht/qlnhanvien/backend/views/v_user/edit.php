@@ -114,11 +114,18 @@
                           <input type="text" name="txtRole" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $v[20]; ?>">
                         </div>
                       </div>
+                   
+
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Phòng ban <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="txtTeam" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $v[21]; ?>">
+                          <select class="form-control"  name="txtTeam">
+                           
+                             <?php $t= $team->get_free("select id,name from teams"); foreach ($t as $vT) {   ?>
+                            <option value="<?php echo($vT[0]); ?>" <?php if($vT[0]==$v[21]){ ?> selected <?php } ?>  >   <?php echo $vT[1]; ?> </option>
+                            <?php }; ?>
+                          </select>
                         </div>
                       </div>
                       <?php } ?>

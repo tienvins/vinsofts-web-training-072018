@@ -54,9 +54,20 @@
 		}
 		function add(){
 			$team= new TeamModel();
-			require 'backend/views/v_user/add.php';
+			$name="";
 			
-			if (isset($_POST['btnAdd'])) {
+			
+			if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['btnAdd'])) {
+				$err= array();
+				if (empty($_POST['txtName'])) {
+					$err[]= "loiTen";
+				}
+				if (empty($_POST['txtEmail'])) {
+					$err[]= "loiEmail";
+				}
+				
+				if (empty($err)) {
+					# code...
 				$name= $_POST['txtName'];
 				$email=$_POST['txtEmail'];
 				$password = $_POST['txtPassword'];
@@ -71,11 +82,11 @@
 				$role = $_POST['txtRole'];
 				$team = $_POST['txtTeam'];
 				
+
 				
 				$q= array("('$name'","'$email'","'$md_password'","'$avatar'","'$gender'","'$date'","'$identify'","'$hobbie'","'$role'","'$team')");
 				$str =implode(",", $q);
-				var_dump($str);
-				var_dump($avatar);
+				
 				$user   = new UserModel();
 				$rUser  = $user->insertUser($str);
 				
@@ -86,14 +97,18 @@
               	if(move_uploaded_file($filetmp,"$uploaddir/$newfilename")==true)
 
 				move_uploaded_file($filetmp , $uploaddir);
-				var_dump(move_uploaded_file($_FILES['image']['tmp_name'], $uploaddir));
+				
 				
 				header("location:?controller=user");
+				}
+
 				
 			}
+	require 'backend/views/v_user/add.php';
 		}
 		
 		function edit(){
+			$team= new TeamModel();
 			$user   = new UserModel();
 			
 			if (isset($_GET['eid'])) {
@@ -120,6 +135,13 @@
 				
 				if (isset($_POST['btnEdit'])) {
 					$r= $user->editUser($name,$email,$password,$avatar,$gender,$date,$identify,$hobbie,$role,$team,$_GET['eid']);
+					$uploaddir      =   "asset/images";
+	              	$fileinfo       =   PATHINFO($_FILES['image']['name']);
+	              	$newfilename    =   $fileinfo['filename'].".".$fileinfo['extension'];
+	              	$filetmp        =   $_FILES['image']['tmp_name'];
+	              	if(move_uploaded_file($filetmp,"$uploaddir/$newfilename")==true)
+
+					move_uploaded_file($filetmp , $uploaddir);
 					header("location:?controller=user");
 				}
 				

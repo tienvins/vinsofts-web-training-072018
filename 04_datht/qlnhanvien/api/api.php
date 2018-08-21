@@ -53,16 +53,22 @@ class api extends restful_api {
 			$description 		= $_POST['description'];
 			$logo 				=	$_POST['logo'];
 			$leader_id			=	$_POST['leader_id'];
-			$sql  		 		= "INSERT into teams(name,description,logo,leader_id) values('{$name}','{$description}','{$logo}','{$leader_id}')";
-			if( $conn->query($sql)){
-				$res["MESSAGE"] = "insert sucsses ";
-				$res["STATUS"]	= 200;
-			}else{
-				$res["MESSAGE"]	= "insert fail";
-				$res["STATUS"]	= 404;
+			if ($name==null ||$description==null||$logo==null||$leader_id==null) {
+				$this->response(404,"phai nhap day du thong tin");
 			}
+			else{
+				$sql  		 		= "INSERT into teams(name,description,logo,leader_id) values('{$name}','{$description}','{$logo}','{$leader_id}')";
+				if( $conn->query($sql)){
+					$res["MESSAGE"] = "insert sucsses ";
+					$res["STATUS"]	= 200;
+				}else{
+					$res["MESSAGE"]	= "insert fail";
+					$res["STATUS"]	= 404;
+				}
 			
 			echo json_encode($res);
+			}
+			
 		}
 	}
 
@@ -101,7 +107,10 @@ class api extends restful_api {
 			$identify 			= $_POST['Identify'];
 			$hobbie 			= $_POST['Hobbie'];
 			$role 				= $_POST['Role'];
-			$team 				= $_POST['Team'];   
+			$team 				= $_POST['Team'];
+			if ($name==null||$email==null||$password==null||$gender==null||$date==null||$identify==null||$hobbie==null||$role==null||$team==null) {
+				$this->response(404,'phai dien day du thong tin');
+			}else{
 			$q="SELECT * FROM user where email='$email'";
 			$rs= $conn->query($q);
 			$row= $rs->num_rows;
@@ -115,7 +124,9 @@ class api extends restful_api {
 					}else{
 						$this->response(404,'insert fall');
 					}
-			 }
+			 }				
+			}
+
           	
             
          

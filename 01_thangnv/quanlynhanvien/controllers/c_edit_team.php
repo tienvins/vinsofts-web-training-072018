@@ -3,20 +3,25 @@
         public function __construct(){
             parent::__construct();
 
+            $tb="";
             $action=$_GET['action'];
             $id=$_GET['id'];
             $team = $this->m_teams->get_id($id);
+            $list_id_user = $this->model->get_all("select id,name from users");
+            sort($list_id_user);
+            $new_id=$this->m_teams->get_new_id();
 
             if($action=="delete"){
                 $this->m_teams->delete($_GET['id']);
                 header("location:index.php?controller=c_teams");
             }
             else{
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-                $tb="";
                 $data=$_POST;
+
+                if($data['name']=="")
+                    $tb="Name";
 
                 if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0){
                     $uploaddir      =   "images/teams";
@@ -30,7 +35,6 @@
                 else{
                     $data["image"]="-1";
                 }
-
                 switch ($action){
                     case "add":
                     $this->m_teams->insert($data);
@@ -47,15 +51,10 @@
                         }
                         break;
                 }
-                $tb="<i class='fa fa-check-circle'></i>";
                 header("location:index.php?controller=c_edit_team&action=edit&id=".$_POST['id']);
+                }
             }
-  
-            $list_id_user = $this->model->get_all("select id from users where id not in (select leader_id from teams group by leader_id)");
-            sort($list_id_user);
-            $new_id=$this->m_teams->get_new_id();
             include "views/v_edit_team.php";
-            }
         }
     }
     new c_edit_team();

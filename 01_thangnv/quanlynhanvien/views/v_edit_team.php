@@ -1,7 +1,7 @@
 <div class="col-md-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Update Team <?php echo $tb?></h2>
+            <h2>Update Team</h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -24,31 +24,35 @@
             <form class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        <input name="id" type="text" readonly="readonly" value=" <?php echo $action=="edit" ? $team->id:$new_id ?>" class="form-control" placeholder="ID">
+                        <label for="id">ID</label>
+                        <input name="id" type="number" readonly="readonly" value="<?php if($action=="add") echo $new_id; else echo $team->id; ?>" class="form-control" placeholder="ID">
                     </div>
                
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        <input name="name" type="text" class="form-control" placeholder="Name" value="<?php echo $team->name ?>">
+                    <label for="name">Name</label>
+                        <input name="name" required type="text" class="form-control" placeholder="Name" value="<?php echo $team->name ?>">
                     </div>
                     <div class=" form-group col-md-6 col-sm-12 col-xs-12">
-                        <select class="form-control" name="leader_id" value="<?php echo $team->leader_id ?>">
+                    <label for="leader_id">Leader ID</label>
+                        <select class="form-control" name="leader_id">
                             <option value ="0">Choose Leader ID</option>
                             <?php
                                 foreach($list_id_user as $id){
                             ?>
-                            <option value="<?php echo $id->id ?>"><?php echo $id->id ?></option>
+                            <option <?php if($id->id==$team->leader_id) echo "selected" ?> value="<?php echo $id->id ?>"><?php echo $id->name ?></option>
                             <?php
                                 }
                             ?>
                         </select>
                     </div>
-
                     <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                        <label for="image">Image</label>
                         <input name="image" type="file" value="Upload" class="form-control" placeholder="File Image">
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <textarea name="description" class="form-control" rows="3" placeholder="Description"><?php echo $team->description ; ?></textarea>
+                        <label for="description">Description</label>
+                        <textarea name="description" type="text" required class="form-control" rows="3" placeholder="Description"><?php echo $team->description ; ?></textarea>
                     </div>
                 </div>
                 <div class="ln_solid"></div>

@@ -17,6 +17,16 @@
 			return $arr;
         }
 
+        public function get_all_info(){
+            global $db;
+            $sql ="select users.id, users.name, users.email, users.email_personal, users.password, users.remenber_token, users.image, users.gender, users.date_of_birth, users.identify_id, users.phone_number, users.current_address, users.permanent_address, users.graduate_from, users.salary, users.bank_account_number, users.hobby, users.family_description, users.language_skills, users.leave_days, users.role_id, teams.name as team, users.status from users,teams WHERE users.team_id=teams.id";
+            $res = mysqli_query($db,$sql);
+            $arr = array();
+			while ($rows = mysqli_fetch_object($res))
+				$arr[] = $rows;
+			return $arr;
+        }
+
         public function get_id($id){
             global $db;
             $sql ="select * from users where id='".$id."'";

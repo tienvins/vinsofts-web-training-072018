@@ -6,6 +6,9 @@
             $action=$_GET['action'];
             $id=$_GET['id'];
             $user = $this->m_users->get_id($id);
+            $list_id_team = $this->m_teams->get_all();
+            sort($list_id_team);
+            $new_id=$this->m_users->get_new_id();
 
             if($action=="delete"){
                 $this->m_users->delete($id);
@@ -15,7 +18,6 @@
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                $tb="";
                 $data=$_POST;
 
                 if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0){
@@ -50,12 +52,8 @@
                         }
                         break;
                 }
-                $tb="<i class='fa fa-check-circle'></i>";
                 header("location:index.php?controller=c_edit_user&action=edit&id=".$_POST['id']);
             }  
-            $list_id_team = $this->m_teams->get_all();
-            sort($list_id_team);
-            $new_id=$this->m_users->get_new_id();
             include "views/v_edit_user.php";
             }
         }

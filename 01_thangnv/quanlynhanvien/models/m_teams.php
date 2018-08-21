@@ -16,6 +16,16 @@
 			return $arr;
         }
 
+        public function get_all_info(){
+            global $db;
+            $sql ="select teams.id, teams.name, teams.description, teams.logo, users.name as leader  from teams,users where teams.leader_id=users.id";
+            $res = mysqli_query($db,$sql);
+            $arr = array();
+			while ($rows = mysqli_fetch_object($res))
+				$arr[] = $rows;
+			return $arr;
+        }
+
         public function get_id($id){
             global $db;
             $sql ="select * from teams where id='".$id."'";

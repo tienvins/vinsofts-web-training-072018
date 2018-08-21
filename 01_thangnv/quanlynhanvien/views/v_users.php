@@ -1,3 +1,4 @@
+
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
@@ -44,19 +45,19 @@
               <th>Family Description</th>
               <th>Leave Days</th>
               <th>Role ID</th>
-              <th>Team-ID</th>
+              <th>Team</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
-          <?php foreach ($users as $user){ ?>
+          <?php foreach ($users as $user){ 
+            
+            ?>
             <tr>
               <td class="text-center">
                 <a href="index.php?controller=c_edit_user&action=edit&id=<?php echo $user->id ?>"><i class="fa fa-edit"></i></a>
                 &nbsp;
-                <?php
-                    if($user->id !=1) echo '<a href="index.php?controller=c_edit_user&action=delete&id='.$user->id.'"><i class="fa fa-remove"></i></a>';
-                ?>
+                <a href="index.php?controller=c_edit_user&action=delete&id=<?php echo $user->id ?>" onclick="return window.confirm('Bạn muốn xóa user <?php echo $user->name ?> ?')"><i class="fa fa-remove"></i></a>
               </td>
               <td><?php echo $user->id ?></td>
               <td><?php echo $user->name ?></td>
@@ -78,7 +79,7 @@
               <td><?php echo $user->language_skills ?></td>
               <td><?php echo $user->leave_days ?></td>
               <td><?php echo $user->role_id ?></td>
-              <td><?php echo $user->team_id ?></td>
+              <td><?php echo $user->team ?></td>
               <td><?php echo $user->status ?></td>
             </tr>
           <?php } ?>

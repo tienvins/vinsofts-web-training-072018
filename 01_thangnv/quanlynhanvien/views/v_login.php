@@ -33,6 +33,7 @@
         <section class="login_content">
           <form method="POST">
             <h1>Login Form</h1>
+            <p><?php echo $tb ?></p>
             <div>
               <input type="email" name ="email" class="form-control" placeholder="Email" required="" />
             </div>

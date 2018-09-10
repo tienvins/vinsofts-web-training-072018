@@ -3,7 +3,7 @@
 		public function __construct(){
 			parent::__construct();
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-				$url = 'http://localhost/vinsofts-web-training-072018/07_kiendv/PHP_MVC/APIs/api/loginApi.php/login';
+				$url = 'http://localhost/vinsofts-web-training-072018/07_kiendv/PHP_MVC_MongoDB/APIs/api/loginApi.php/login';
 				$data = array('username' => $_POST["username"], 'password' => $_POST["password"]);
 
 				// use key 'http' even if you send the request to https://...

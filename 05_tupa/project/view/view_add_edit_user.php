@@ -41,7 +41,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" >Password<span style="color: red;">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="password" id="email2" name="c_password" data-validate-linked="email" required="required"  class="form-control col-md-7 col-xs-12">
+                    <input type="password" name="c_password" data-validate-linked="email" <?php if(isset($arr->c_email)) { ?> placeholder="Nhập vào password mới nếu muốn đổi password" <?php }else { ?> required <?php } ?>  class="form-control col-md-7 col-xs-12">
                   </div>
                 </div>
                 <div class="item form-group">
@@ -55,7 +55,9 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender<span style="color: red;">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" name="c_gender" value="<?php echo isset($arr->c_gender) ? $arr->c_gender : "";?>" required class="form-control col-md-7 col-xs-12">
+                    <!-- <input type="text" name="c_gender" value="<?php echo isset($arr->c_gender) ? $arr->c_gender : "";?>" required class="form-control col-md-7 col-xs-12"> -->
+                    <input type="radio" name="c_gender" value="0">Male
+                    <input type="radio" name="c_gender" value="1">Female
                   </div>
                 </div>
                 <div class="item form-group">

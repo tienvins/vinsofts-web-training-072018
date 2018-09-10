@@ -15,11 +15,12 @@
 					if($check->c_password 	== md5($c_password) ){
 						//gán vào session
 						$_SESSION["c_email"] = $c_email;
-						//quay trở lại trang index
 						header('location:index.php');
 					}
 				}
-				else{echo "ok";}
+				else{
+					echo "sai tên đăng nhập or mật khẩu";
+				}
 			}
 			//-------------------
 			include "view/view_login.php";

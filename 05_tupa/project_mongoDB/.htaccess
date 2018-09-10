@@ -1,0 +1,6 @@
+RewriteEngine On
+#rewrite trang-admin
+RewriteRule ^home$ index.php
+RewriteRule ^user$ index.php?controller=user
+RewriteRule ^teams$ index.php?controller=teams
+RewriteRule ^logout$ index.php?controller=logout

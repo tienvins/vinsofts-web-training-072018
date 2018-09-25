@@ -47,9 +47,7 @@
               <td><?php echo isset($rows->_id) ? $rows->_id : 0; ?></td>
               <td><?php echo $rows->name; ?></td>
               <td><?php echo $rows->description; ?></td>
-              <td>
-                <img src="../project_mongoDB/public/upload/teams/<?php echo $rows->logo; ?>" style="width: 150px; height: 100px;">
-              </td>
+              
               <!-- <td><?php echo isset($rows->name_user) ? $rows->name_user : "" ?></td> --> 
 
               <td>
@@ -59,10 +57,13 @@
                     $listteam = $this->model->table(users)->find([
                       '_id' => new MongoDB\BSON\ObjectID($leader_id)
                     ])->toArray();
-                    
+
                     echo isset($listteam[0]->name) ? $listteam[0]->name : "";
                   ?>
                 </td>
+                <td>
+                <img src="../project_mongoDB/public/upload/teams/<?php echo $rows->logo; ?>" style="width: 150px; height: 150px;">
+              </td>
               <td class="text-center">
                 <a href="index.php?controller=add_edit_teams&act=edit&id=<?php echo $rows->_id ?>">Edit</a>&nbsp;&nbsp;
                 <a onclick="return window.confirm('Are you sure')" href="index.php?controller=teams&act=delete&id=<?php echo $rows->_id ?>">Delete</a>

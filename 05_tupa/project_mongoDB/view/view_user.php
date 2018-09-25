@@ -54,7 +54,7 @@
               <td>
                   <?php
                     $team_id = $rows->team_id;
-                    
+
                     $listteam = $this->model->table(teams)->find([
                       '_id' => new MongoDB\BSON\ObjectID($team_id)
                     ])->toArray();
@@ -66,7 +66,7 @@
               <td><?php echo $rows->date_of_birth; ?></td>
               <td><?php echo number_format($rows->salary) ?></td>
               <td>
-                <img src="../project_mongoDB/public/upload/user/<?php echo $rows->img; ?>" style="width: 150px; height: 100px;">
+                <img src="../project_mongoDB/public/upload/user/<?php echo $rows->img; ?>" style="width: 150px; height: 150px;">
               </td>
               <td class="text-center">
                 <a href="index.php?controller=add_edit_user&act=edit&id=<?php echo $rows->_id ?>">Edit</a>&nbsp;&nbsp;
